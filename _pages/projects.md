@@ -6,19 +6,23 @@ permalink: /projects/
 ---
 
 Projects are one of the ways to learn something new. There is no such thing as a completed project.
-Here is the list of projects I own::
+Here is the list of projects I own:
 
-* [**Autonomous Stair Climbing**][Google Summer of Code]- In this project, we built an autonomous stair climbing robot from scratch using **Solidworks** to build the robot, **Ros** and **Gazebo** to simulate our design and various **Python** libraries for perception and path planning.
-I mainly worked on the Vision part of the project. For stair detection, we trained **YOLOv5** to detect stairs, after which we implemented edge linking and path planning algorithms to determine the path of the robot.Achievement For more info, check out our github repo.
+## Notable Projects
 
-* [**Energy Conservation of Streetlights using LoRa Communication**][Flood League]: Designed and implemented a system which detects the presence of pedestrians or vehicles using **LIDAR** sensors. Based on the sensor information, the given streetlight then communicates with other streetlights using **LoRa** communication to determine which streetlights need to be switched ON/OFF. Our design was chosen to represent IIIT- Hyderabad in the Smart India Hackathon-2020. For more info on how we designed and implemented this system, check our github rep.
+* **Autonomous Stair Climbing**- In this project, we built an autonomous stair climbing robot from scratch using **Solidworks** to build the robot, **Ros** and **Gazebo** to simulate our design and various **Python** libraries for perception and path planning.
+I mainly worked on the Vision part of the project. For stair detection, we trained **YOLOv5** to detect stairs, after which we implemented edge linking and path planning algorithms to determine the path of the robot.Our design was one of the top 300 projects out of 6500 participating teams. For more info, check out our github [repo][Github Repo 1].
 
-* [**32 bit MIPS Processor**][Run]: In this project, I designed a 32-bit MIPS processor supporting the basic instructions from scratch using **Verilog** and **Vivado**. The various modules developed for the processor are the **Instruction Fetch Unit (IFU)** to fetch instructions from the RAM. The next instruction is the **Decode** module used to decode the instruction fetched by the IFU. The last module is the **Execute** module which then executes the instruction in the processor. For more info, check out my github repo.
+* **Energy Conservation of Streetlights using LoRa Communication**: Designed and implemented a system which detects the presence of pedestrians or vehicles using **LIDAR** sensors. Based on the sensor information, the given streetlight then communicates with other streetlights using **LoRa** communication to determine which streetlights need to be switched ON/OFF. Our design was chosen to represent IIIT- Hyderabad in the Smart India Hackathon-2020. For more info on how we designed and implemented this system, check our github [repo][Github Repo 2].
+
+* **32 bit MIPS Processor**: In this project, I designed a 32-bit MIPS processor supporting the basic instructions from scratch using **Verilog** and **Vivado**. One of the main features of this project is that the processor is 2 stage pipelines (**IFU** and **Decode and Execute** run in parallel). Another notable feature is that the processor runs at 1.3 GHz. The various modules developed for the processor are the **Instruction Fetch Unit (IFU)** to fetch instructions from the RAM. The next instruction is the **Decode** module used to decode the instruction fetched by the IFU. The last module is the **Execute** module which then executes the instruction in the processor. For more info, check out my github [repo][Github Repo 3].
+
+## Side Projects
 
 
-[Project Awaaz]: http://projectawaaz.org/
-[Flood League]: https://github.com/Ferozepurwale/Flood-League/
-[Lost]: https://github.com/Terasology/Lost/
+[Github Repo 1]: https://github.com/Avinash2468/Stair_Climbing_Robot
+[Github Repo 2]: https://github.com/Avinash2468/IOT_STREETLIGHTS
+[Github Repo 3]: https://github.com/Avinash2468/32-bit-2-stage-pipelined-mips-processor
 [AdvancedBehaviors]: https://github.com/Terasology/AdvancedBehaviors/
 [AdventureAssets]: https://github.com/Terasology/AdventureAssets
 [WildAnimals]: https://github.com/Terasology/WildAnimals

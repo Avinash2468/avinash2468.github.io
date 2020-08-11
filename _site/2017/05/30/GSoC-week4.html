@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Nihal Singh - GSoC Week 4: Integrating Journal</title>
+
+	<link rel="stylesheet" href="/css/main.css">
+	<link rel="canonical" href="http://localhost:4000/2017/05/30/GSoC-week4.html">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,600' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+
+	<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114314056-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-114314056-1');
+	</script>
+
+</head> 
+
+
+<body>
+	<aside>
+	<div class="container">
+    <nav>
+      <a class="site-title" href="/">nihal111</a>
+    </nav>
+		<nav class="site-nav">
+     <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+			<ul>
+				
+          
+          
+  				<li><a href="/about/">About</a></li>
+          
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          
+  				<li><a href="/projects/">Projects</a></li>
+          
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          <li><a href="/docs/CV.pdf">CV</a></li>
+      		<li><a href="/blog">Blog</a></li>
+			</ul>
+      </div>
+		</nav>
+	</div>
+</aside>
+	<div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+          <a href="/" class="site-avatar"><img src="https://avatars1.githubusercontent.com/u/13916513?v=2&s=460" /></a>
+
+          <div class="site-info">
+            <h1 class="site-name"><a href="/">Nihal Singh</a></h1>
+            <p class="site-description">I like to know things</p>
+          </div>
+          
+          <nav>
+            <a href="https://github.com/nihal111">
+<span class="icon icon--github">
+<img src="/img/github.png" class="darken" alt="GitHub">
+</span></a>
+
+<a href="https://facebook.com/nihal111">
+<span class="icon icon--facebook">
+<img src="/img/facebook.png" class="darken" alt="Facebook">
+</span>
+</a>
+
+<a href="https://linkedin.com/in/nihal111">
+<span class="icon icon--linkedin">
+<img src="/img/linkedin.png" class="darken" alt="LinkedIn">
+</span>
+</a>
+          </nav>
+          
+        </header>
+      </div>
+</div>
+
+	<main>
+		<article>
+			<center>
+<h2>GSoC Week 4: Integrating Journal</h2>
+<time><i>Written on May 30, 2017</i></time>
+<br><br>
+<div class="post-tags">
+  
+  
+  <a class="tag" href="/tags/#open source">open source</a>
+  
+  <a class="tag" href="/tags/#MovingBlocks">MovingBlocks</a>
+  
+  <a class="tag" href="/tags/#Terasology">Terasology</a>
+  
+  <a class="tag" href="/tags/#GSoC">GSoC</a>
+  
+</div>
+</center>
+
+
+<style type="text/css">
+    .collapsiblecontainer {
+    width:100%;
+    border:1px solid #d3d3d3;
+}
+.collapsiblecontainer div {
+    width:100%;
+}
+.collapsiblecontainer .collapsibleheader {
+    background-color:#d3d3d3;
+    padding: 2px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.collapsiblecontainer .collapsiblecontent {
+    display: none;
+    padding : 5px;
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+<script type="text/javascript" src="/js/github-buttons.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $(".collapsibleheader").click(function () {
+        $collapsibleheader = $(this);
+        //getting the next element
+        $collapsiblecontent = $collapsibleheader.next();
+        //open up the collapsiblecontent needed - toggle the slide- if visible, slide up, if not slidedown.
+        $collapsiblecontent.slideToggle(500, function () {
+            //execute this after slideToggle is done
+            //change text of collapsibleheader based on visibility of collapsiblecontent div
+            $collapsibleheader.find("span:first-child").text(function () {
+                //change text based on condition
+                return $collapsiblecontent.is(":visible") ? "- " : "+ ";
+            });
+        });
+
+    });
+}); 
+
+</script>
+
+<p>The past week involved creating the new module for my exploration world and getting sarted with it.</p>
+
+<h1 id="what-have-i-been-up-to">What have I been up to?</h1>
+
+<h2 id="creating-the-lost-module">Creating the Lost module</h2>
+
+<p>The Lost module is the new gameplay module that I have created and would be working on for the next two months. I’m still working on writing some logs but the general idea for the <a href="https://docs.google.com/document/d/1GVmJEV2KKjqgxjtVR-_Lh7QsvRzQbfxg9qeHjimIbPg/edit?usp=sharing">lore</a> is complete. In short the story is centered around an intergalactic explorer who while exploring the vast world of Terasology, gets stranded. The wormhole creator that allows him to travel through space becomes dysfunctional. Fornlorn with no way to return to his home planet, he starts exploring the planet, trying to survive on what may become the last planet he would ever set his foot on.</p>
+
+<h2 id="integrating-journal">Integrating Journal</h2>
+<p>A key part of the new explorationn world would be a journal that links several things. The main purpose of the Journal would be to serve as a secondary memory for the player. I plan to use the Journal in several ways-</p>
+
+<ol>
+  <li>Exploration logs that would be generated as time passes or when an event occurs. Like when the player first spots a deer or finds a treasure.</li>
+  <li>New recipes would show up when the player pick a new item. Like picking up a stone would create an entry with the recipe for hammer.</li>
+  <li>The journal would be integrated with books. Whenever you open an important book, the key parts of the book would be stored in the journal.</li>
+  <li>Integrations with content modules like WoodCrafting, StoneCrafting (earlier WoodAndStone), CopperAndBronze, Alchemy, EquipmentSmithing, Equipment, Cooking and SimpleFarming. These would essentially be tutorials to help the player. Essentially recipes that show up, guides about more involved process like different quality of ingredients resulting in different final products.</li>
+</ol>
+
+<p>As of now the Journal has only been integrated with item pick up events and an initial on-spawn event that sends the first journal entry.</p>
+
+<h2 id="improvements-in-journal">Improvements in Journal</h2>
+
+<p>The <a href="https://github.com/Terasology/Journal">Journal module</a> was left pretty much untouched since <a href="https://github.com/MarcinSc">MarcinSc</a> had created. The Journal module looks like so-</p>
+
+<p class="center"><img src="/img/WaSJournal.jpg" alt="WoodAndStone Journal" title="WoodAndStone Journal" /></p>
+
+<p>It has a left panel for different chapters and each chapter has its own entries. This handles categorisation pretty well, making it easier for the user to access specific entries and saving a long scroll.</p>
+
+<p>I’ve added another enhancement which now makes the Journal more interactive. Earlier there was just a notification that would pop up when a new Journal Entry was added. However, it wouldn’t be highlighted in any way in the Journal. With the <a href="https://github.com/Terasology/Journal/pull/3/">latest PR</a> merged, now the unread Journal entries appear highlightedin yellow, until the chapter they belong to gets opened once.</p>
+
+<p class="center"><img src="/img/UnreadJournal.jpg" alt="Unread Journal" title="Unread Journal" /></p>
+
+<p>In the image above, Exploration Log #111 is a “read” entry while Exploration Log #112 is a new/”unread” entry.</p>
+
+<div class="github-button" url="https://github.com/Terasology/Journal/pull/3"></div>
+
+<div class="github-button" url="https://github.com/Terasology/Journal/pull/4"></div>
+
+<p><strong><em>Roadblock:</em></strong> There was a problem with the Journal module though, the first journal entry that was required to be sent only once when the player was spawned was resent every time the player respawned. This happened because the <code class="language-plaintext highlighter-rouge">onPlayerSpawnedEvent</code> was sent to the Player entity even on respawn.<br />
+A bigger problem was that whatever entries that the player had in his journal would all disappear when the player respawned. This happened because the player entity in the game was completely destroyed when the player died. In the process all components attached to the player were stripped and destroyed too.</p>
+
+<p>This was what I dealt with for the larger part of last week.</p>
+
+<h2 id="saving-the-player-entity-from-destruction">Saving the player entity from destruction</h2>
+<p>All existing systems relied on the player entity to be totally destroyed (and stripped of all components) when the player dies in game. This however wasn’t a nice approach, as the player entity carried a lot of data that potentially could be preserved or dealt with a better way even on death.</p>
+
+<p>I felt this problem for the first time when I realised that my player would lose all it’s journal entries on death. However there are many other cases which require the player entity and it’s components to not be totally destroyed.</p>
+
+<h4 id="the-need">The need</h4>
+<ol>
+  <li>A player’s inventory is always lost on death. It just disappears. With the player entity now being preserved, the player simply gets to keep its inventory after respawn. However, if needed a system can easily be added to allow items from inventory to drop when a player dies (even probabilistically).</li>
+  <li>Many other components would be better off having persisted than being destroyed at death. For eg. the EventualSkills module makes learning and gaining skills possible. All the skills a player has just would disappear if the player entity is completely destroyed, which might be undesirable.</li>
+  <li>There was no separate event that would be sent upon respawning. Now there is an additional <code class="language-plaintext highlighter-rouge">onPlayerRespawnedEvent</code> that can be used for this purpose. The <code class="language-plaintext highlighter-rouge">onPlayerSpawnedEvent</code> is simply an event that only gets fired once when the player enters a world for the first time.</li>
+</ol>
+
+<p><a href="https://github.com/MovingBlocks/Terasology/pull/2958">This PR</a> makes the said change. It adds the <strong>OnPlayerRespawnedEvent, PlayerDeathEvent, AliveCharacterComponent, PlayerCharacterComponent.</strong></p>
+
+<div class="github-button" url="https://github.com/MovingBlocks/Terasology/pull/2958"></div>
+
+<h4 id="what-happens-now">What happens now</h4>
+
+<p>A character lives. It has the AliveComponent.
+It dies.
+A <code class="language-plaintext highlighter-rouge">BeforeDestroyEvent</code> handler receives all entities having <code class="language-plaintext highlighter-rouge">AliveCharacterComponent</code></p>
+
+<ul>
+  <li>If the entity also has a <code class="language-plaintext highlighter-rouge">PlayerCharacterComponent</code>, the event is consumed to prevent destruction. The <code class="language-plaintext highlighter-rouge">AliveCharacterComponent</code> is stripped off adn a <code class="language-plaintext highlighter-rouge">PlayerDeathEvent</code> sent along with <code class="language-plaintext highlighter-rouge">DeathEvent</code></li>
+  <li>Else just a <code class="language-plaintext highlighter-rouge">DeathEvent</code> sent  and the <code class="language-plaintext highlighter-rouge">AliveCharacterComponent</code> stripped off.
+DeathScreen launches on <code class="language-plaintext highlighter-rouge">PlayerDeathEvent</code> and sends the <code class="language-plaintext highlighter-rouge">RespawnRequestEvent</code>.
+<code class="language-plaintext highlighter-rouge">RespawnRequestEvent</code> is received by the <code class="language-plaintext highlighter-rouge">PlayerSystem</code>.
+<code class="language-plaintext highlighter-rouge">PlayerSystem</code> then respawns player, sets the location for <code class="language-plaintext highlighter-rouge">clientEntity</code> to spawn location. Sends <code class="language-plaintext highlighter-rouge">OnPlayerRespawnedEvent</code>.</li>
+</ul>
+
+<p>Components that need to be removed on death are removed by receiving the <code class="language-plaintext highlighter-rouge">PlayerDeathEvent</code>.
+Components that need to be reset are done by receiving the <code class="language-plaintext highlighter-rouge">OnPlayerRespawnedEvent</code>.</p>
+
+<p>Next week would see more work on the exploration module. I need to experiment with Structural Templates and see what’s the best way to spawn structures in different places.</p>
+
+
+
+<!-- Code for disqus comments -->
+
+<div id="disqus_thread"></div>
+<script>
+
+var disqus_config = function () {
+this.page.url = "http://localhost:4000/2017/05/30/GSoC-week4.html"; // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "/2017/05/30/GSoC-week4"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//nihal111.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+	
+
+
+
+
+
+		</article>
+		
+	</main>
+	<footer class="site-footer">
+
+  <div class="wrapper">
+
+   
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="name">Nihal Singh</li>
+          <li>-nihal111</li>
+          <li><a href="mailto:nihaliter@gmail.com">nihaliter@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <p class="abode">Abode:</p>Indian Institue of Technology, Bombay Mumbai-400076, India
+      </div>
+      <div class="footer-col footer-filler">
+        <p> </p>
+      </div>
+      <div class="footer-col footer-col-3">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/nihal111"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">nihal111</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://facebook.com/nihal111"><span class="icon icon--facebook">
+<svg  x="0px" y="0px" width="16px" height="16px" viewBox="0 0 90 90" style="enable-background:new 0 0 90 90;" xml:space="preserve">
+<g>
+	<path id="Facebook__x28_alt_x29_" d="M90,15.001C90,7.119,82.884,0,75,0H15C7.116,0,0,7.119,0,15.001v59.998   C0,82.881,7.116,90,15.001,90H45V56H34V41h11v-5.844C45,25.077,52.568,16,61.875,16H74v15H61.875C60.548,31,59,32.611,59,35.024V41   h15v15H59v34h16c7.884,0,15-7.119,15-15.001V15.001z" fill="#3A589B"/>
+</g>
+</svg>
+</span><span class="username">Nihal Singh</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://linkedin.com/in/nihal111"><span class="icon icon--linkedin"><svg  x="0px" y="0px" width="16px" height="16px" viewBox="0 50 512 512" style="enable-background:new 0 0 90 90;" xml:space="preserve">
+<g>
+	<path fill="#828282" d="M150.65,100.682c0,27.992-22.508,50.683-50.273,50.683c-27.765,0-50.273-22.691-50.273-50.683
+	C50.104,72.691,72.612,50,100.377,50C128.143,50,150.65,72.691,150.65,100.682z M143.294,187.333H58.277V462h85.017V187.333z
+	M279.195,187.333h-81.541V462h81.541c0,0,0-101.877,0-144.181c0-38.624,17.779-61.615,51.807-61.615
+	c31.268,0,46.289,22.071,46.289,61.615c0,39.545,0,144.181,0,144.181h84.605c0,0,0-100.344,0-173.915
+	s-41.689-109.131-99.934-109.131s-82.768,45.369-82.768,45.369V187.333z"/>
+</g>
+</svg>
+</span><span class="username">Nihal Singh</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      
+    </div>
+
+  </div>
+
+</footer>
+
+</body>
+
+</html>

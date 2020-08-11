@@ -1,0 +1,904 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nihal Singh</title>
+    <description>Nihal Singh's personal blog.
+</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Tue, 11 Aug 2020 17:07:10 +0400</pubDate>
+    <lastBuildDate>Tue, 11 Aug 2020 17:07:10 +0400</lastBuildDate>
+    <generator>Jekyll v4.1.1</generator>
+    
+      <item>
+        <title>Pommerman- Reinforcement Learning Project</title>
+        <description>&lt;p&gt;As the course project for CS 747 - Foundations of Intelligent &amp;amp; Learning Agents, Fall 2018, I teamed up with Chinmay Talegaonkar and Dhruv Shah to take on the &lt;a href=&quot;https://www.pommerman.com/&quot;&gt;Pommerman Challenge&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/pommerman.gif&quot; alt=&quot;Pommerman&quot; title=&quot;Pommerman&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The Pommerman Challenge essentially serves as a test bed for multi-agent learning algorithms. It is essentially a clone of the popular Bomberman game, providing a constantly changing environment with bombs going off, power-ups to be collected and other agents to be eliminated. There are mainly two modes to the game, &lt;strong&gt;FFA&lt;/strong&gt;- where each of the four agents battle against each other and the last one to survive wins, &lt;strong&gt;Team&lt;/strong&gt;- where there are two teams of two agents which compete against each other.&lt;/p&gt;
+
+&lt;p&gt;We took on the FFA challenge, trying a few different approaches. After facing a few hurdles, we found that the DQfD agent performed remarkably well as against our other approaches.&lt;/p&gt;
+
+&lt;p&gt;Our experiments and approaches are detailed here- &lt;a href=&quot;/docs/pommerman_report.pdf&quot;&gt;Report&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;To see our agent in action, watch the video below-&lt;/p&gt;
+
+&lt;iframe width=&quot;100%&quot; height=&quot;400px&quot; src=&quot;https://www.youtube.com/embed/DtiyIrMZ69A&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+</description>
+        <pubDate>Sun, 25 Nov 2018 00:00:00 +0400</pubDate>
+        <link>http://localhost:4000/2018/11/25/pommerman-rl.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/11/25/pommerman-rl.html</guid>
+        
+        <category>Machine Learning</category>
+        
+        <category>Reinforcement Learning</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>To hell and back again, US B1 Visa</title>
+        <description>&lt;p&gt;Having been selected as one of the representatives from MovingBlocks, I was all excited about being able to attend the GSoC Mentor Summit for 2018. It would be the first time I would be travelling to the States. The timeline worked out well, and I was also able to fit Github Universe in my schedule. In little time, I had my flight tickets booked and reserved a room at the hotel provided by Google. Everything was in order and only acquiring the Visa remained.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-visa-process&quot;&gt;The Visa Process&lt;/h2&gt;
+&lt;p&gt;I started my Visa process around mid-August, filled out my DS160, made the 160$ payment and booked dates for the VAC (Biometrics) and VI (Consular Interview). The earliest date that I could find for the interview was 24th September.&lt;/p&gt;
+
+&lt;h2 id=&quot;nearly-there-but-oh-well&quot;&gt;Nearly there but oh, well&lt;/h2&gt;
+&lt;p&gt;I reached just in time for my 10 AM appointment at the Mumbai consulate, owing to the deplorable peak-hour traffic. I had barely done any reading up about what the interview is like, apart from some tips shared on the GSoC mailing list and a few stories from friends.&lt;/p&gt;
+
+&lt;p&gt;I had read about a good number of cases on the mailing thread, where fellow mentors had their Visa denied, and there was absolutely nothing that could be done after that. I had a word with the person standing next to me in the queue, who mentioned that it was his second attempt. The last time he had appeared, the interview lasted for 10 seconds. As soon as he said he was an IT professional, the Consular officer handed him the rejection letter saying- “I cannot approve your Visa this time”.&lt;/p&gt;
+
+&lt;p&gt;With these stories in my head, I was partly nervous but still convinced that my purpose of travelling was entirely legitimate. I had an invitation letter from Google, and I had to complete my undergraduate studies, which meant that I was bound to return.&lt;/p&gt;
+
+&lt;p&gt;After a long wait, and slowly moving through the serpentine queue my turn arrived. While I was waiting at the counter, the person ahead of me had his Visa denied. As I walked up to the counter, I could see that the consular officer was unhappy.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Me:&lt;/strong&gt; Good morning&lt;br /&gt;
+&lt;strong&gt;Officer:&lt;/strong&gt; May I have your passport? &lt;br /&gt;
+(I pass my passport) &lt;br /&gt;
+&lt;strong&gt;O:&lt;/strong&gt; Why would you be travelling to the United States? &lt;br /&gt;
+&lt;strong&gt;M:&lt;/strong&gt; To attend a conference. &lt;br /&gt;
+(I kept my answers brief and answered only what I was asked. I had read this tip somewhere, and I was extra cautious to not annoy the officer further.) &lt;br /&gt;
+&lt;strong&gt;O:&lt;/strong&gt; What conference is this? &lt;br /&gt;
+&lt;strong&gt;M:&lt;/strong&gt; It’s a conference about open source software. It’s called the Google Summer of Code mentor summit. &lt;br /&gt;
+(He starts looking at the screen and typing in something.) &lt;br /&gt;
+&lt;strong&gt;O:&lt;/strong&gt; Who would be paying for your trip? &lt;br /&gt;
+&lt;strong&gt;M:&lt;/strong&gt; Google would be paying. They would be paying 1100$ for every attendee, and if that falls short, my organisation can cover the rest. 
+(More typing and looking at the screen) &lt;br /&gt;
+&lt;strong&gt;O:&lt;/strong&gt; Are you pursuing your undergraduate studies? &lt;br /&gt;
+&lt;strong&gt;M:&lt;/strong&gt; Yes. I am a fourth-year student. &lt;br /&gt;
+&lt;strong&gt;O:&lt;/strong&gt; Do you have your old passports. May I see them? &lt;br /&gt;
+(I pass my older passports) &lt;br /&gt;
+&lt;strong&gt;O:&lt;/strong&gt; What does your father do? &lt;br /&gt;
+&lt;strong&gt;M:&lt;/strong&gt; He is an engineer. He works at X. &lt;br /&gt;
+&lt;strong&gt;O:&lt;/strong&gt; Who pays for your education? &lt;br /&gt;
+&lt;strong&gt;M:&lt;/strong&gt; My father does. &lt;br /&gt;
+(More typing. Longer this time.) &lt;br /&gt;
+&lt;strong&gt;O:&lt;/strong&gt; Your Visa application has been denied. The reason is written in this paper. You may apply again.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Profoundly disappointed and dissatisfied with how the interview went, I left. I had carried a file with all the documents I could think of, and the interviewer didn’t ask for even a single document. The paper given to me cited Section 214 (b) as the ground for denial, which essentially means I couldn’t prove strong ties to my home country. Baseless in my case, since I needed to come back to finish my undergrad.&lt;/p&gt;
+
+&lt;p&gt;My plans had come to an end. There was no way I could apply again. It took me more than a month to get my first appointment. I barely had 2 weeks before my flight, this time.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-gamble&quot;&gt;The Gamble&lt;/h2&gt;
+&lt;p&gt;I heard from a friend (&lt;a href=&quot;https://mozillians.org/en-US/u/ydidwania/&quot;&gt;Yashvardhan Didwania&lt;/a&gt;, thanks again) that it isn’t all that impossible to get an appointment on a date before the expected waiting period. He had pulled it off in the past by continually refreshing the webpage and checking for available dates. When someone cancels or reschedules, an earlier date becomes available for a short while. That’s when you grab it.&lt;/p&gt;
+
+&lt;p&gt;The gamble was that I would have to pay 160$ before I become able to book an appointment. To get the Visa on my passport in time, I needed to get an interview date on or before October 8. There was a good chance that I would not get such a date but I decided to play the odds.&lt;/p&gt;
+
+&lt;p&gt;I had to wait for the next day to start a new application since the website still showed my present-day appointment (24 September) as active. I filled out the DS-160 in the meantime and spent the entire day reading stories about Visa rejections and searching for ways to overcome them. I woke up on 25th September and at 10:21 AM, on my way to class, I made the MRV payment of 160$ again. I remember it took around 1-2 hours for my receipt to get activated and reflect on the website, last time. However, I kept checking during class, and the receipt was activated at sharp 11:00 AM. The earliest available date was 19 October at the Mumbai Consulate, as I had expected. Chennai had an earlier date of 3 October available, but I dropped that thought. Better judgement prevailed, and I kept refreshing the page hoping for a miracle to happen. At 11:21 AM, I made my last refresh, and to my surprise, the website now showed the earliest available date as 27th September. Within what were an intense 15 seconds, I had managed to secure my second interview on the 27th of September. It was unbelievable, and I was happy beyond my wits.&lt;/p&gt;
+
+&lt;h2 id=&quot;turning-my-luck-upside-down&quot;&gt;Turning my luck upside down&lt;/h2&gt;
+
+&lt;p&gt;Fast forward to 27th September. Again, I saw rejections all over the place and people returning with their passports. I saw three applicants have their Visa denied by the very same officer who had denied my Visa last time. I kept my head clear, and I approached the counter.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Me:&lt;/strong&gt; Good morning ma’am. &lt;br /&gt;
+&lt;strong&gt;Officer:&lt;/strong&gt; Good morning. May I have your passport? &lt;br /&gt;
+&lt;em&gt;(I pass my passport along with the 4 most essential supporting documents)&lt;/em&gt; &lt;br /&gt;
+&lt;strong&gt;O:&lt;/strong&gt; Why would you be travelling? &lt;br /&gt;
+&lt;strong&gt;M:&lt;/strong&gt; I am invited to attend a conference. The conference is called the Google Summer of Code Mentor Summit. It’s a conference where mentors from different open source organisations come together to discuss how the Google Summer of Code program can be made better and how the open source community can improve as a whole.&lt;br /&gt;
+&lt;strong&gt;O:&lt;/strong&gt; I’m sorry, can you explain what the conference is about again? &lt;br /&gt;
+&lt;strong&gt;M:&lt;/strong&gt; Alright, so Google has a program called the Google Summer of Code wherein students participate by contributing to open source   organisations. I am a student myself, and I participated in the summer of 2017 by contributing to an organisation called MovingBlocks. In 2018, I became a mentor. Each organisation is supposed to send two representatives to the Mentor Summit, to come together and discuss how the program can be improved. I would be representing MovingBlocks this time.&lt;br /&gt;
+&lt;em&gt;(Looks at the screen, types a little)&lt;/em&gt;&lt;br /&gt;
+&lt;strong&gt;O:&lt;/strong&gt; Who would be paying for your trip? &lt;br /&gt;
+&lt;strong&gt;M:&lt;/strong&gt; My expenses would be covered directly by my organisation. Google, in turn, would fund each organisation by paying 1100$ for each   representative and also arranging for a hotel during the period of the conference.&lt;br /&gt;
+&lt;em&gt;(She scrolls through the documents I forwarded)&lt;/em&gt;&lt;br /&gt;
+&lt;strong&gt;O:&lt;/strong&gt; I see you have travelled to Japan recently. What was that for? &lt;br /&gt;
+&lt;strong&gt;M:&lt;/strong&gt; I was doing an internship in Japan in the past summer. &lt;em&gt;//Explain a little more&lt;/em&gt; &lt;br /&gt;
+&lt;strong&gt;O:&lt;/strong&gt; Is there any other country you have travelled to? &lt;br /&gt;
+&lt;strong&gt;M:&lt;/strong&gt; Yes, &lt;em&gt;// Explain&lt;/em&gt;&lt;br /&gt;
+&lt;em&gt;(She starts typing and continues for a long time)&lt;/em&gt;&lt;br /&gt;
+&lt;em&gt;(I see her look up at the clock and press key combinations this time, she then keeps my passport on the side.)&lt;/em&gt;&lt;br /&gt;
+&lt;strong&gt;O:&lt;/strong&gt; Your Visa application has been approved. Have a nice trip. &lt;br /&gt;
+&lt;strong&gt;M:&lt;/strong&gt; Thank you so much.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;I come to realise that I’ve pulled it off. The gamble had paid off perfectly well, and all plans were back on track.&lt;/p&gt;
+
+&lt;h3 id=&quot;tips&quot;&gt;Tips:&lt;/h3&gt;
+
+&lt;p&gt;The following are a few tips from my personal experience. I do not claim that these would generalize across different consulates and the following should not be considered in any way as formal/legal advice.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Be confident. If you deserve the Visa, act like you already have it.&lt;/li&gt;
+  &lt;li&gt;Always explain in great depth. Give no excuse to the officer to think that you’re making things up. If the officer enjoys brevity, they will ask you to stop or shoot another question.&lt;/li&gt;
+  &lt;li&gt;Push your papers forward initially. If they are returned, make further attempts to show them relevant papers whenever a document supports something you’re saying. Remember, the burden of proof is on the applicant.&lt;/li&gt;
+  &lt;li&gt;Hope for the best, expect the worst. In my opinion, the process is semi-arbitrary, and you may be unlucky to have a short interview or a grumpy interviewer. Be prepared for this and leave no effort in making sure you deliver all the information you can.&lt;/li&gt;
+  &lt;li&gt;A denial is only temporary, and it can be turned easily if you have all the right reasons. Advice on forums echoed with- “Don’t apply immediately after a rejection. Wait till your circumstances change”. While this may be true, if you feel there was no real reason for your application to be rejected, applying again immediately may work in your favour. Here is a timeline of how I flipped my rejection in 4 days.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;24th September - (VI appointment) Interview. Visa Denied&lt;/em&gt;&lt;/strong&gt;&lt;br /&gt;
+&lt;strong&gt;&lt;em&gt;25th September - Paid for next appointment.&lt;/em&gt;&lt;/strong&gt;&lt;br /&gt;
+&lt;strong&gt;&lt;em&gt;26th September - (VAC appointment) Biometrics&lt;/em&gt;&lt;/strong&gt; &lt;br /&gt;
+&lt;strong&gt;&lt;em&gt;27th September - (VI appointment) Interview. Visa approved.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;I’m delighted that my gamble worked out well and excited more than ever to fly to California.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 27 Sep 2018 00:00:00 +0400</pubDate>
+        <link>http://localhost:4000/2018/09/27/us-visa-b1.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/09/27/us-visa-b1.html</guid>
+        
+        <category>Visa</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Internship at Mercari</title>
+        <description>&lt;p&gt;I’m back in Mumbai as I write this recap blog post describing my summer spent in the heart of Tokyo, during my internship at Mercari. This blog post is going to be specific to my internship. I’ve written about my travelling experiences in a &lt;a href=&quot;https://nihal111.github.io/2018/07/09/japan-lookback.html&quot;&gt;different post&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;about-mercari&quot;&gt;About Mercari&lt;/h2&gt;
+
+&lt;p&gt;Mercari is a CtoC marketplace startup that was founded in 2013. Their main product is the Mercari CtoC marketplace app. In just 5 years, the company has skyrocketed to become Japan’s largest community-driven marketplace. The company also gained the pre-IPO unicorn status, being a privately held company valued over $1 billion. This was before the company went public this June on the Toyko Stock Exchange’s Mothers Market, during my stay there.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-office&quot;&gt;The Office&lt;/h2&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/mercari/officeview.jpg&quot; alt=&quot;Office View&quot; title=&quot;Office View&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The Mercari office is located on the 18th floor of Mori Tower, the 6th tallest building in Tokyo. The view from the office is fantastic and the breeze on the top, at the observation deck is better. There is a giant spider outside the office, that should remind you of &lt;a href=&quot;http://silverscreensnobs.com/spiders-doppelgangers-secrets-enemy-expained/&quot;&gt;Enemy&lt;/a&gt; if you’re into sci-fi.&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/mercari/moritower.jpg&quot; alt=&quot;Mori Tower&quot; title=&quot;Mori Tower&quot; style=&quot;max-height: 500px;&quot; /&gt;
+&lt;img src=&quot;/img/mercari/spider.jpg&quot; alt=&quot;spider&quot; title=&quot;Spider&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;the-honeymoon-phase&quot;&gt;The Honeymoon Phase&lt;/h2&gt;
+&lt;p&gt;The first week was nothing short of overwhelming. Even for the honeymoon phase, things seemed too good to be true. The onboarding and orientation were smooth, and we were given our gear. We got company phones, portable wifi and the $2000 MacBook Pro amongst other goodies.&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/mercari/gear.jpg&quot; alt=&quot;Gear&quot; title=&quot;Gear&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We were assigned to our teams but were supposed to go through a week of orientation before beginning any work. The Global Operations Team took special effort to make us feel at home. They organised the multiple onboarding sessions and even took us out for a complete Tokyo tour on a weekday.&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/mercari/tokyotour.jpg&quot; alt=&quot;Tokyo Tour&quot; title=&quot;Tokyo Tour&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;By week two, we were on our desks at our respective teams with the welcome balloons we received.&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/mercari/balloons.jpg&quot; alt=&quot;Balloons&quot; title=&quot;Balloons&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;the-android-team&quot;&gt;The Android Team&lt;/h2&gt;
+&lt;p&gt;I had the pleasure to work with the JP Android Team, the team working on the main marketplace app- &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.kouzoh.mercari&quot;&gt;Mercari&lt;/a&gt; for Japan. It was a medium sized team with just over 10 people. The bulk of my task for the summer was to implement client facing feature on the Android app. I also worked on a few isolated issues all over the codebase and took the initiative to improve the code quality in the codebase which was very well received by the team.&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/mercari/androidteam.jpg&quot; alt=&quot;Android Team&quot; title=&quot;Android Team&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;My team was largely global, consisting of a large number of Gaijins (Japanese for foreigners). I benefited hugely from this and learned how to work in a multi-cultural team. I learned the flow for how a spec moves to feature that gets shipped and how each detail in the middle matters.&lt;/p&gt;
+
+&lt;p&gt;On the technical side, for the first time I &lt;strong&gt;implemented a software architecture&lt;/strong&gt;, &lt;strong&gt;wrote Kotlin code&lt;/strong&gt;, &lt;strong&gt;wrote Unit tests using Mockito and Robolectric&lt;/strong&gt; and &lt;strong&gt;created an automation task using CI&lt;/strong&gt;. I’m glad to have been able to achieve this in a small period of just over a month.&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/mercari/desk.jpg&quot; alt=&quot;Desk&quot; title=&quot;Desk&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;My team was great in many ways, apart from the mentor lunches that all of us interns were entitled to, the Android team had a weekly team lunch. My team even put together a special farewell dinner for me, after which we ended up going to Karaoke. There was also this beautiful parting gift I received from my team-&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/mercari/rum.jpg&quot; alt=&quot;rum&quot; title=&quot;rum&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;experience&quot;&gt;Experience&lt;/h2&gt;
+
+&lt;p&gt;All in all, the whole experience over the course of my internship was more than I could have asked for. Mercari was great to me, and it was a crazy time to be there. Amidst the whole IPO frenzy and the company celebrating its 5th anniversary, I was lucky to go to all the parties.&lt;/p&gt;
+
+&lt;p&gt;I learned how to work efficiently in a team, picked up on a few technical things, got to meet a whole bunch of great people, got exposed to a whole new culture and travelled as much as I could (more about that &lt;a href=&quot;https://nihal111.github.io/2018/07/09/japan-lookback.html&quot;&gt;here&lt;/a&gt;).&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Summer of ‘18 was one of the best summers I’ve had so far. Being home feels warm but itchy.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 09 Jul 2018 00:00:00 +0400</pubDate>
+        <link>http://localhost:4000/2018/07/09/mercari-internship.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/07/09/mercari-internship.html</guid>
+        
+        <category>Japan</category>
+        
+        <category>Mercari</category>
+        
+        <category>internship</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Adventures in Japan</title>
+        <description>&lt;p&gt;My time in Japan comes to a close as I enter the last week of my stay here. The experience so far has been nothing short of crazy.&lt;/p&gt;
+
+&lt;p&gt;I was fortunate to spend the summer of ‘18 in Tokyo doing my internship at Mercari, an e-commerce unicorn. I spent most of my working days writing Android code for the main Japanese marketplace app-&lt;a href=&quot;https://play.google.com/store/apps/details?id=com.kouzoh.mercari&quot;&gt;Mercari&lt;/a&gt;. My weekends were well spent touring around Japan. This is an attempt to lookback and document some of my adventures in Japan. Most of the following adventures were made with a varying subset of the 8 co-interns I was lucky to be in company of.&lt;/p&gt;
+
+&lt;h3 id=&quot;week-1-tokyo-disney-sea&quot;&gt;Week 1: Tokyo Disney Sea&lt;/h3&gt;
+&lt;p&gt;We were planning to get the 2 day Disney Land + Disney Sea pass, but better judgement prevailed and we went ahead with only getting the Disney Sea tickets.&lt;br /&gt;
+This was my first Disney experience and it was the best theme park experience I had so far. The landscapes were beyond amazing. Being a weekend, it was super crowded. But with our strong fast pass game, we managed to ride through to most of the attractions with great efficiency. The evening fireworks show- Fantasmic was true to its name. I walked over 15k steps that day and returned home with tired legs.&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/tokyo/disneysea.jpg&quot; alt=&quot;Lounge&quot; title=&quot;DisneySea&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;week-2-akihbara--the-electric-town&quot;&gt;Week 2: Akihbara- the electric town&lt;/h3&gt;
+&lt;p&gt;With our first attempt at making a booking for FujiQ online having failed, we were left with an empty weekend. I decided to make the most of it by going shopping.&lt;br /&gt;
+I went to Akihabara, the electric town of Japan, filled with electronic stores of all sizes and interspersed with Anime cafes and Manga stores of all sorts. I explored the world’s largest electronics store- the Yodobashi Camera. I bought a few things from BIC Camera and also a lot of handy items from small stores around. I went to Gachapon store and got a few capsule toys. I roamed around and went to a few other interesting stores as well…&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/tokyo/akihabara.jpg&quot; alt=&quot;Lounge&quot; title=&quot;Akihabara&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;week-3-exploring-kyoto&quot;&gt;Week 3: Exploring Kyoto&lt;/h3&gt;
+&lt;p&gt;How can you come to Japan and not go to the ancient capital to witness true Japanese tradition?&lt;br /&gt;
+We took the Shinkansen to Kyoto on our third weekend. We left early Saturday morning and reached there by 10 AM. We had planned an efficient route that would get us to a lot of good spots without having to travel a lot. We started off with &lt;strong&gt;Nijo Castle&lt;/strong&gt;, which was home to the shoguns from the Edo period. Next up, we went to the &lt;strong&gt;Imperial Palace&lt;/strong&gt; and then to &lt;strong&gt;Kinkakuji&lt;/strong&gt;, the golden shrine. We paused for lunch and then continued to &lt;strong&gt;Ryōan-ji&lt;/strong&gt;, a Zen temple with a rock garden. We then headed to the &lt;strong&gt;Fushimi-inari&lt;/strong&gt; shrine. The climb to the top was tiring, but the view from the top was spectacular. After sundown, we made our way to the Ryokan we had booked for the night. It was a small place, but we had a fun night sleeping in traditional Japanese rooms. The next day, we went to the &lt;strong&gt;Arashiyama&lt;/strong&gt; bamboo forest and enjoyed boating in the Hozugawa river. Later, we went to the Arashiyama monkey park to watch some macaque from real close. We returned in time to catch one of the last Shinkansen back to Tokyo.&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/tokyo/kyoto.jpg&quot; alt=&quot;Lounge&quot; title=&quot;Kyoto&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;week-4-fujiq-roller-coaster-madness&quot;&gt;Week 4: FujiQ, roller coaster madness&lt;/h3&gt;
+&lt;p&gt;We really got lucky with this one. With most weekends having heavy rainfall forecast, we had almost given up on our roller coaster hopes. Until one Saturday we made an instant plan and went ahead since the next day showed very little rainfall.&lt;br /&gt;
+We took the Q-Pack which includes the to and fro ride from Shinjuku and the day pass to the park. To make the most out of our lucky chance, we further bought express passes to three of the crowded roller coasters. There are a total of four popular roller coasters- Fujiyama, Eejanaika, Takabisha and Do-Dodonpa. Fujiyama surprisingly had smaller queues and we ended up going for Fujiyama twice despite not having a fast pass for it. With the express passes, we were able to get done with the popular rides in less time and had enough time on our hands to try out most of the other attractions as well. Overall, I enjoyed a lot. Some of the roller coasters are world record holders and it was a completely thrilling experience to ride them.&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/tokyo/fujiq.jpg&quot; alt=&quot;Lounge&quot; title=&quot;FujiQ&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;week-5-oshima--an-island-escapade&quot;&gt;Week 5: Oshima- an island escapade&lt;/h3&gt;
+&lt;p&gt;This was definitely one of the best weekends spent in Japan. Izu Oshima is the largest of the Izu islands that fall under the administeration of Tokyo. It has a population of around 2500 people but for long stretches, we barely saw any people when we went cycling around the island.&lt;br /&gt;
+We took the overnight ferry from Tokyo to Oshima, that docked at early Saturday morning. We quickly went ahead and rented out cycles to begin our expedition. The island’s perimeter has a nice circuit made for cycling. Cycling along the oceanline with a constant ocean breeze and through the mountains was definitely my best cycling experience so far. We cycled for a good 30+ km and headed back to our hotel. It was a small nice place called the Book Tea Bed. We went to the Hama-no-yu onsen next to have a hot water bath to relax our tired muscles whilst watching the sun set on the horizon as we sat at the edge of the island surrounded by the ocean. What followed was a good night’s sleep and another cycle journey to head to the Okata port where we went snorkeling. Snorkeling was fun and we saw a lot of fish. Bringing a GoPro to record the underwater sights and the cycle journeys was one of my better decisions. We had to rush back to Motomachi port for our ship back to Tokyo. The ship had some of the coolest vending machines, ones with built in microwave for warm food and hot water dispensers for cup noodles.&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/tokyo/oshima.jpg&quot; alt=&quot;Lounge&quot; title=&quot;Oshima&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;week-6-conquering-mt-fuji&quot;&gt;Week 6: Conquering Mt. Fuji&lt;/h3&gt;
+&lt;p&gt;This was probably the stupidest, albeit the most adventurous thing I did in Japan. The proper and recommended way to climb Mt. Fuji and witness the literally ‘breath-taking’ sunrise involves making a climb during day, and resting in a hut for the night, waking up energized and making to the top just in time for the sunrise. We weren’t able to book a hut, thanks to our last moment planning and we decided to do it the hard way- rush to the top, see the sunrise and come back.&lt;br /&gt;
+We made it to the 5th station at around 16:00 and started the climb at 19:30. The Yoshida trail is the easiest way to the top and that’s the one we took. With frequent stops, we took it slow and made it to the top at 04:00 just in time to see the sunrise. The view was nothing short of spectacular, but it was freezing cold at the summit. The temperature touched zero degree Celcius and there were super strong chilly winds blowing. Altitude sickness and asphixiation had started taking a toll on me. It was a super cloudy day and the crater was completely shielded with fog. The sun was hidden behind the clouds intermittently too. Somehow, I survived and started descending. The descent was torturous with steep curved paths that have slippery gravel for extremely long stretches. With an extreme body ache and a severe headache, I took the bus to take me home.&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/tokyo/mtfuji.jpg&quot; alt=&quot;Lounge&quot; title=&quot;Mt. Fuji&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;There were a few mini adventures on weekdays, but the bulk of my expeditions in Japan have been recorded above. Woo!&lt;/p&gt;
+</description>
+        <pubDate>Mon, 09 Jul 2018 00:00:00 +0400</pubDate>
+        <link>http://localhost:4000/2018/07/09/japan-lookback.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/07/09/japan-lookback.html</guid>
+        
+        <category>Japan</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>I just flew to Japan</title>
+        <description>&lt;p&gt;Wifi or SkyTV, I needed at least one. The UEFA Champions League Final was on at night, and I was flying the ANA to Tokyo.&lt;/p&gt;
+
+&lt;p&gt;I was travelling from Mumbai to Tokyo for my summer internship at Mercari. I left for the airport at 4 PM. My plane was to depart at 8:15 PM. The traffic was unusually high for a non-working Saturday afternoon; I ended up reaching the airport at 5:45 PM. The airport stuff didn’t take long, and I was near the boarding gates by 6:30. I decided to wait in the lounge. &lt;strong&gt;PROTIP&lt;/strong&gt;: always try to carry a &lt;a href=&quot;https://www1.mastercard.com/content/mc/campaign-exchange/moments/india/en/local-campaigns/exclusive-airport-lounge-access.html&quot;&gt;MasterCard&lt;/a&gt; to the lounge, you get free food and drinks.&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/lounge.jpg&quot; alt=&quot;Lounge&quot; title=&quot;Lounge&quot; style=&quot;max-height: 250px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As soon as I boarded the flight, I checked the entertainment system. SkyTV was disabled. I accepted my fate of missing the finals and decided to watch a movie- The Butterfly Effect. My flight’s departure got delayed by an hour. After the flight took off, I realised that SkyTV started working. With my plans of sleeping destroyed, I braced myself for the match. The match was disappointing (save for Bale’s bicycle), thanks to Sergio Ramos’ &lt;a href=&quot;https://www.youtube.com/watch?v=UxCcZe_q1iI&quot;&gt;love for clean play&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Barely able to sleep at night, I arrived in Japan with numb legs. I found Emily-san from Fourth Valley Concierge waiting to pick me up. The other interns had already reached. We took a bus to the Ginza station and then a train to the Tameikei Sanno station. Our apartment was located somewhere in Roppongi. We picked up the keys to our apartments and went in to freshen up. Seeing the apartment for the first time was a delight, and I really couldn’t wish for better.&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/homeJapan.jpeg&quot; alt=&quot;Home&quot; title=&quot;Home&quot; style=&quot;max-height: 300px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Emily-san and Tanaka-san took us out for lunch and showed us around. I started falling in love with Tokyo. I spent most of the afternoon unpacking and getting used to my new home. I had a hard time trying to figure out a few things since almost everything was documented in Japanese, from the toilet seat temperature controls to the TV remote. The waste segregation was pretty complicated too, and I pushed it off for later.&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/viewJapan.jpeg&quot; alt=&quot;View&quot; title=&quot;View&quot; style=&quot;max-height: 400px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I called over Prateek in the evening, who lives only an hour away. He was doing his research internship at the University of Tokyo. We went out and explored the locality, hopped across a few convenience stores and got a few ready to cook items for dinner.&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/dinnerJapan.jpeg&quot; alt=&quot;dinnerJapan&quot; title=&quot;Dinner&quot; style=&quot;max-height: 250px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I retired to bed early, super excited for my first day at work.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 28 May 2018 00:00:00 +0400</pubDate>
+        <link>http://localhost:4000/2018/05/28/flew-to-japan.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/05/28/flew-to-japan.html</guid>
+        
+        <category>Japan</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Flying a DJI Mavic</title>
+        <description>&lt;p&gt;On yet another Summer weekend, I drove to the NRI Complex in Seawoods. It was a sunny day, and we were to fly a drone that evening.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-lake&quot;&gt;The Lake&lt;/h3&gt;
+
+&lt;p&gt;Just adjacent to the NRI Estate is a lake where a raft of flamingoes with almost a dozen other species visit during the summer. During the season, the lake also becomes a hive for photographers from all over Navi Mumbai. 
+During winter, this lake also becomes home to thousands of migratory aquatic birds including ducks, herons, and kingfishers. There’s also an interesting &lt;a href=&quot;https://www.thebetterindia.com/120843/shruti-agarwal-sunil-agarwal-seawoods-lake-mumbai/&quot;&gt;story&lt;/a&gt; behind the lake’s preservation and it’s battle against being converted to a golf course.&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/lake.jpg&quot; alt=&quot;Lake&quot; title=&quot;Lake&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;the-drone&quot;&gt;The Drone&lt;/h3&gt;
+
+&lt;p&gt;The drone belonged to Vaibhav. It was a DJI Mavic, the one listed &lt;a href=&quot;https://www.dji.com/mavic&quot;&gt;here&lt;/a&gt;. A small transmitter hooks on to a phone, and the drone relays a clear view to the phone’s screen, saving higher quality footage to the SD card. There were four of us flying that evening, each reluctantly passing on the transmitter to the other.&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/drone1.jpg&quot; alt=&quot;drone1&quot; title=&quot;drone1&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The drone is pretty smart and packed with features including collision avoidance, wind monitoring, constant battery monitoring for safe return and a fantastic return-to-home option that brings the drone back to the take-off point with centimeter accuracy.&lt;/p&gt;
+
+&lt;p&gt;The software side from DJI is pretty amazing too. In addition to providing the above-listed features in a clean interface, it does a great job at pre-processing too- threading together an entire video from the shots taken during flight and overlaying music with one button tap. The videos attached below are created automagically by the DJI app.&lt;/p&gt;
+
+&lt;div class=&quot;videowrapper&quot;&gt;
+    &lt;iframe width=&quot;1024&quot; height=&quot;768&quot; src=&quot;https://www.youtube.com/embed/_7gnN7xBIlM&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;After Saturday’s exciting flight session, Arpan and I couldn’t get enough and ended up exhorting Vaibhav for another flying session on Sunday.&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/drone2.jpg&quot; alt=&quot;drone2&quot; title=&quot;drone2&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This time we took off from Vaibhav’s roof (14 storeys high) getting an aerial perspective and a larger field of view to maneuver the drone. We flew past the lake again and also took cinematic landscape shots of the NRI colony.&lt;/p&gt;
+
+&lt;div class=&quot;videowrapper&quot;&gt;
+    &lt;iframe width=&quot;1024&quot; height=&quot;768&quot; src=&quot;https://www.youtube.com/embed/iOXtOOut9f4&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Overall, it was a weekend well spent. Also, this happens to be my last weekend here in Mumbai as I fly to Tokyo this Saturday for my internship.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 20 May 2018 00:00:00 +0400</pubDate>
+        <link>http://localhost:4000/2018/05/20/flying-dji-mavic.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/05/20/flying-dji-mavic.html</guid>
+        
+        <category>drone</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Voice Conversion- Machine Learning Project</title>
+        <description>&lt;p&gt;As the course project for CS 419 - Introducing to Machine Learning, Spring 2018, I teamed up with Arpan Banerjee and Srivatsan Sridhar to work on the task of Voice Conversion.&lt;/p&gt;
+
+&lt;p&gt;We built a pipelined approach to convert one person’s voice into another person’s voice. We proposed a deep learning approach to convert source waveform to phonemes and further phonemes to target waveform. This approach consisted of two neural networks.
+The first network was used to convert the source speaker’s waveforms to phonemes.&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/voice-conversion/net1.png&quot; alt=&quot;Net1&quot; title=&quot;Net1&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;While the second network involved converting the obtained phonemes to the target speaker’s waveforms.&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/voice-conversion/net2.png&quot; alt=&quot;Net2&quot; title=&quot;Net2&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We used the TIMIT (different sources) and CMU ARCTIC (single target) corpus respectively for training our network. As part of our project, we performed extensive experimentation with bi-directional Recurrent Neural Networks using LSTM and GRU cells.&lt;/p&gt;
+
+&lt;p&gt;We’ve used the multitask approach to train the network as per both the mel spectral coefficients (as an intermediate representation) and magnitude spectrum which forms the final output while using a pyramidal network architecture.&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/voice-conversion/multitask.png&quot; alt=&quot;multitask&quot; title=&quot;multitask&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Our experiments and approaches are detailed here- &lt;a href=&quot;/docs/voice_conversion_report.pdf&quot;&gt;Report&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 30 Apr 2018 00:00:00 +0400</pubDate>
+        <link>http://localhost:4000/2018/04/30/voice-conversion.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/04/30/voice-conversion.html</guid>
+        
+        <category>Machine Learning</category>
+        
+        <category>Reinforcement Learning</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Update time on Windows with IIT Bombay NTP server</title>
+        <description>&lt;p&gt;&lt;em&gt;The following blog post discusses two solutions to updating time through an external/local NTP server on a Windows machine.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;problem&quot;&gt;Problem&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Windows would not update time using the standard NTP servers since they are blocked on the network.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The system time often gets messed up when &lt;strong&gt;switching between different operating systems on a multi-boot machine&lt;/strong&gt; (solution to this specific problem in &lt;a href=&quot;#appendix&quot;&gt;appendix&lt;/a&gt;). This problem arises when you are on a network (like the IIT Bombay network) that blocks outside NTP servers. IIT Bombay has its own NTP server- ntp.iitb.ac.in. All other standard NTP servers (like time.windows.com, time.nist.gov, pool.ntp.org) are blocked.&lt;/p&gt;
+
+&lt;p&gt;This problem can be &lt;a href=&quot;https://askubuntu.com/questions/14558/how-do-i-setup-a-local-ntp-server&quot;&gt;easily solved&lt;/a&gt; on linux machines by simply adding the NTP server to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/etc/ntp.conf&lt;/code&gt;. However, in Windows, the control panel settings would not allow you to add an external NTP server (in our case ntp.iitb.ac.in).&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/ntp_no_option.png&quot; alt=&quot;ntp_no_option&quot; title=&quot;No Option&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Trying to force an update through a pre-defined NTP server (like time.nist.gov) results in a time out, as shown-&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/ntp_timeout.png&quot; alt=&quot;ntp_timeout&quot; title=&quot;Timeout&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;checking-if-an-ntp-server-is-accessible-&quot;&gt;Checking if an NTP server is accessible-&lt;/h3&gt;
+&lt;p&gt;On windows you can check if an NTP server is accessible by running the following command in command prompt-&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;w32tm /stripchart /computer:ntp.iitb.ac.in /dataonly /samples:3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;(Replace ntp.iitb.ac.in with your NTP server address)&lt;/p&gt;
+
+&lt;p&gt;This command is analogous to running &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ntpdate -q ntp.iitb.ac.in&lt;/code&gt; on a linux machine.&lt;/p&gt;
+
+&lt;p&gt;Testing the above command on IIT-B network, reveals this-&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/cmd_check_ntp_server.png&quot; alt=&quot;cmd_check_ntp_server&quot; title=&quot;cmd check ntp server&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;time.nist.gov is inaccessible while ntp.iitb.ac.in is accessible.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;solution-1-python-script-with-windows-task-scheduler&quot;&gt;Solution 1: Python Script with Windows Task Scheduler&lt;/h1&gt;
+
+&lt;h3 id=&quot;description&quot;&gt;Description:&lt;/h3&gt;
+&lt;p&gt;Make a list of NTP servers, and send a request to each until a response is received. Use socket to send a request to the NTP server on port 123. (Reference: &lt;a href=&quot;http://code.activestate.com/recipes/117211-simple-very-sntp-client/&quot;&gt;Simon Foster’s recipe&lt;/a&gt;). Use win32api to update system time.&lt;/p&gt;
+
+&lt;h3 id=&quot;step-1-install-dependencies&quot;&gt;Step 1: Install Dependencies&lt;/h3&gt;
+&lt;p&gt;All dependencies are standard libraries apart from win32api (a.k.a. pywin32).&lt;/p&gt;
+
+&lt;p&gt;Install &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pywin32&lt;/code&gt; from &lt;a href=&quot;https://sourceforge.net/projects/pywin32/&quot;&gt;here&lt;/a&gt; or simply do a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip install pywin32&lt;/code&gt;.&lt;br /&gt;
+To install pip for Windows, refer &lt;a href=&quot;https://stackoverflow.com/questions/4750806/how-do-i-install-pip-on-windows&quot;&gt;this&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;step-2-download-the-script&quot;&gt;Step 2: Download the script&lt;/h3&gt;
+&lt;p&gt;The script can be found in &lt;a href=&quot;https://gist.github.com/nihal111/23faa51c3f88a281b676dcbac77ce015&quot;&gt;this gist&lt;/a&gt;.&lt;br /&gt;
+Find Raw file &lt;a href=&quot;https://gist.githubusercontent.com/nihal111/23faa51c3f88a281b676dcbac77ce015/raw/fc1e5009837ab7920cd34acc8113c2451618e6f5/ntp_update_time.py&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This script is tested with Python 2 and 3.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;socket&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;struct&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sys&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;time&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;datetime&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;win32api&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# List of servers in order of attempt of fetching
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;server_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'ntp.iitb.ac.in'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'time.nist.gov'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'time.windows.com'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'pool.ntp.org'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;s&quot;&gt;'''
+Returns the epoch time fetched from the NTP server passed as argument.
+Returns none if the request is timed out (5 seconds).
+'''&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;gettime_ntp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;addr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'time.nist.gov'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# http://code.activestate.com/recipes/117211-simple-very-sntp-client/
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;TIME1970&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2208988800&lt;/span&gt;      &lt;span class=&quot;c1&quot;&gt;# Thanks to F.Lundh
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;client&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;socket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;socket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;socket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;AF_INET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;socket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SOCK_DGRAM&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x1b&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;47&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\0&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;# Timing out the connection after 5 seconds, if no response received
+&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;client&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;settimeout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;5.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;client&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sendto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;addr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;123&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;address&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;client&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;recvfrom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1024&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;epoch_time&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;struct&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;unpack&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'!12I'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;epoch_time&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TIME1970&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;epoch_time&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;except&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;socket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;timeout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;__main__&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# Iterates over every server in the list until it finds time from any one.
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;server&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;server_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;epoch_time&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gettime_ntp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;server&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;epoch_time&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;# SetSystemTime takes time as argument in UTC time. UTC time is obtained using utcfromtimestamp()
+&lt;/span&gt;            &lt;span class=&quot;n&quot;&gt;utcTime&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;datetime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;datetime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;utcfromtimestamp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;epoch_time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;win32api&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SetSystemTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;utcTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;utcTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;month&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;utcTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;weekday&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;utcTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;day&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;utcTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hour&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;utcTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;minute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;utcTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;second&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;# Local time is obtained using fromtimestamp()
+&lt;/span&gt;            &lt;span class=&quot;n&quot;&gt;localTime&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;datetime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;datetime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fromtimestamp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;epoch_time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Time updated to: &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;localTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strftime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%Y-%m-%d %H:%M&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; from &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;server&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Could not find time from &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;server&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Download the file and save it at a location you’ll remember.
+For the purpose of this demonstration, I’ll be saving it inside- &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C:\Python27\ntp_update_time.py&lt;/code&gt; with my Python installation directory as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C:\Python27&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;step-3-test-the-script&quot;&gt;Step 3: Test the script&lt;/h3&gt;
+&lt;p&gt;Open Command Prompt with admin privileges- Hit key combo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Windows&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;X&lt;/code&gt;, and click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Command Prompt (Admin)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Type:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd C:\Python27
+python ntp_update_time.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If you were on IIT-B network and everything worked well, it should say- &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Time updated to: 2018-03-30 19:04 from ntp.iitb.ac.in&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;step-4-schedule-a-task&quot;&gt;Step 4: Schedule a Task&lt;/h3&gt;
+&lt;p&gt;Similar to a cronjob in Unix, you can create a task to run periodically using Windows Task Scheduler.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Search for “Task Scheduler” from the start menu and open it.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Create a basic task from the Actions menu at the right&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/ntp_ts_1.png&quot; alt=&quot;ntp_ts_1&quot; title=&quot;ntp_ts_1&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Under the General tab, give a name and description to the task. Check the “Run with highest privileges” checkbox.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/ntp_ts_2.png&quot; alt=&quot;ntp_ts_2&quot; title=&quot;ntp_ts_2&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Under the Triggers tab, click on New, and set “Begin the task:” to “On workstation unlock”. Leave everything as is, and hit Ok.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/ntp_ts_3.png&quot; alt=&quot;ntp_ts_3&quot; title=&quot;ntp_ts_3&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Under the Actions tab, set Program/Script to your python path (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C:\Python27\python.exe&lt;/code&gt;) and set “Add arguments (optional)” to the script path (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C:\Python27\ntp_update_time.py&lt;/code&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/ntp_ts_4.png&quot; alt=&quot;ntp_ts_4&quot; title=&quot;ntp_ts_4&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Under the Conditions tab, uncheck the checkbox under Power which says “Start the task only if the computer is on AC power”.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/ntp_ts_5.png&quot; alt=&quot;ntp_ts_5&quot; title=&quot;ntp_ts_5&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Hit Ok and save the Task. Return to the Task Scheduler window, double click on “Task Scheduler Library” on the left navigation drawer. Select the task you made from the list and click on it. Hit “Run” from the right hand actions menu. (Make sure to screw up your system time before running. If it gets fixed after you run the task, everything is set up to work.)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/ntp_ts_6.png&quot; alt=&quot;ntp_ts_6&quot; title=&quot;ntp_ts_6&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The task would be scheduled to run every time you unlock your machine. This makes sense since mostly the time gets messed up when switching between two different Operating Systems on a multi-boot machine.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;solution-2-use-windows-time-service-tools-to-query-local-ntp-server&quot;&gt;Solution 2: Use Windows Time Service tools to query local NTP server&lt;/h1&gt;
+
+&lt;p&gt;This solution uses the Windows Time Service tool to add an external/local NTP server.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Open Command Prompt with admin privileges- Hit key combo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Windows&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;X&lt;/code&gt;, and click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Command Prompt (Admin)&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Stop the time service- &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;net stop w32time&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Type in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;w32tm /config /syncfromflags:manual /manualpeerlist:&quot;ntp.iitb.ac.in,pool.ntp.org&quot;&lt;/code&gt; to manually set the list of external/local NTP servers.&lt;/li&gt;
+  &lt;li&gt;Force set the connection as reliable- &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;w32tm /config /reliable:yes&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Start the time service- &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;net start w32time&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Check if the configuration has been written successfully- &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;w32tm /query /configuration&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;w32tm /query /status&lt;/code&gt;. You should see “NtpServer: ntp.iitb.ac.in,pool.ntp.org (Local)”.&lt;/li&gt;
+  &lt;li&gt;Do a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;w32tm /resync&lt;/code&gt; to force an update. (Make sure your system time is messed up to see if it gets corrected).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;solution-3-no-ntp-server-reachable-update-using-https&quot;&gt;Solution 3: No NTP server reachable, update using HTTPS&lt;/h1&gt;
+&lt;p&gt;In case you are unable to reach any NTP server, you can use the following script to update the time by scraping duration since epoch time from www.unixtimestamp.com.&lt;/p&gt;
+
+&lt;p&gt;The script can be found in &lt;a href=&quot;https://gist.github.com/nihal111/7d95fa52fb91bf3298947cd36b700ce8&quot;&gt;this gist&lt;/a&gt;.&lt;br /&gt;
+Find Raw file &lt;a href=&quot;https://gist.githubusercontent.com/nihal111/7d95fa52fb91bf3298947cd36b700ce8/raw/b65d8c187329d85ac971efc23291c06eff4d433b/update_time.py&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;requests&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;datetime&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;win32api&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;page&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requests&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'https://www.unixtimestamp.com/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Cache-Control'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'no-cache'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;
+
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;match_text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&amp;lt;h3 class=&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;text-danger&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;gt;&quot;&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;suffix&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; &amp;lt;small&amp;gt;seconds since Jan 01 1970. (UTC)&amp;lt;/small&amp;gt;&amp;lt;/h3&amp;gt;&quot;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;match_text&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&amp;lt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;' '&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&amp;gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;' '&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;epoch_time&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isdigit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;utcTime&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;datetime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;datetime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;utcfromtimestamp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;epoch_time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+	&lt;span class=&quot;c1&quot;&gt;# SetSystemTime takes time as argument in UTC time
+&lt;/span&gt;	&lt;span class=&quot;n&quot;&gt;win32api&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SetSystemTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;utcTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;utcTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;month&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;utcTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;weekday&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;utcTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;day&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;utcTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hour&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;utcTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;minute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;utcTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;second&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;localTime&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;datetime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;datetime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fromtimestamp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;epoch_time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Time updated to: &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;localTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strftime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%Y-%m-%d %H:%M&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;except&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Could not update time&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Install requests- &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip install requests&lt;/code&gt;.
+To install pip for Windows, refer &lt;a href=&quot;https://stackoverflow.com/questions/4750806/how-do-i-install-pip-on-windows&quot;&gt;this&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Follow Step 3 and Step 4 from Solution 1, using the script above.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;appendix&quot;&gt;Appendix&lt;/h3&gt;
+
+&lt;p&gt;Specifically pertaining to the problem of the system time going haywire when dual booting across Windows and Linux, the &lt;a href=&quot;https://help.ubuntu.com/community/UbuntuTime#Multiple_Boot_Systems_Time_Conflicts&quot;&gt;Official Ubuntu documentation explains&lt;/a&gt; what causes this.&lt;/p&gt;
+
+&lt;p&gt;In essence, Linux/Unix systems store UTC as the time on the hardware clock and with good reason, since this saves unnecessary changes to the hardware clock when moving between timezones. On the other hand, Windows stores the local time as the time on the hardware clock. This ends up messing with the system time since both OS deal with the hardware clock differently.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://help.ubuntu.com/community/UbuntuTime#Multiple_Boot_Systems_Time_Conflicts&quot;&gt;Official Ubuntu Docs&lt;/a&gt; list down a step by step solution to avoid this from happening.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;That should save you from manually setting time again.&lt;/p&gt;
+
+&lt;p&gt;Till next ‘time’..&lt;br /&gt;
+Cheers!&lt;/p&gt;
+</description>
+        <pubDate>Fri, 30 Mar 2018 00:00:00 +0400</pubDate>
+        <link>http://localhost:4000/2018/03/30/ntp-update-time.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/03/30/ntp-update-time.html</guid>
+        
+        <category>python</category>
+        
+        <category>windows</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>CFS Visualizer- Operating Systems Project</title>
+        <description>&lt;p&gt;As the course project for CS 347 - Operating Systems, Fall 2017, I teamed up with Arpan Banerjee and Srivatsan Sridhar to work on building a visulizer for the Completely Fair Scheduler that’s widely present in all Linux systems as the default scheduler.&lt;/p&gt;
+
+&lt;p&gt;The visualizer is available at- &lt;a href=&quot;https://nihal111.github.io/CFS-visualizer/&quot;&gt;https://nihal111.github.io/CFS-visualizer/&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;schedulers&quot;&gt;Schedulers&lt;/h3&gt;
+
+&lt;p&gt;Linux is a multitasking operating system, and therefore, it has a scheduler to manage the processes. The Linux scheduler has evolved over time. With the Linux Kernerl 2.6, the O(1) scheduler came in. It relies on active and expired arrays of processes to achieve constant scheduling time. Each process is given a fixed time quantum, after which it is preempted and moved to the expired array. Once all the tasks from the active array have exhausted their time quantum and have been moved to the expired array, an array switch takes place. This switch makes the active array the new empty expired array, while the expired array becomes the active array. The main issue with this algorithm is the complex heuristics used to mark a task as interactive or non-interactive.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-completely-fair-scheduler&quot;&gt;The Completely Fair Scheduler&lt;/h3&gt;
+
+&lt;p&gt;The Completely Fair Scheduler is a process scheduler that handles CPU resource allocation for executing processes and aims to maximize overall CPU utilization while also maximizing interactive performance. This was merged into the 2.6.23 (October 2007) release of the Linux kernel and is the default scheduler.&lt;/p&gt;
+
+&lt;p&gt;By “Completely Fair”, the CFS Scheduler means to allocate the CPU resources equally and fairly among all the queued processes depending on their nice values.&lt;/p&gt;
+
+&lt;p&gt;The Completely Fair Scheduler uses a Red-Black tree to keep track of all the queued processes and handles switching with a nano second granularity. The fair queuing CFS scheduler has a scheduling complexity of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(log N)&lt;/code&gt;, where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;N&lt;/code&gt; is the number of tasks in the runqueue. Choosing a task can be done in constant time, but reinserting a task after it has run requires &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(log N)&lt;/code&gt; operations, because the runqueue is implemented as a red-black tree.
+The Visualizer&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://nihal111.github.io/CFS-visualizer/&quot;&gt;CFS visualizer&lt;/a&gt; allows one to look at the process queue and the populated dynamic red-black tree while the scheduler is in action. The time scale has been magnified so that one can slow down and visualize the scheduler with nano-second granularity work in real time.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 15 Nov 2017 00:00:00 +0400</pubDate>
+        <link>http://localhost:4000/2017/11/15/cfs-visualizer.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/11/15/cfs-visualizer.html</guid>
+        
+        <category>Machine Learning</category>
+        
+        <category>Reinforcement Learning</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>GSoC Wrap Up</title>
+        <description>&lt;style type=&quot;text/css&quot;&gt;
+.collapsiblecontainer {
+width:100%;
+border:1px solid #d3d3d3;
+}
+.collapsiblecontainer div {
+width:100%;
+}
+.collapsiblecontainer .collapsibleheader {
+background-color:#d3d3d3;
+padding: 2px;
+cursor: pointer;
+font-weight: bold;
+}
+.collapsiblecontainer .collapsiblecontent {
+display: none;
+padding : 5px;
+}
+&lt;/style&gt;
+
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/github-buttons.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+$(document)  .ready(function()  {
+$(&quot;.collapsibleheader&quot;)  .click(function ()   {
+$collapsibleheader = $(this)  ;
+//getting the next element
+$collapsiblecontent = $collapsibleheader.next()  ;
+//open up the collapsiblecontent needed - toggle the slide- if visible, slide up, if not slidedown.
+$collapsiblecontent.slideToggle(500, function ()   {
+//execute this after slideToggle is done
+//change text of collapsibleheader based on visibility of collapsiblecontent div
+$collapsibleheader.find(&quot;span:first-child&quot;)  .text(function ()   {
+//change text based on condition
+return $collapsiblecontent.is(&quot;:visible&quot;)   ? &quot;- &quot; : &quot;+ &quot;;
+})  ;
+})  ;
+
+})  ;
+})  ;
+
+&lt;/script&gt;
+
+&lt;p&gt;Finally it is time for wrapping up my GSoC project and along with it a highly eventful summer. It has been an amazing experience. I’ve learned a lot over the summer, spending countless days and nights in a row to add new things to this game. The community has been more than helpful. I couldn’t have asked for more.&lt;/p&gt;
+
+&lt;p&gt;This wrap up post links to all the work done over the summer. There have been a total of &lt;strong&gt;72 PRs&lt;/strong&gt; and quite a few independent commits in the new modules I’ve created. With over &lt;strong&gt;19,000 lines of code&lt;/strong&gt;, this summer has boosted my Github stats to a whole new level.&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/GSoCStreak.png&quot; alt=&quot;GSoCStreak&quot; title=&quot;GSoCStreak&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;final-product&quot;&gt;Final Product&lt;/h2&gt;
+&lt;p&gt;The final product out of my GSoC is a whole new gameplay setting in the world of Terasology. It is a single player gameplay mode called &lt;strong&gt;Lost&lt;/strong&gt;. You take up the role of a player that ends up stranded on a planet with no way left to get back home. Set on an expedition to find signs of life in neighbouring galaxies, you come across several intriguing things that confirm the existence of intelligent life outside your planet. &lt;em&gt;Are you truly lost? Will you ever return home?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/lostBackground.jpg&quot; alt=&quot;lostBackground&quot; title=&quot;Lost&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To test it out simply follow the below instructions-&lt;/p&gt;
+
+&lt;h4 id=&quot;instructions-to-run-lost&quot;&gt;Instructions to run Lost:&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Download &lt;a href=&quot;https://slack-files.com/T03G8SB1X-F6N474GS0-867f5f5289&quot;&gt;this&lt;/a&gt; Omega.&lt;/li&gt;
+  &lt;li&gt;Extract the Omega.&lt;/li&gt;
+  &lt;li&gt;Move the save folder called “Lost” inside &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;omega796/saves&lt;/code&gt; to the save directory-
+    &lt;ul&gt;
+      &lt;li&gt;in Windows, C:/Users/name/Saved Games/Terasology/&lt;/li&gt;
+      &lt;li&gt;in Linux, /home/name/.local/share/terasology/saves/&lt;br /&gt;
+&lt;strong&gt;&lt;em&gt;Alternatively&lt;/em&gt;&lt;/strong&gt;, you can run the game with the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-homedir&lt;/code&gt; flag.&lt;/li&gt;
+      &lt;li&gt;in Windows, run the game from cmd using a command like: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Terasology.x64.exe -homedir&lt;/code&gt;
+or add the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-homedir&lt;/code&gt; flag to the target field of the shortcut to the exe file.&lt;/li&gt;
+      &lt;li&gt;in Linux, modify the run_linux.sh script so that it has a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-homedir&lt;/code&gt; flag at the end, like so:
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;java -Xms128m -Xmx1536m -jar libs/Terasology.jar -homedir&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Launch the game using the script or the .exe file.&lt;/li&gt;
+  &lt;li&gt;Select Singleplayer -&amp;gt; Lost and load the saved game.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;list-of-new-modules-created-&quot;&gt;List of new modules created-&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Terasology/AdvancedBehaviors&quot;&gt;Terasology/AdvancedBehaviors&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Terasology/WorldlyTooltipAPI&quot;&gt;Terasology/WorldlyTooltipAPI&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Terasology/WoodAndStoneCraftingJournal&quot;&gt;Terasology/WoodAndStoneCraftingJournal&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Terasology/AdventureAssets&quot;&gt;Terasology/AdventureAssets&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Terasology/Lost&quot;&gt;Terasology/Lost&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/newModules.png&quot; alt=&quot;newModules&quot; title=&quot;newModules&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;list-of-repositories-contributed-to-&quot;&gt;List of repositories contributed to-&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/MovingBlocks/Terasology&quot;&gt;Engine- MovingBlocks/Terasology&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/engine.png&quot; alt=&quot;engine&quot; title=&quot;engine&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Terasology/WildAnimals&quot;&gt;Terasology/WildAnimals&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Terasology/StructureTemplates&quot;&gt;Terasology/StructureTemplates&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Terasology/Books&quot;&gt;Terasology/Books&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Terasology/WorldlyTooltip&quot;&gt;Terasology/WorldlyTooltip&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Terasology/Projectile&quot;&gt;Terasology/Projectile&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Terasology/Pathfinding&quot;&gt;Terasology/Pathfinding&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Terasology/Journal&quot;&gt;Terasology/Journal&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Terasology/Scenario&quot;&gt;Terasology/Scenario&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Terasology/Thirst&quot;&gt;Terasology/Thirst&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Terasology/Hunger&quot;&gt;Terasology/Hunger&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/oldModules.jpg&quot; alt=&quot;oldModules&quot; title=&quot;oldModules&quot; style=&quot;max-height: 700px;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;list-of-pull-requests-&quot;&gt;List of Pull Requests-&lt;/h3&gt;
+
+&lt;p&gt;Here is a &lt;a href=&quot;https://github.com/pulls?utf8=%E2%9C%93&amp;amp;q=is%3Apr+is%3Amerged+author%3Anihal111+created%3A2017-05-04..2017-08-15+&quot;&gt;list of pull requests&lt;/a&gt; from the start of GSoC up until now.&lt;/p&gt;
+
+&lt;div class=&quot;collapsiblecontainer&quot;&gt;
+&lt;div class=&quot;collapsibleheader&quot;&gt;&lt;span&gt;+ &lt;/span&gt;&lt;span&gt;Click here to view all PRs?&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;collapsiblecontent&quot;&gt;
+&lt;a href=&quot;https://github.com/MovingBlocks/Terasology/pull/3065&quot;&gt;&lt;strong&gt;MovingBlocks/Terasology&lt;/strong&gt; Added setSpawnLocation command&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdventureAssets/pull/20&quot;&gt;&lt;strong&gt;Terasology/AdventureAssets&lt;/strong&gt; Added MCQ Button Door&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/MovingBlocks/Terasology/pull/3061&quot;&gt;&lt;strong&gt;MovingBlocks/Terasology&lt;/strong&gt; Added removeAllWidgets method API UI&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/MovingBlocks/Terasology/pull/3033&quot;&gt;&lt;strong&gt;MovingBlocks/Terasology&lt;/strong&gt; Dead players alive-d on join&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/StructureTemplates/pull/20&quot;&gt;&lt;strong&gt;Terasology/StructureTemplates&lt;/strong&gt; Consumes AttackEvent for BlockRegions&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/MovingBlocks/Terasology/pull/3030&quot;&gt;&lt;strong&gt;MovingBlocks/Terasology&lt;/strong&gt; PlayerDeath event should be sent to character entity&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/Hunger/pull/12&quot;&gt;&lt;strong&gt;Terasology/Hunger&lt;/strong&gt; Fix for Hunger related Alive/Death handling&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/Thirst/pull/5&quot;&gt;&lt;strong&gt;Terasology/Thirst&lt;/strong&gt; Fix for Thirst related Alive/Death handling&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdventureAssets/pull/19&quot;&gt;&lt;strong&gt;Terasology/AdventureAssets&lt;/strong&gt; Added NoInteraction component&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/MovingBlocks/Terasology/pull/3024&quot;&gt;&lt;strong&gt;MovingBlocks/Terasology&lt;/strong&gt; Checking isHeadless from DisplayDevice&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/MovingBlocks/Terasology/pull/3020&quot;&gt;&lt;strong&gt;MovingBlocks/Terasology&lt;/strong&gt; Change ActivationPredicted to consumable event&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/StructureTemplates/pull/18&quot;&gt;&lt;strong&gt;Terasology/StructureTemplates&lt;/strong&gt; Consuming ActivationPredicted event&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/Scenario/pull/33&quot;&gt;&lt;strong&gt;Terasology/Scenario&lt;/strong&gt; Added Protected Regions and Resizing functionality&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/Projectile/pull/4&quot;&gt;&lt;strong&gt;Terasology/Projectile&lt;/strong&gt; MaxDistance check during displacement calculation&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdventureAssets/pull/18&quot;&gt;&lt;strong&gt;Terasology/AdventureAssets&lt;/strong&gt; Structure Template Integration fixes&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/Books/pull/15&quot;&gt;&lt;strong&gt;Terasology/Books&lt;/strong&gt; Multiplayer + newline fix&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdventureAssets/pull/17&quot;&gt;&lt;strong&gt;Terasology/AdventureAssets&lt;/strong&gt; Swinging Blade is multiplayer ready&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdventureAssets/pull/16&quot;&gt;&lt;strong&gt;Terasology/AdventureAssets&lt;/strong&gt; WipeOut is multiplayer ready&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdventureAssets/pull/15&quot;&gt;&lt;strong&gt;Terasology/AdventureAssets&lt;/strong&gt; Fixed Fireball Launcher for multiplayer&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdventureAssets/pull/14&quot;&gt;&lt;strong&gt;Terasology/AdventureAssets&lt;/strong&gt; Door works in multiplayer&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdventureAssets/pull/13&quot;&gt;&lt;strong&gt;Terasology/AdventureAssets&lt;/strong&gt; Password Door is now multiplayer ready&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/MovingBlocks/Terasology/pull/2994&quot;&gt;&lt;strong&gt;MovingBlocks/Terasology&lt;/strong&gt; Added door related events&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/MovingBlocks/Terasology/pull/2993&quot;&gt;&lt;strong&gt;MovingBlocks/Terasology&lt;/strong&gt; FloatingTextRenderer accepts multiple \n separated lines&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/MovingBlocks/Terasology/pull/2988&quot;&gt;&lt;strong&gt;MovingBlocks/Terasology&lt;/strong&gt; Multiline UIText, enter produces newline&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/MovingBlocks/Terasology/pull/2987&quot;&gt;&lt;strong&gt;MovingBlocks/Terasology&lt;/strong&gt; Store DoorRegion prefab as component parameter&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdventureAssets/pull/12&quot;&gt;&lt;strong&gt;Terasology/AdventureAssets&lt;/strong&gt; Added a UI Screen Password locked Door&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/MovingBlocks/Terasology/pull/2983&quot;&gt;&lt;strong&gt;MovingBlocks/Terasology&lt;/strong&gt; Separated spawnLocation calculation from respawnPlayer method&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdventureAssets/pull/11&quot;&gt;&lt;strong&gt;Terasology/AdventureAssets&lt;/strong&gt; Add the Revival Stone&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdventureAssets/pull/10&quot;&gt;&lt;strong&gt;Terasology/AdventureAssets&lt;/strong&gt; Moved duplicate methods to utility class&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdventureAssets/pull/9&quot;&gt;&lt;strong&gt;Terasology/AdventureAssets&lt;/strong&gt; Remember rotation after mining of trap blocks&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/Projectile/pull/3&quot;&gt;&lt;strong&gt;Terasology/Projectile&lt;/strong&gt; Revert to old constructor&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdventureAssets/pull/8&quot;&gt;&lt;strong&gt;Terasology/AdventureAssets&lt;/strong&gt; Added more parameters for Fireball with Structure Template integration&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/Projectile/pull/2&quot;&gt;&lt;strong&gt;Terasology/Projectile&lt;/strong&gt; Changed CollisionGroup filter to ALL&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/Projectile/pull/1&quot;&gt;&lt;strong&gt;Terasology/Projectile&lt;/strong&gt; Added new event constructor for configurable maxDistance&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/DamagingBlocks/pull/6&quot;&gt;&lt;strong&gt;Terasology/DamagingBlocks&lt;/strong&gt; Reverted the AliveCharacter check&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdventureAssets/pull/6&quot;&gt;&lt;strong&gt;Terasology/AdventureAssets&lt;/strong&gt; Added Fireball Launcher&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/MovingBlocks/Terasology/pull/2982&quot;&gt;&lt;strong&gt;MovingBlocks/Terasology&lt;/strong&gt; Prevents player entity from being destroyed after death onDamage&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/DamagingBlocks/pull/5&quot;&gt;&lt;strong&gt;Terasology/DamagingBlocks&lt;/strong&gt; Added Alive Character check&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdventureAssets/pull/5&quot;&gt;&lt;strong&gt;Terasology/AdventureAssets&lt;/strong&gt; Added Wipeout&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdventureAssets/pull/4&quot;&gt;&lt;strong&gt;Terasology/AdventureAssets&lt;/strong&gt; Changed trap placement approach to root block&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdventureAssets/pull/3&quot;&gt;&lt;strong&gt;Terasology/AdventureAssets&lt;/strong&gt; Changed trapPlaceholder block shape and fixed readme&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/StructureTemplates/pull/16&quot;&gt;&lt;strong&gt;Terasology/StructureTemplates&lt;/strong&gt; Moved rotation logic&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/MovingBlocks/Terasology/pull/2973&quot;&gt;&lt;strong&gt;MovingBlocks/Terasology&lt;/strong&gt; Fixes &lt;code class=&quot;highlighter-rouge&quot;&gt;dumpEntities&lt;/code&gt; console command&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdventureAssets/pull/2&quot;&gt;&lt;strong&gt;Terasology/AdventureAssets&lt;/strong&gt; Added SwingingBlade&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/StructureTemplates/pull/15&quot;&gt;&lt;strong&gt;Terasology/StructureTemplates&lt;/strong&gt; Added rotation logic for spawning entities&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdventureAssets/pull/1&quot;&gt;&lt;strong&gt;Terasology/AdventureAssets&lt;/strong&gt; Add module.txt and gitignore&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdvancedBehaviors/pull/7&quot;&gt;&lt;strong&gt;Terasology/AdvancedBehaviors&lt;/strong&gt; Added alive character check&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/Pathfinding/pull/31&quot;&gt;&lt;strong&gt;Terasology/Pathfinding&lt;/strong&gt; Added alive character check&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/WildAnimals/pull/16&quot;&gt;&lt;strong&gt;Terasology/WildAnimals&lt;/strong&gt; Added alive character component&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/GooeysQuests/pull/14&quot;&gt;&lt;strong&gt;Terasology/GooeysQuests&lt;/strong&gt; Added alive character component&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/Journal/pull/4&quot;&gt;&lt;strong&gt;Terasology/Journal&lt;/strong&gt; Added Recipe and Image paragraph&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/WoodCrafting/pull/3&quot;&gt;&lt;strong&gt;Terasology/WoodCrafting&lt;/strong&gt; Moved generators to NeoTTA&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/NeoTTA/pull/1&quot;&gt;&lt;strong&gt;Terasology/NeoTTA&lt;/strong&gt; Moved generators from WoodCrafting&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/MovingBlocks/Terasology/pull/2962&quot;&gt;&lt;strong&gt;MovingBlocks/Terasology&lt;/strong&gt; Fixed eye height movement debug command&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/PhysicalStats/pull/3&quot;&gt;&lt;strong&gt;Terasology/PhysicalStats&lt;/strong&gt; Fixes missing save component bugs&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/MovingBlocks/Terasology/pull/2958&quot;&gt;&lt;strong&gt;MovingBlocks/Terasology&lt;/strong&gt; Do not destroy player entity completely on death&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/Journal/pull/3&quot;&gt;&lt;strong&gt;Terasology/Journal&lt;/strong&gt; Adds different colored entries for Unread Journal entries&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/Pathfinding/pull/30&quot;&gt;&lt;strong&gt;Terasology/Pathfinding&lt;/strong&gt; Fixed intelligent flee&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdvancedBehaviors/pull/6&quot;&gt;&lt;strong&gt;Terasology/AdvancedBehaviors&lt;/strong&gt; Added intelligent flee&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/Pathfinding/pull/29&quot;&gt;&lt;strong&gt;Terasology/Pathfinding&lt;/strong&gt; Added intelligent flee&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdvancedBehaviors/pull/5&quot;&gt;&lt;strong&gt;Terasology/AdvancedBehaviors&lt;/strong&gt; Refactor&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdvancedBehaviors/pull/3&quot;&gt;&lt;strong&gt;Terasology/AdvancedBehaviors&lt;/strong&gt; Added the fleeInProximity package&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/WildAnimals/pull/15&quot;&gt;&lt;strong&gt;Terasology/WildAnimals&lt;/strong&gt; Added a scaredDeer&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdvancedBehaviors/pull/2&quot;&gt;&lt;strong&gt;Terasology/AdvancedBehaviors&lt;/strong&gt; Added followInProximity package&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/WildAnimals/pull/14&quot;&gt;&lt;strong&gt;Terasology/WildAnimals&lt;/strong&gt; Added a friendlyDeer&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/WildAnimals/pull/13&quot;&gt;&lt;strong&gt;Terasology/WildAnimals&lt;/strong&gt; Moved packages to AdvancedBehaviors** module&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdvancedBehaviors/pull/1&quot;&gt;&lt;strong&gt;Terasology/AdvancedBehaviors&lt;/strong&gt; Moved packages from WildAnimals** module&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/WildAnimals/pull/12&quot;&gt;&lt;strong&gt;Terasology/WildAnimals&lt;/strong&gt; AttackInProximity- adds hostile-stray behavior switching&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/FunnyBlocks/pull/11&quot;&gt;&lt;strong&gt;Terasology/FunnyBlocks&lt;/strong&gt; Portals work in multiplayer&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/WildAnimals/pull/10&quot;&gt;&lt;strong&gt;Terasology/WildAnimals&lt;/strong&gt; Added aggressiveDeer&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/WorldlyTooltip/pull/7&quot;&gt;&lt;strong&gt;Terasology/WorldlyTooltip&lt;/strong&gt; Configured with WorldlyTooltipAPI module&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/MovingBlocks/Terasology/pull/2932&quot;&gt;&lt;strong&gt;MovingBlocks/Terasology&lt;/strong&gt; Fixes the blocker #2913&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/WorldlyTooltip/pull/6&quot;&gt;&lt;strong&gt;Terasology/WorldlyTooltip&lt;/strong&gt; Added character entity support&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/MovingBlocks/Terasology/pull/2930&quot;&gt;&lt;strong&gt;MovingBlocks/Terasology&lt;/strong&gt; BehaviorSystem- use cachedInterpreters&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/MovingBlocks/Terasology/pull/2929&quot;&gt;&lt;strong&gt;MovingBlocks/Terasology&lt;/strong&gt; Worldly tooltip addition for character entities&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/WildAnimals/pull/9&quot;&gt;&lt;strong&gt;Terasology/WildAnimals&lt;/strong&gt; Worldly tooltip Integration&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;what-more-to-look-at&quot;&gt;What more to look at?&lt;/h3&gt;
+
+&lt;p&gt;There have been a whole lot of videos I’ve made over the summer. You can have a look at them at &lt;a href=&quot;https://www.youtube.com/channel/UCVDrDJDt7sI8A9Ww1FekUMQ&quot;&gt;my channel&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I have also written a set of blog posts marking the progress I made through the summers. A list of all these can be found under the #GSoC tag &lt;a href=&quot;http://nihal111.github.io/tags/#GSoC&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;whats-next&quot;&gt;What’s next?&lt;/h3&gt;
+
+&lt;p&gt;Although I have checked off most of my primary targets from the proposal. There are quite a few things that need work on-&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Some of the traps like the Swinging Blade work well only in Single Player. This is because the Movement Prediction works quite differently on the server side. The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CharacterImpulseEvent&lt;/code&gt; triggers differently even with a little lag.&lt;/li&gt;
+  &lt;li&gt;Traps like the Wipe Out, require the player to move constantly along with the surfboard. There have also been instances when a collision is not detected between the player and the surfboard. Again something to deal with the Movement Prediction and Physics engine.&lt;/li&gt;
+  &lt;li&gt;On the Gameplay side, I’ve attempted to make interesting short riddles for the three treasure locations, however they get boring very fast. The player might feel it is too much effort to solve a text based riddle. It can be difficult to strike the right chord while making riddles and clues that are both short, engaging and require the player to think.&lt;/li&gt;
+  &lt;li&gt;The Portal upon construction does nothing yet. Well, it is supposed to take you back to your home planet. But I guess we could display a “Game Over” dialog or somehow bring up the Credits screen.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Some of these might be fixed by a long overdue movement refactoring. With Tyler Thompson’s Scenario module developed alongside in &lt;a href=&quot;https://thompsontyler.github.io/gsoc/2017/08/25/scenario-gsoc.html&quot;&gt;another GSoC project&lt;/a&gt;, the Lost module serves as an example of how a gameplay scenario can be made.&lt;br /&gt;
+With the completion of this GSoC project making adventure assets like locked doors, traps, resurrection statues etc are now a lot more easier. Creation of more such things can probably serve as one of the tougher GCI tasks later.&lt;/p&gt;
+
+&lt;h3 id=&quot;wrapping-it-up&quot;&gt;Wrapping it up&lt;/h3&gt;
+
+&lt;p&gt;Once again, I would like to thank all my mentors. My primary mentor, &lt;a href=&quot;http://forum.terasology.org/members/skysom.1621/&quot;&gt;Skylar ‘skysom’ Sommers&lt;/a&gt;, for replying always within a splitsecond (save for the times when he forgets to hit the Send button :P). &lt;a href=&quot;http://forum.terasology.org/members/florian.1335/&quot;&gt;Florian ‘flo’ Köberle&lt;/a&gt;, who was my secondary but went out of his way and functioned effectively as my primary. I got to learn a lot from flo regarding various aspects about the game. It would have been impossible to complete my project without his aid. &lt;a href=&quot;http://forum.terasology.org/members/xtariq.1697/&quot;&gt;Xavier ‘xtariq’ Tariq&lt;/a&gt;, who was also my secondary mentor, helped me whenever I needed him. I’d like to specially thank &lt;a href=&quot;http://forum.terasology.org/members/cervator.2/&quot;&gt;Rasmus ‘cervator’ Praestholm&lt;/a&gt; here. Had he not been there that night in October, welcoming me on IRC and helping me set up my codebase, maybe I would have given up, moved on and never have done GSoC in the first place.&lt;/p&gt;
+
+&lt;p&gt;All in all, it has been a thrilling summer. By this time I am familiar with a good part of the game’s codebase. I would love to continue contributing, albeit in different capacities. Let’s hope real life doesn’t get in the way too much. Also, GCI is almost here and another storm’s coming!&lt;/p&gt;
+
+&lt;p&gt;Here’s a snap from one of the many exciting multiplayer play test sessions-&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/multiplayerPlayTest.jpg&quot; alt=&quot;multiplayerPlayTest&quot; title=&quot;multiplayerPlayTest&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 15 Aug 2017 00:00:00 +0400</pubDate>
+        <link>http://localhost:4000/2017/08/15/GSoC-wrap-up.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/08/15/GSoC-wrap-up.html</guid>
+        
+        <category>open source</category>
+        
+        <category>MovingBlocks</category>
+        
+        <category>Terasology</category>
+        
+        <category>GSoC</category>
+        
+        
+      </item>
+    
+  </channel>
+</rss>

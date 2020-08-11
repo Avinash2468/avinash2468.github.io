@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<h2>Blog</h2>
+{% for post in site.posts %}
+		
+	<div class="blog_ele">
+		<a href="{{ post.url | prepend: site.baseurl }}">
+			<time>{{ post.date | date: "%b %-d, %Y" }}</time>
+		<h3>{{ post.title }}</h3>
+		</a>
+	</div>
+{% endfor %}
+
+

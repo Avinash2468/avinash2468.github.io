@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Nihal Singh - GSoC Week 3: Advanced Behaviors and Taming</title>
+
+	<link rel="stylesheet" href="/css/main.css">
+	<link rel="canonical" href="http://localhost:4000/2017/05/21/GSoC-week3.html">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,600' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+
+	<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114314056-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-114314056-1');
+	</script>
+
+</head> 
+
+
+<body>
+	<aside>
+	<div class="container">
+    <nav>
+      <a class="site-title" href="/">nihal111</a>
+    </nav>
+		<nav class="site-nav">
+     <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+			<ul>
+				
+          
+          
+  				<li><a href="/about/">About</a></li>
+          
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          
+  				<li><a href="/projects/">Projects</a></li>
+          
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          <li><a href="/docs/CV.pdf">CV</a></li>
+      		<li><a href="/blog">Blog</a></li>
+			</ul>
+      </div>
+		</nav>
+	</div>
+</aside>
+	<div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+          <a href="/" class="site-avatar"><img src="https://avatars1.githubusercontent.com/u/13916513?v=2&s=460" /></a>
+
+          <div class="site-info">
+            <h1 class="site-name"><a href="/">Nihal Singh</a></h1>
+            <p class="site-description">I like to know things</p>
+          </div>
+          
+          <nav>
+            <a href="https://github.com/nihal111">
+<span class="icon icon--github">
+<img src="/img/github.png" class="darken" alt="GitHub">
+</span></a>
+
+<a href="https://facebook.com/nihal111">
+<span class="icon icon--facebook">
+<img src="/img/facebook.png" class="darken" alt="Facebook">
+</span>
+</a>
+
+<a href="https://linkedin.com/in/nihal111">
+<span class="icon icon--linkedin">
+<img src="/img/linkedin.png" class="darken" alt="LinkedIn">
+</span>
+</a>
+          </nav>
+          
+        </header>
+      </div>
+</div>
+
+	<main>
+		<article>
+			<center>
+<h2>GSoC Week 3: Advanced Behaviors and Taming</h2>
+<time><i>Written on May 21, 2017</i></time>
+<br><br>
+<div class="post-tags">
+  
+  
+  <a class="tag" href="/tags/#open source">open source</a>
+  
+  <a class="tag" href="/tags/#MovingBlocks">MovingBlocks</a>
+  
+  <a class="tag" href="/tags/#Terasology">Terasology</a>
+  
+  <a class="tag" href="/tags/#GSoC">GSoC</a>
+  
+</div>
+</center>
+
+
+<style type="text/css">
+    .collapsiblecontainer {
+    width:100%;
+    border:1px solid #d3d3d3;
+}
+.collapsiblecontainer div {
+    width:100%;
+}
+.collapsiblecontainer .collapsibleheader {
+    background-color:#d3d3d3;
+    padding: 2px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.collapsiblecontainer .collapsiblecontent {
+    display: none;
+    padding : 5px;
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+<script type="text/javascript" src="/js/github-buttons.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $(".collapsibleheader").click(function () {
+        $collapsibleheader = $(this);
+        //getting the next element
+        $collapsiblecontent = $collapsibleheader.next();
+        //open up the collapsiblecontent needed - toggle the slide- if visible, slide up, if not slidedown.
+        $collapsiblecontent.slideToggle(500, function () {
+            //execute this after slideToggle is done
+            //change text of collapsibleheader based on visibility of collapsiblecontent div
+            $collapsibleheader.find("span:first-child").text(function () {
+                //change text based on condition
+                return $collapsiblecontent.is(":visible") ? "- " : "+ ";
+            });
+        });
+
+    });
+}); 
+
+</script>
+
+<p>The past week has been lighter compared to the previous two, involving a lot more of packing and moving, research and documentation.</p>
+
+<h1 id="what-have-i-been-up-to">What have I been up to?</h1>
+
+<h2 id="more-behaviors">More behaviors</h2>
+
+<p>Adding to the 4 deer (<code class="language-plaintext highlighter-rouge">deer</code>, <code class="language-plaintext highlighter-rouge">insensitiveDeer</code>, <code class="language-plaintext highlighter-rouge">aggressiveDeer</code> and <code class="language-plaintext highlighter-rouge">hostileDeer</code>) from last time two new behaviors have been added namely- <code class="language-plaintext highlighter-rouge">scared</code> and <code class="language-plaintext highlighter-rouge">friendly</code>. Again these are just placeholders for actual animals that would display such behavior like a chicken (timid) and a dog (friendly). Here are two new videos that would give a quick preview.</p>
+
+<div class="github-button" url="https://github.com/Terasology/WildAnimals/pull/14"></div>
+
+<div class="github-button" url="https://github.com/Terasology/WildAnimals/pull/15"></div>
+
+<div class="videowrapper">
+    <iframe width="1024" height="768" src="https://www.youtube.com/embed/5VREvBUPmA0" frameborder="0" allowfullscreen=""></iframe>
+</div>
+<p><br /></p>
+<div class="videowrapper">
+    <iframe width="1024" height="768" src="https://www.youtube.com/embed/GbeXKIi9Mvs" frameborder="0" allowfullscreen=""></iframe>
+</div>
+<p><br /></p>
+
+<div class="github-button" url="https://github.com/Terasology/WildAnimals/pull/12"></div>
+
+<div class="github-button" url="https://github.com/Terasology/AdvancedBehaviors/pull/2"></div>
+
+<div class="github-button" url="https://github.com/Terasology/AdvancedBehaviors/pull/3"></div>
+
+<p>Also, the flee behavior is now improved such that the animal would always run in a direction away from the player as compared to randomly moving about like last time.</p>
+
+<div class="github-button" url="https://github.com/Terasology/Pathfinding/pull/29"></div>
+
+<div class="github-button" url="https://github.com/Terasology/AdvancedBehaviors/pull/6"></div>
+
+<p>In addition, last year’s GCI saw a lot of students write up formal descriptions about AI for animals and their behavior. This can be found <a href="http://forum.terasology.org/search/2685474/?q=Formal+Description&amp;o=date">here</a> and is possibly a good reference for future.</p>
+
+<h2 id="packing-and-moving--advancedbehaviors">Packing and Moving- AdvancedBehaviors</h2>
+
+<p>It was felt that the behavior work that I had been up to, should not really be restricted to the WildAnimals module. It had great potential outside for other NPCs like monsters, zombies, aliens.. you name it. One particular requirement was that of the GooeysQuests’ skeleton which would try its best to kill you in the dungeons. Currently the skeleton just has a hostile behavior, which means that it does nothing at all until a player comes close to it. After which, it would follow the player in an attempt to kill. When the player dies or escapes the skelton would return to doing nothing (standing still) where ever it had reached. The <code class="language-plaintext highlighter-rouge">hostileInProximity</code> behavior that I had implemented for the hostileDeer is probably a better alternative, where in the deer switches from hostile to stray behavior. Further the behavior switching systems could be used to add a <strong>guard behavior</strong> that would allow the skeleton to return to a specific location that it guards (a tressure, a secret door, who knows?).</p>
+
+<p>All this just meant one thing, that the core behavior systems should not be kept restricted to the <a href="https://github.com/Terasology/WildAnimals">WildAnimals</a> module as they would have great use even in other modules. With this need was born the <a href="https://github.com/Terasology/AdvancedBehaviors">AdvancedBehaviors</a> module which would just be a library module having logic and systems that are required by other modules as dependencies, but no content of its own. All the behavior systems and behavior components were packaged and moved to this new module.</p>
+
+<div class="github-button" url="https://github.com/Terasology/AdvancedBehaviors/pull/1"></div>
+
+<div class="github-button" url="https://github.com/Terasology/WildAnimals/pull/13"></div>
+
+<h2 id="optional-dependencies-and-libraryapi-modules">Optional Dependencies and Library/API modules</h2>
+
+<p><a href="https://github.com/Terasology/AdvancedBehaviors">AdvancedBehaviors</a> would be my second module in the game, the first being the <a href="https://github.com/Terasology/WorldlyTooltipAPI">WorldlyTooltipAPI</a> module which too has no content of its own, but just serves as an API module for <a href="https://github.com/Terasology/WorldlyTooltip">WorldlyTooltip</a>. This was decided to be a better alternative to optional dependencies.</p>
+
+<div class="collapsiblecontainer">
+<div class="collapsibleheader"><span>+ </span><span>What is a Library module?</span></div>
+<div class="collapsiblecontent">   
+    A library module is one that does not have any features or content of its own. It only provides systems that are used by other modules. An example of such a module is the Pathfinding module. Also the newly created, AdvancedBehaviors module would just be a library module.
+</div>
+</div>
+
+<p>Modules like WildAnimals that use events from the WorldlyTooltip module should not have a dependency on it as it doesn’t need to be necessarily activated. A user should be able to enjoy the WildAnimals module without having to activate the WorldlyTooltip module. One possible way to solve this is using optional dependencies.</p>
+
+<div class="collapsiblecontainer">
+<div class="collapsibleheader"><span>+ </span><span>What is an optional dependency?</span></div>
+<div class="collapsiblecontent">   
+	An optional dependency allows the user to activate modules that depend on other modules without activating the other module. The features that rely on the other module would just be enabled when the other module is activated.
+    <br />
+    Lets take the WildAnimals and WorldlyTooltip module as an example. If the WildAnimals module is made to have an optional dependency on the WorldlyTooltip module, it's core features would be accessible even when the WorldlyTooltip module is inactive. Activating the WorldlyTooltip module just would enable the features that rely on it.
+</div>
+</div>
+
+<div class="collapsiblecontainer">
+<div class="collapsibleheader"><span>+ </span><span>What are the problems with optional dependencies?</span></div>
+<div class="collapsiblecontent">   
+    Optional dependencies make sure that the user doesn't have to forcefully download a module that serves as an optional dependency. But for a developer, the module would not compile unless the developer manually downloads all the optional dependencies. Also there is a chance that with some changes happening in Java, this feature might not be available later.
+</div>
+</div>
+
+<p>The other way to do this is using what are called API modules.</p>
+
+<div class="collapsiblecontainer">
+<div class="collapsibleheader"><span>+ </span><span>What is an API module?</span></div>
+<div class="collapsiblecontent"> 
+    An API module is one that allows for modules to use on a feature that is present in an external module without having a direct dependency on it. In short it is an alternative to optional dependencies. It can be thought of as an interface to a class. If a module X relies on some classes in Y for a feature, the classes can be moved to Z. Both X and Y can now have dependency on Z and everything would work naturally. This means that Y does not necessarily need to be activated for the user to enjoy the core features of X.
+    <br /><br />
+    For example, the WildAnimals module uses the events from the WorldlyTooltip module for the tooltip feature. To enable this, the events were moved to the API module called WorldlyTooltipAPI. Both WildAnimals and WorldlyTooltip had a dependency on the WorldlyTooltipAPI module. WildAnimals module could now be activated without activating the WorldlyTooltip functionality (even though the dependency WorldlyTooltipAPI got activated).
+</div>
+</div>
+<p><br /></p>
+
+<div class="github-button" url="https://github.com/Terasology/WorldlyTooltip/pull/6"></div>
+
+<div class="github-button" url="https://github.com/Terasology/WildAnimals/pull/9"></div>
+
+<div class="github-button" url="https://github.com/Terasology/WorldlyTooltip/pull/7"></div>
+
+<hr />
+<h2 id="taming-animals">Taming animals</h2>
+<p>With behaviors being defined for animals, it would be fun to turn a hostile or aggressive animal into a friendly one. Having a horse that you can ride, a donkey that carries around some load, a dog that guards an entrance, a cow that gives milk, all sound like a fun idea to have in game. Here are some thoughts on how taming can work in game.</p>
+
+<p>Animals can be broadly and vaguely grouped into friendly and unfriendly, with different animals falling at different levels in this classification. Generally, the friendlier the animal, the easier it would be to tame it.</p>
+
+<h3 id="how-would-taming-work">How would taming work?</h3>
+<p>Possibly there could be a taming progress bar that gives the player an idea of how long should he continue the efforts on taming. There might be more than one ways to tame an animal, some more effective than the others. The more effective ones would increase the progress bar quicker allowing for speedy taming.</p>
+
+<h3 id="taming-methods">Taming Methods</h3>
+<ol>
+  <li><strong>Petting</strong>- Some very friendly animals like dogs might just be tamed after a while of petting.</li>
+  <li><strong>Feeding</strong>- Every animal would have a preferred food item (or rather a list of food items it eats with an order of preference). Feeding an animal with its favorite food item would increase the taming progress quicker than with other foods.</li>
+  <li><strong>Sedating or Tranquilising</strong>- Animals can be fed poisonous berries or some other substances to intoxicate them. These would leave them vulnerable and make them easier to tame. Such an approach would be useful for more unfriendly or aggressive animals.</li>
+  <li><strong>Tranquiliser darts</strong>- For animals that are hostile and would attack when in proximity of the player, tranquiliser darts could be used to intoxicate and subdue the animal, leaving it in a vulnerable state where it can be fed and tamed easily.</li>
+  <li><strong>Trap</strong>- Animals that are timid or hostile would either run away from the player or chase the player. A good idea is to trap the animals and then approach them when they are not in a position to run away or attack. An animal trapped in such a manner would have the feed option available now (which wouldn’t have been available earlier).</li>
+  <li><strong>Knocking out</strong>- The animals can be knocked out by fighting off with different equipment. When an animal reaches a low health the player can choose to knock it out. If the player continues to attack it and makes it health reach 0, the animal simply dies as it now does. Knocking out would have a similar effect like tranquilising, it would leave the animal in a vulnerable state where it can be fed and tamed easily.</li>
+</ol>
+
+<p>These options of <strong>Feed</strong>, <strong>Pet</strong>, <strong>Knock Out</strong>, <strong>Poison</strong> (selectively enabled) can be displayed in a radial menu that appears on <code class="language-plaintext highlighter-rouge">E</code> click on an animal. The radial menu can have a circular progressbar outside that also shows the taming progress.</p>
+
+<p>Since methods like knocking out or hurting an animal before attempting to tame it seems odd. It can be made possible that the animal remembers only the player which hurt it. This would allow any other player (or even the same player in disguise) to befriend or tame the animal. Such an approach would be necessary only for hostile and aggressive animals and might also bring into picture multiplayer taming.</p>
+
+<h3 id="animal-utilities">Animal Utilities</h3>
+<ol>
+  <li><strong>Mount for travel</strong>- Some animals can be chosen as a mount to ride on and for fast travel. Animals would have different speeds, jump heights, stamina etc. Some animals would be suitable for short distance while others for long commutes. Some animals would be stronger than others making them a safer choice of travel. Additionally, some animals may be faster in the day and some faster at night.</li>
+  <li><strong>Carry load and inventory</strong>- Most animals would have an inventory of their own that can be used for carrying goods around.</li>
+  <li><strong>Mining</strong>- Animals can dig through (with various speeds and capacities) and collect ores and minerals present inside the crust.</li>
+  <li><strong>Food supply</strong>- Animals can give eggs or milk that can be used as food.</li>
+  <li><strong>Wood and stone gatherers</strong>- Some animals could fell trees and collect wood from their barks. Others could simply go around collecting stone, making construction easier.</li>
+  <li><strong>Specialised gatherers</strong>- Some animals could be gatherers for specific items like berries, a specific fruit etc.</li>
+  <li><strong>Organic Polymer Producer</strong> - Some animals can be tamed (or killed) to obtain fibre.</li>
+  <li><strong>Food hunter</strong>- Tamed carnivores can be trusted to hunt other animals and bring meat. Tamed herbivores can be used to get raw products from trees.</li>
+  <li><strong>Guard animals</strong>- Animals can be instructed to guard a location and attack all other players/animals that try to enter.</li>
+  <li><strong>Combat</strong>- Different animals can have different special combat abilities that protect the player from attackers.</li>
+  <li><strong>Sea creatures</strong>- Sea creatures can be used as a mount to cross oceans or for fishing. Some sea creatures can share their reserve of oxygen increasing the player’s breathing capacity. Some sea creatures could be used to collect resources at the bottom of the sea like oil.</li>
+  <li><strong>Companion</strong>- An animal that simply follows you around so that you never feel lonely.</li>
+</ol>
+
+<p>A nice forum post by <a href="http://forum.terasology.org/members/vaibhav-bajaj.1985/">Vaibhav Bajaj</a>, last year’s GCI student, talks about creating a Pets module and talks about taming at great detail <a href="http://forum.terasology.org/threads/new-module-pets.1742/">here</a>.
+Implementing taming in game is still a bonus item, probably something I’d get back to after I’ve checked off the main items. Next week should involve a start to all the puzzle work and making of the new gameplay module.</p>
+
+
+
+<!-- Code for disqus comments -->
+
+<div id="disqus_thread"></div>
+<script>
+
+var disqus_config = function () {
+this.page.url = "http://localhost:4000/2017/05/21/GSoC-week3.html"; // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "/2017/05/21/GSoC-week3"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//nihal111.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+	
+
+
+
+
+
+		</article>
+		
+	</main>
+	<footer class="site-footer">
+
+  <div class="wrapper">
+
+   
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="name">Nihal Singh</li>
+          <li>-nihal111</li>
+          <li><a href="mailto:nihaliter@gmail.com">nihaliter@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <p class="abode">Abode:</p>Indian Institue of Technology, Bombay Mumbai-400076, India
+      </div>
+      <div class="footer-col footer-filler">
+        <p> </p>
+      </div>
+      <div class="footer-col footer-col-3">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/nihal111"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">nihal111</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://facebook.com/nihal111"><span class="icon icon--facebook">
+<svg  x="0px" y="0px" width="16px" height="16px" viewBox="0 0 90 90" style="enable-background:new 0 0 90 90;" xml:space="preserve">
+<g>
+	<path id="Facebook__x28_alt_x29_" d="M90,15.001C90,7.119,82.884,0,75,0H15C7.116,0,0,7.119,0,15.001v59.998   C0,82.881,7.116,90,15.001,90H45V56H34V41h11v-5.844C45,25.077,52.568,16,61.875,16H74v15H61.875C60.548,31,59,32.611,59,35.024V41   h15v15H59v34h16c7.884,0,15-7.119,15-15.001V15.001z" fill="#3A589B"/>
+</g>
+</svg>
+</span><span class="username">Nihal Singh</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://linkedin.com/in/nihal111"><span class="icon icon--linkedin"><svg  x="0px" y="0px" width="16px" height="16px" viewBox="0 50 512 512" style="enable-background:new 0 0 90 90;" xml:space="preserve">
+<g>
+	<path fill="#828282" d="M150.65,100.682c0,27.992-22.508,50.683-50.273,50.683c-27.765,0-50.273-22.691-50.273-50.683
+	C50.104,72.691,72.612,50,100.377,50C128.143,50,150.65,72.691,150.65,100.682z M143.294,187.333H58.277V462h85.017V187.333z
+	M279.195,187.333h-81.541V462h81.541c0,0,0-101.877,0-144.181c0-38.624,17.779-61.615,51.807-61.615
+	c31.268,0,46.289,22.071,46.289,61.615c0,39.545,0,144.181,0,144.181h84.605c0,0,0-100.344,0-173.915
+	s-41.689-109.131-99.934-109.131s-82.768,45.369-82.768,45.369V187.333z"/>
+</g>
+</svg>
+</span><span class="username">Nihal Singh</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      
+    </div>
+
+  </div>
+
+</footer>
+
+</body>
+
+</html>

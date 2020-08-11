@@ -1,0 +1,24 @@
+---
+layout: landing
+title : Avinash Prabhu
+header: False
+---
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-container">
+      <img src="{{ site.avatar }}" alt="author thumb" class="dot">
+      <h1>Avinash Prabhu</h1>
+		{% for page in site.pages %}
+		  {% if page.header %}
+		  {% if page.title %}
+		  	<a href="{{ page.url | prepend: site.baseurl }}" class="button button-ghost" title="{{ page.title }}">{{ page.title }}</a>
+		  {% endif %}
+		  {% endif %}
+		{% endfor %}
+		<a href="{{ '/docs/CV.pdf' | prepend: site.baseurl }}" class="button button-ghost" title="CV">CV</a>
+		<a href="{{ '/blog' | prepend: site.baseurl }}" class="button button-ghost" title="Blog">Blog</a>
+      {% include landing_social.html %}
+    </div>
+  </div>
+</section>

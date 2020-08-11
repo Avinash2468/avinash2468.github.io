@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Nihal Singh - J.A.R.V.I.S.</title>
+
+	<link rel="stylesheet" href="/css/main.css">
+	<link rel="canonical" href="http://localhost:4000/2016/05/16/J.A.R.V.I.S.html">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,600' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+
+	<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114314056-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-114314056-1');
+	</script>
+
+</head> 
+
+
+<body>
+	<aside>
+	<div class="container">
+    <nav>
+      <a class="site-title" href="/">nihal111</a>
+    </nav>
+		<nav class="site-nav">
+     <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+			<ul>
+				
+          
+          
+  				<li><a href="/about/">About</a></li>
+          
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          
+  				<li><a href="/projects/">Projects</a></li>
+          
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          <li><a href="/docs/CV.pdf">CV</a></li>
+      		<li><a href="/blog">Blog</a></li>
+			</ul>
+      </div>
+		</nav>
+	</div>
+</aside>
+	<div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+          <a href="/" class="site-avatar"><img src="https://avatars1.githubusercontent.com/u/13916513?v=2&s=460" /></a>
+
+          <div class="site-info">
+            <h1 class="site-name"><a href="/">Nihal Singh</a></h1>
+            <p class="site-description">I like to know things</p>
+          </div>
+          
+          <nav>
+            <a href="https://github.com/nihal111">
+<span class="icon icon--github">
+<img src="/img/github.png" class="darken" alt="GitHub">
+</span></a>
+
+<a href="https://facebook.com/nihal111">
+<span class="icon icon--facebook">
+<img src="/img/facebook.png" class="darken" alt="Facebook">
+</span>
+</a>
+
+<a href="https://linkedin.com/in/nihal111">
+<span class="icon icon--linkedin">
+<img src="/img/linkedin.png" class="darken" alt="LinkedIn">
+</span>
+</a>
+          </nav>
+          
+        </header>
+      </div>
+</div>
+
+	<main>
+		<article>
+			<center>
+<h2>J.A.R.V.I.S.</h2>
+<time><i>Written on May 16, 2016</i></time>
+<br><br>
+<div class="post-tags">
+  
+  
+  <a class="tag" href="/tags/#AI">AI</a>
+  
+  <a class="tag" href="/tags/#python">python</a>
+  
+</div>
+</center>
+
+
+<p class="center w100"><img src="/img/jarvis.jpg" alt="J.A.R.V.I.S." title="J.A.R.V.I.S." /></p>
+
+<p>Almost a week ago, I attempted to create <a href="https://github.com/nihal111/J.A.R.V.I.S">my own version</a> of Iron Man’s J.A.R.V.I.S. which would perform a few tasks and have chatbot like abilities. After a bit of research I found out about <a href="http://www.alicebot.org/aiml.html">AIML</a> and its <a href="https://pypi.python.org/pypi/PyAIML">interpreter for python</a>. I also found ways to convert text to speech and speech to to text using python libraries like <a href="https://pypi.python.org/pypi/pyttsx">pyttsx</a> and <a href="https://pypi.python.org/pypi/SpeechRecognition/3.4.3">SpeechRecognition</a>. I soon ended up making a J.A.R.V.I.S. which understood some of the things I said and performed a few fun actions.</p>
+
+<h2 id="configuring-voice-input-and-output">Configuring voice input and output:</h2>
+
+<h3 id="text-to-speech">Text to Speech:</h3>
+
+<p>With pyttsx installed through <code class="language-plaintext highlighter-rouge">pip install pyttsx</code> or otherwise,</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">pyttsx</span>
+<span class="k">def</span> <span class="nf">speak</span><span class="p">(</span><span class="n">jarvis_speech</span><span class="p">):</span>
+	<span class="n">engine</span> <span class="o">=</span> <span class="n">pyttsx</span><span class="p">.</span><span class="n">init</span><span class="p">()</span>
+	<span class="n">engine</span><span class="p">.</span><span class="n">say</span><span class="p">(</span><span class="n">jarvis_speech</span><span class="p">)</span>
+	<span class="n">engine</span><span class="p">.</span><span class="n">runAndWait</span><span class="p">()</span>
+
+<span class="n">speak</span><span class="p">(</span><span class="s">"Hello world"</span><span class="p">)</span></code></pre></figure>
+
+<p>This should produce an audio output of “Hello World” in a slightly mechanical voice.</p>
+
+<h3 id="speech-to-text">Speech-to-Text:</h3>
+
+<p>With SpeechRecognition installed through <code class="language-plaintext highlighter-rouge">pip install SpeechRecognition</code> or otherwise,</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">speech_recognition</span> <span class="k">as</span> <span class="n">sr</span>
+<span class="k">def</span> <span class="nf">listen</span><span class="p">():</span>
+	<span class="n">r</span> <span class="o">=</span> <span class="n">sr</span><span class="p">.</span><span class="n">Recognizer</span><span class="p">()</span>
+	<span class="k">with</span> <span class="n">sr</span><span class="p">.</span><span class="n">Microphone</span><span class="p">()</span> <span class="k">as</span> <span class="n">source</span><span class="p">:</span>
+	    <span class="k">print</span><span class="p">(</span><span class="s">"Talk to J.A.R.V.I.S: "</span><span class="p">)</span>
+	    <span class="n">audio</span> <span class="o">=</span> <span class="n">r</span><span class="p">.</span><span class="n">listen</span><span class="p">(</span><span class="n">source</span><span class="p">)</span>
+	<span class="k">try</span><span class="p">:</span>
+	    <span class="k">print</span> <span class="n">r</span><span class="p">.</span><span class="n">recognize_google</span><span class="p">(</span><span class="n">audio</span><span class="p">)</span>
+	    <span class="k">return</span> <span class="n">r</span><span class="p">.</span><span class="n">recognize_google</span><span class="p">(</span><span class="n">audio</span><span class="p">)</span>
+	<span class="k">except</span> <span class="n">sr</span><span class="p">.</span><span class="n">UnknownValueError</span><span class="p">:</span>
+	    <span class="n">offline_speak</span><span class="p">(</span><span class="s">"I couldn't understand what you said! Would you like to repeat?"</span><span class="p">)</span>
+	    <span class="k">return</span><span class="p">(</span><span class="n">listen</span><span class="p">())</span>
+	<span class="k">except</span> <span class="n">sr</span><span class="p">.</span><span class="n">RequestError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+	    <span class="k">print</span><span class="p">(</span><span class="s">"Could not request results from Google Speech Recognition service; {0}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
+
+<span class="n">listen</span><span class="p">()</span></code></pre></figure>
+
+<p>This should listen to an audio input once from the microphone. However this can produce a series of warnings and errors. Resolution for some errors can be found in the Troubleshooting section of <a href="https://pypi.python.org/pypi/SpeechRecognition/3.4.3">this page</a>.</p>
+
+<h2 id="working-with-aiml">Working with AIML:</h2>
+
+<p>AIML stands for Artificial Intelligence Markup Language. AIML is XML based markup language meant to create artificial intelligent application to create human interface. Using AIML, the implementation remains easy to program and highly maintainable. However, the development for AIML has become rather stagnant and AIML 1.0 (the one which has a python interpreter) has a documentation dating back to 2005, making it quite obsolete. Nevertheless, AIML is easy to learn and fun to use. At the very basic level, AIML recognizes patterns and gives responses as programmed. The patterns are called categories and responses are called templates. A very basic AIML code looks like this:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;aiml</span> <span class="na">version=</span><span class="s">"1.0.1"</span> <span class="na">encoding=</span><span class="s">"UTF-8"</span><span class="err">?</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;category&gt;</span>
+		<span class="nt">&lt;pattern&gt;</span>HELLO<span class="nt">&lt;/pattern&gt;</span>
+		<span class="nt">&lt;template&gt;</span>
+		Well, hello!
+		<span class="nt">&lt;/template&gt;</span>
+	<span class="nt">&lt;/category&gt;</span>
+<span class="nt">&lt;/aiml&gt;</span></code></pre></figure>
+
+<p>This small piece of code allows J.A.R.V.I.S. to reply with “Well, hello!” for every “HELLO” it gets as input.</p>
+
+<p>Such a code can then be customised to give a random output from a list of templates, redirect to a already defined pattern, use a part or whole of the user’s input, run shell scripts etc. Out of all these running a shell script makes AIML, or atleast J.A.R.V.I.S. very powerful.</p>
+
+<p>All one has to do to create a chatbot using AIML, is to make up a list of <code class="language-plaintext highlighter-rouge">.aiml</code> files containing categories like the one defined above and use the aiml library for python to import them into a kernel using a <code class="language-plaintext highlighter-rouge">startup.xml</code> file which looks like this:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;aiml</span> <span class="na">version=</span><span class="s">"1.0.1"</span> <span class="na">encoding=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;category&gt;</span>
+        <span class="nt">&lt;pattern&gt;</span>LOAD AIML<span class="nt">&lt;/pattern&gt;</span>
+        <span class="nt">&lt;template&gt;</span>          
+            <span class="nt">&lt;learn&gt;</span>*.aiml<span class="nt">&lt;/learn&gt;</span>
+        <span class="nt">&lt;/template&gt;</span>        
+    <span class="nt">&lt;/category&gt;</span>
+<span class="nt">&lt;/aiml&gt;</span></code></pre></figure>
+
+<p>This should allow one to load up all the aiml files present in the working directory to the created kernel. A simple python script to do is:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">aiml</span>
+
+<span class="n">kernel</span> <span class="o">=</span> <span class="n">aiml</span><span class="p">.</span><span class="n">Kernel</span><span class="p">()</span>
+<span class="n">kernel</span><span class="p">.</span><span class="n">learn</span><span class="p">(</span><span class="s">"startup.xml"</span><span class="p">)</span>
+<span class="n">kernel</span><span class="p">.</span><span class="n">respond</span><span class="p">(</span><span class="s">"load aiml"</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">print</span> <span class="n">kernel</span><span class="p">.</span><span class="n">respond</span><span class="p">(</span><span class="nb">raw_input</span><span class="p">(</span><span class="s">"Talk to J.A.R.V.I.S: "</span><span class="p">))</span></code></pre></figure>
+
+<p>A good guide to get started with AIML using the python interpreter can be found <a href="http://www.devdungeon.com/content/ai-chat-bot-python-aiml">here</a>.</p>
+
+<h2 id="using-the-system-tag">Using the &lt;system&gt; tag:</h2>
+
+<p>The system tag in AIML is a very powerful tag. It allows the script to run a shell command and use its output. A very simple example of this is:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;category&gt;</span>
+    <span class="nt">&lt;pattern&gt;</span>WHAT TIME IS IT<span class="nt">&lt;/pattern&gt;</span>
+    <span class="nt">&lt;template&gt;</span>
+        The time is <span class="nt">&lt;system&gt;</span>date "+%l:%M %P"<span class="nt">&lt;/system&gt;</span>
+    <span class="nt">&lt;/template&gt;</span>
+<span class="nt">&lt;/category&gt;</span></code></pre></figure>
+
+<p>Running <code class="language-plaintext highlighter-rouge">date "+%l:%M %P"</code> in shell returns the current time in a 12 hour format like “6:12 PM”. This can be used as a template output for the question “What time is it?”.</p>
+
+<p>Using the &lt;system&gt; tag one can achieve a lot of functionalities like opening applications, killing running processes, changing volume levels, adjusting brightness, changing wallpapers etc. And J.A.R.V.I.S. does quite a few of them.</p>
+
+<h2 id="integrating-python-scripts">Integrating Python scripts</h2>
+
+<p>Since it is easy enough to use shell commands through AIML. It is equally easy to use the shell to run python scripts and perform tasks using their output. A really fun example and perhaps the best feature of J.A.R.V.I.S. is the following.</p>
+
+<h3 id="finding-and-playing-a-song-on-youtube">Finding and playing a song on youtube</h3>
+<p>With the following python script, to find the link for first result for a given <code class="language-plaintext highlighter-rouge">query</code>:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">urllib</span>
+<span class="kn">import</span> <span class="nn">urllib2</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="n">flag</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">query</span> <span class="o">=</span> <span class="n">sys</span><span class="p">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">strip</span><span class="p">(</span><span class="s">"</span><span class="se">\"</span><span class="s">"</span><span class="p">).</span><span class="n">replace</span><span class="p">(</span><span class="s">" "</span><span class="p">,</span><span class="s">"+"</span><span class="p">)</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://www.youtube.com/results?search_query="</span> <span class="o">+</span> <span class="n">query</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="p">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">html</span> <span class="o">=</span> <span class="n">response</span><span class="p">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html</span><span class="p">,</span><span class="s">"lxml"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">vid</span> <span class="ow">in</span> <span class="n">soup</span><span class="p">.</span><span class="n">findAll</span><span class="p">(</span><span class="n">attrs</span><span class="o">=</span><span class="p">{</span><span class="s">'class'</span><span class="p">:</span><span class="s">'yt-uix-tile-link'</span><span class="p">}):</span>
+    <span class="k">if</span> <span class="p">(</span><span class="s">'https://www.youtube.com'</span> <span class="o">+</span> <span class="n">vid</span><span class="p">[</span><span class="s">'href'</span><span class="p">]).</span><span class="n">startswith</span><span class="p">(</span><span class="s">"https://www.youtube.com/watch?v="</span><span class="p">):</span>
+    	<span class="n">flag</span> <span class="o">=</span> <span class="mi">1</span>
+    	<span class="k">print</span> <span class="s">'https://www.youtube.com'</span> <span class="o">+</span> <span class="n">vid</span><span class="p">[</span><span class="s">'href'</span><span class="p">]</span>
+<span class="k">if</span> <span class="n">flag</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+	<span class="k">print</span> <span class="s">"https://www.youtube.com"</span></code></pre></figure>
+
+<p>and this AIML file which opens the link provided by the above script in chromium-browser:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;category&gt;</span>
+    <span class="nt">&lt;pattern&gt;</span>PLAY SONG *<span class="nt">&lt;/pattern&gt;</span>
+    <span class="nt">&lt;template&gt;</span>
+         <span class="nt">&lt;random&gt;</span>
+           <span class="nt">&lt;li&gt;</span>Sure thing! <span class="nt">&lt;/li&gt;</span>
+           <span class="nt">&lt;li&gt;</span>Right away, sir! <span class="nt">&lt;/li&gt;</span>
+           <span class="nt">&lt;li&gt;</span>On it! <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/random&gt;</span>
+        <span class="nt">&lt;system&gt;</span> chromium-browser "<span class="nt">&lt;system&gt;</span> python youtube.py "<span class="nt">&lt;star/&gt;</span>"<span class="nt">&lt;/system&gt;</span>"<span class="nt">&lt;/system&gt;</span>
+    <span class="nt">&lt;/template&gt;</span>
+<span class="nt">&lt;/category&gt;</span></code></pre></figure>
+
+<p>the following output can be achieved:</p>
+
+<p><strong>Talk to J.A.R.V.I.S :</strong> play song Killswitch Engage This Fire Burns<br />
+<strong>J.A.R.V.I.S:</strong> Sure thing!  Created new window in existing browser session.</p>
+
+<p>With this <a href="https://www.youtube.com/watch?v=OPpJ7xyUapc">song</a> opened in a new chromium-browser tab.<br />
+I have improved the above AIML code to produce this output:</p>
+
+<p><strong>Talk to J.A.R.V.I.S :</strong> play me a song<br />
+<strong>J.A.R.V.I.S :</strong> What song, sir?<br />
+<strong>Talk to J.A.R.V.I.S :</strong> Killswitch Engage This Fire Burns<br />
+<strong>J.A.R.V.I.S :</strong> On it!  Created new window in existing browser session.</p>
+
+<p>The repository for J.A.R.V.I.S. lies <a href="https://github.com/nihal111/J.A.R.V.I.S">here</a>. Feel free to <a href="https://github.com/nihal111/J.A.R.V.I.S/fork">fork</a> it and customise it. Create a PR if you feel you have an interesting feature that could be added.</p>
+
+<p>Happy coding!</p>
+
+
+
+<!-- Code for disqus comments -->
+
+<div id="disqus_thread"></div>
+<script>
+
+var disqus_config = function () {
+this.page.url = "http://localhost:4000/2016/05/16/J.A.R.V.I.S.html"; // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "/2016/05/16/J.A.R.V.I.S"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//nihal111.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+	
+
+
+
+
+
+		</article>
+		
+	</main>
+	<footer class="site-footer">
+
+  <div class="wrapper">
+
+   
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="name">Nihal Singh</li>
+          <li>-nihal111</li>
+          <li><a href="mailto:nihaliter@gmail.com">nihaliter@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <p class="abode">Abode:</p>Indian Institue of Technology, Bombay Mumbai-400076, India
+      </div>
+      <div class="footer-col footer-filler">
+        <p> </p>
+      </div>
+      <div class="footer-col footer-col-3">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/nihal111"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">nihal111</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://facebook.com/nihal111"><span class="icon icon--facebook">
+<svg  x="0px" y="0px" width="16px" height="16px" viewBox="0 0 90 90" style="enable-background:new 0 0 90 90;" xml:space="preserve">
+<g>
+	<path id="Facebook__x28_alt_x29_" d="M90,15.001C90,7.119,82.884,0,75,0H15C7.116,0,0,7.119,0,15.001v59.998   C0,82.881,7.116,90,15.001,90H45V56H34V41h11v-5.844C45,25.077,52.568,16,61.875,16H74v15H61.875C60.548,31,59,32.611,59,35.024V41   h15v15H59v34h16c7.884,0,15-7.119,15-15.001V15.001z" fill="#3A589B"/>
+</g>
+</svg>
+</span><span class="username">Nihal Singh</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://linkedin.com/in/nihal111"><span class="icon icon--linkedin"><svg  x="0px" y="0px" width="16px" height="16px" viewBox="0 50 512 512" style="enable-background:new 0 0 90 90;" xml:space="preserve">
+<g>
+	<path fill="#828282" d="M150.65,100.682c0,27.992-22.508,50.683-50.273,50.683c-27.765,0-50.273-22.691-50.273-50.683
+	C50.104,72.691,72.612,50,100.377,50C128.143,50,150.65,72.691,150.65,100.682z M143.294,187.333H58.277V462h85.017V187.333z
+	M279.195,187.333h-81.541V462h81.541c0,0,0-101.877,0-144.181c0-38.624,17.779-61.615,51.807-61.615
+	c31.268,0,46.289,22.071,46.289,61.615c0,39.545,0,144.181,0,144.181h84.605c0,0,0-100.344,0-173.915
+	s-41.689-109.131-99.934-109.131s-82.768,45.369-82.768,45.369V187.333z"/>
+</g>
+</svg>
+</span><span class="username">Nihal Singh</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      
+    </div>
+
+  </div>
+
+</footer>
+
+</body>
+
+</html>

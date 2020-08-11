@@ -1,0 +1,2024 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nihal Singh</title>
+    <description>My Google Summer of Code '17 experience</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed-gsoc.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 11 Aug 2020 17:07:10 +0400</pubDate>
+    <lastBuildDate>Tue, 11 Aug 2020 17:07:10 +0400</lastBuildDate>
+    <generator>Jekyll v4.1.1</generator>
+    
+    		
+				
+	
+				
+
+    
+    		
+				
+
+    
+    		
+				
+	
+				
+	
+				
+
+    
+    		
+				
+
+    
+    		
+				
+
+    
+    		
+				
+
+    
+    		
+				
+	
+				
+
+    
+    		
+				
+	
+				
+
+    
+    		
+				
+	
+				
+
+    
+    		
+				
+	
+				
+	
+				
+	
+				
+				  <item>
+					  <title>GSoC Wrap Up</title>
+					  <description>&lt;style type=&quot;text/css&quot;&gt;
+.collapsiblecontainer {
+width:100%;
+border:1px solid #d3d3d3;
+}
+.collapsiblecontainer div {
+width:100%;
+}
+.collapsiblecontainer .collapsibleheader {
+background-color:#d3d3d3;
+padding: 2px;
+cursor: pointer;
+font-weight: bold;
+}
+.collapsiblecontainer .collapsiblecontent {
+display: none;
+padding : 5px;
+}
+&lt;/style&gt;
+
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/github-buttons.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+$(document)  .ready(function()  {
+$(&quot;.collapsibleheader&quot;)  .click(function ()   {
+$collapsibleheader = $(this)  ;
+//getting the next element
+$collapsiblecontent = $collapsibleheader.next()  ;
+//open up the collapsiblecontent needed - toggle the slide- if visible, slide up, if not slidedown.
+$collapsiblecontent.slideToggle(500, function ()   {
+//execute this after slideToggle is done
+//change text of collapsibleheader based on visibility of collapsiblecontent div
+$collapsibleheader.find(&quot;span:first-child&quot;)  .text(function ()   {
+//change text based on condition
+return $collapsiblecontent.is(&quot;:visible&quot;)   ? &quot;- &quot; : &quot;+ &quot;;
+})  ;
+})  ;
+
+})  ;
+})  ;
+
+&lt;/script&gt;
+
+&lt;p&gt;Finally it is time for wrapping up my GSoC project and along with it a highly eventful summer. It has been an amazing experience. I’ve learned a lot over the summer, spending countless days and nights in a row to add new things to this game. The community has been more than helpful. I couldn’t have asked for more.&lt;/p&gt;
+
+&lt;p&gt;This wrap up post links to all the work done over the summer. There have been a total of &lt;strong&gt;72 PRs&lt;/strong&gt; and quite a few independent commits in the new modules I’ve created. With over &lt;strong&gt;19,000 lines of code&lt;/strong&gt;, this summer has boosted my Github stats to a whole new level.&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/GSoCStreak.png&quot; alt=&quot;GSoCStreak&quot; title=&quot;GSoCStreak&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;final-product&quot;&gt;Final Product&lt;/h2&gt;
+&lt;p&gt;The final product out of my GSoC is a whole new gameplay setting in the world of Terasology. It is a single player gameplay mode called &lt;strong&gt;Lost&lt;/strong&gt;. You take up the role of a player that ends up stranded on a planet with no way left to get back home. Set on an expedition to find signs of life in neighbouring galaxies, you come across several intriguing things that confirm the existence of intelligent life outside your planet. &lt;em&gt;Are you truly lost? Will you ever return home?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/lostBackground.jpg&quot; alt=&quot;lostBackground&quot; title=&quot;Lost&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To test it out simply follow the below instructions-&lt;/p&gt;
+
+&lt;h4 id=&quot;instructions-to-run-lost&quot;&gt;Instructions to run Lost:&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Download &lt;a href=&quot;https://slack-files.com/T03G8SB1X-F6N474GS0-867f5f5289&quot;&gt;this&lt;/a&gt; Omega.&lt;/li&gt;
+  &lt;li&gt;Extract the Omega.&lt;/li&gt;
+  &lt;li&gt;Move the save folder called “Lost” inside &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;omega796/saves&lt;/code&gt; to the save directory-
+    &lt;ul&gt;
+      &lt;li&gt;in Windows, C:/Users/name/Saved Games/Terasology/&lt;/li&gt;
+      &lt;li&gt;in Linux, /home/name/.local/share/terasology/saves/&lt;br /&gt;
+&lt;strong&gt;&lt;em&gt;Alternatively&lt;/em&gt;&lt;/strong&gt;, you can run the game with the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-homedir&lt;/code&gt; flag.&lt;/li&gt;
+      &lt;li&gt;in Windows, run the game from cmd using a command like: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Terasology.x64.exe -homedir&lt;/code&gt;
+or add the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-homedir&lt;/code&gt; flag to the target field of the shortcut to the exe file.&lt;/li&gt;
+      &lt;li&gt;in Linux, modify the run_linux.sh script so that it has a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-homedir&lt;/code&gt; flag at the end, like so:
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;java -Xms128m -Xmx1536m -jar libs/Terasology.jar -homedir&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Launch the game using the script or the .exe file.&lt;/li&gt;
+  &lt;li&gt;Select Singleplayer -&amp;gt; Lost and load the saved game.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;list-of-new-modules-created-&quot;&gt;List of new modules created-&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Terasology/AdvancedBehaviors&quot;&gt;Terasology/AdvancedBehaviors&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Terasology/WorldlyTooltipAPI&quot;&gt;Terasology/WorldlyTooltipAPI&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Terasology/WoodAndStoneCraftingJournal&quot;&gt;Terasology/WoodAndStoneCraftingJournal&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Terasology/AdventureAssets&quot;&gt;Terasology/AdventureAssets&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Terasology/Lost&quot;&gt;Terasology/Lost&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/newModules.png&quot; alt=&quot;newModules&quot; title=&quot;newModules&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;list-of-repositories-contributed-to-&quot;&gt;List of repositories contributed to-&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/MovingBlocks/Terasology&quot;&gt;Engine- MovingBlocks/Terasology&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/engine.png&quot; alt=&quot;engine&quot; title=&quot;engine&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Terasology/WildAnimals&quot;&gt;Terasology/WildAnimals&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Terasology/StructureTemplates&quot;&gt;Terasology/StructureTemplates&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Terasology/Books&quot;&gt;Terasology/Books&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Terasology/WorldlyTooltip&quot;&gt;Terasology/WorldlyTooltip&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Terasology/Projectile&quot;&gt;Terasology/Projectile&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Terasology/Pathfinding&quot;&gt;Terasology/Pathfinding&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Terasology/Journal&quot;&gt;Terasology/Journal&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Terasology/Scenario&quot;&gt;Terasology/Scenario&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Terasology/Thirst&quot;&gt;Terasology/Thirst&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Terasology/Hunger&quot;&gt;Terasology/Hunger&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/oldModules.jpg&quot; alt=&quot;oldModules&quot; title=&quot;oldModules&quot; style=&quot;max-height: 700px;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;list-of-pull-requests-&quot;&gt;List of Pull Requests-&lt;/h3&gt;
+
+&lt;p&gt;Here is a &lt;a href=&quot;https://github.com/pulls?utf8=%E2%9C%93&amp;amp;q=is%3Apr+is%3Amerged+author%3Anihal111+created%3A2017-05-04..2017-08-15+&quot;&gt;list of pull requests&lt;/a&gt; from the start of GSoC up until now.&lt;/p&gt;
+
+&lt;div class=&quot;collapsiblecontainer&quot;&gt;
+&lt;div class=&quot;collapsibleheader&quot;&gt;&lt;span&gt;+ &lt;/span&gt;&lt;span&gt;Click here to view all PRs?&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;collapsiblecontent&quot;&gt;
+&lt;a href=&quot;https://github.com/MovingBlocks/Terasology/pull/3065&quot;&gt;&lt;strong&gt;MovingBlocks/Terasology&lt;/strong&gt; Added setSpawnLocation command&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdventureAssets/pull/20&quot;&gt;&lt;strong&gt;Terasology/AdventureAssets&lt;/strong&gt; Added MCQ Button Door&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/MovingBlocks/Terasology/pull/3061&quot;&gt;&lt;strong&gt;MovingBlocks/Terasology&lt;/strong&gt; Added removeAllWidgets method API UI&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/MovingBlocks/Terasology/pull/3033&quot;&gt;&lt;strong&gt;MovingBlocks/Terasology&lt;/strong&gt; Dead players alive-d on join&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/StructureTemplates/pull/20&quot;&gt;&lt;strong&gt;Terasology/StructureTemplates&lt;/strong&gt; Consumes AttackEvent for BlockRegions&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/MovingBlocks/Terasology/pull/3030&quot;&gt;&lt;strong&gt;MovingBlocks/Terasology&lt;/strong&gt; PlayerDeath event should be sent to character entity&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/Hunger/pull/12&quot;&gt;&lt;strong&gt;Terasology/Hunger&lt;/strong&gt; Fix for Hunger related Alive/Death handling&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/Thirst/pull/5&quot;&gt;&lt;strong&gt;Terasology/Thirst&lt;/strong&gt; Fix for Thirst related Alive/Death handling&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdventureAssets/pull/19&quot;&gt;&lt;strong&gt;Terasology/AdventureAssets&lt;/strong&gt; Added NoInteraction component&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/MovingBlocks/Terasology/pull/3024&quot;&gt;&lt;strong&gt;MovingBlocks/Terasology&lt;/strong&gt; Checking isHeadless from DisplayDevice&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/MovingBlocks/Terasology/pull/3020&quot;&gt;&lt;strong&gt;MovingBlocks/Terasology&lt;/strong&gt; Change ActivationPredicted to consumable event&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/StructureTemplates/pull/18&quot;&gt;&lt;strong&gt;Terasology/StructureTemplates&lt;/strong&gt; Consuming ActivationPredicted event&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/Scenario/pull/33&quot;&gt;&lt;strong&gt;Terasology/Scenario&lt;/strong&gt; Added Protected Regions and Resizing functionality&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/Projectile/pull/4&quot;&gt;&lt;strong&gt;Terasology/Projectile&lt;/strong&gt; MaxDistance check during displacement calculation&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdventureAssets/pull/18&quot;&gt;&lt;strong&gt;Terasology/AdventureAssets&lt;/strong&gt; Structure Template Integration fixes&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/Books/pull/15&quot;&gt;&lt;strong&gt;Terasology/Books&lt;/strong&gt; Multiplayer + newline fix&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdventureAssets/pull/17&quot;&gt;&lt;strong&gt;Terasology/AdventureAssets&lt;/strong&gt; Swinging Blade is multiplayer ready&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdventureAssets/pull/16&quot;&gt;&lt;strong&gt;Terasology/AdventureAssets&lt;/strong&gt; WipeOut is multiplayer ready&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdventureAssets/pull/15&quot;&gt;&lt;strong&gt;Terasology/AdventureAssets&lt;/strong&gt; Fixed Fireball Launcher for multiplayer&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdventureAssets/pull/14&quot;&gt;&lt;strong&gt;Terasology/AdventureAssets&lt;/strong&gt; Door works in multiplayer&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdventureAssets/pull/13&quot;&gt;&lt;strong&gt;Terasology/AdventureAssets&lt;/strong&gt; Password Door is now multiplayer ready&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/MovingBlocks/Terasology/pull/2994&quot;&gt;&lt;strong&gt;MovingBlocks/Terasology&lt;/strong&gt; Added door related events&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/MovingBlocks/Terasology/pull/2993&quot;&gt;&lt;strong&gt;MovingBlocks/Terasology&lt;/strong&gt; FloatingTextRenderer accepts multiple \n separated lines&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/MovingBlocks/Terasology/pull/2988&quot;&gt;&lt;strong&gt;MovingBlocks/Terasology&lt;/strong&gt; Multiline UIText, enter produces newline&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/MovingBlocks/Terasology/pull/2987&quot;&gt;&lt;strong&gt;MovingBlocks/Terasology&lt;/strong&gt; Store DoorRegion prefab as component parameter&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdventureAssets/pull/12&quot;&gt;&lt;strong&gt;Terasology/AdventureAssets&lt;/strong&gt; Added a UI Screen Password locked Door&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/MovingBlocks/Terasology/pull/2983&quot;&gt;&lt;strong&gt;MovingBlocks/Terasology&lt;/strong&gt; Separated spawnLocation calculation from respawnPlayer method&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdventureAssets/pull/11&quot;&gt;&lt;strong&gt;Terasology/AdventureAssets&lt;/strong&gt; Add the Revival Stone&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdventureAssets/pull/10&quot;&gt;&lt;strong&gt;Terasology/AdventureAssets&lt;/strong&gt; Moved duplicate methods to utility class&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdventureAssets/pull/9&quot;&gt;&lt;strong&gt;Terasology/AdventureAssets&lt;/strong&gt; Remember rotation after mining of trap blocks&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/Projectile/pull/3&quot;&gt;&lt;strong&gt;Terasology/Projectile&lt;/strong&gt; Revert to old constructor&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdventureAssets/pull/8&quot;&gt;&lt;strong&gt;Terasology/AdventureAssets&lt;/strong&gt; Added more parameters for Fireball with Structure Template integration&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/Projectile/pull/2&quot;&gt;&lt;strong&gt;Terasology/Projectile&lt;/strong&gt; Changed CollisionGroup filter to ALL&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/Projectile/pull/1&quot;&gt;&lt;strong&gt;Terasology/Projectile&lt;/strong&gt; Added new event constructor for configurable maxDistance&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/DamagingBlocks/pull/6&quot;&gt;&lt;strong&gt;Terasology/DamagingBlocks&lt;/strong&gt; Reverted the AliveCharacter check&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdventureAssets/pull/6&quot;&gt;&lt;strong&gt;Terasology/AdventureAssets&lt;/strong&gt; Added Fireball Launcher&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/MovingBlocks/Terasology/pull/2982&quot;&gt;&lt;strong&gt;MovingBlocks/Terasology&lt;/strong&gt; Prevents player entity from being destroyed after death onDamage&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/DamagingBlocks/pull/5&quot;&gt;&lt;strong&gt;Terasology/DamagingBlocks&lt;/strong&gt; Added Alive Character check&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdventureAssets/pull/5&quot;&gt;&lt;strong&gt;Terasology/AdventureAssets&lt;/strong&gt; Added Wipeout&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdventureAssets/pull/4&quot;&gt;&lt;strong&gt;Terasology/AdventureAssets&lt;/strong&gt; Changed trap placement approach to root block&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdventureAssets/pull/3&quot;&gt;&lt;strong&gt;Terasology/AdventureAssets&lt;/strong&gt; Changed trapPlaceholder block shape and fixed readme&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/StructureTemplates/pull/16&quot;&gt;&lt;strong&gt;Terasology/StructureTemplates&lt;/strong&gt; Moved rotation logic&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/MovingBlocks/Terasology/pull/2973&quot;&gt;&lt;strong&gt;MovingBlocks/Terasology&lt;/strong&gt; Fixes &lt;code class=&quot;highlighter-rouge&quot;&gt;dumpEntities&lt;/code&gt; console command&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdventureAssets/pull/2&quot;&gt;&lt;strong&gt;Terasology/AdventureAssets&lt;/strong&gt; Added SwingingBlade&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/StructureTemplates/pull/15&quot;&gt;&lt;strong&gt;Terasology/StructureTemplates&lt;/strong&gt; Added rotation logic for spawning entities&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdventureAssets/pull/1&quot;&gt;&lt;strong&gt;Terasology/AdventureAssets&lt;/strong&gt; Add module.txt and gitignore&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdvancedBehaviors/pull/7&quot;&gt;&lt;strong&gt;Terasology/AdvancedBehaviors&lt;/strong&gt; Added alive character check&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/Pathfinding/pull/31&quot;&gt;&lt;strong&gt;Terasology/Pathfinding&lt;/strong&gt; Added alive character check&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/WildAnimals/pull/16&quot;&gt;&lt;strong&gt;Terasology/WildAnimals&lt;/strong&gt; Added alive character component&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/GooeysQuests/pull/14&quot;&gt;&lt;strong&gt;Terasology/GooeysQuests&lt;/strong&gt; Added alive character component&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/Journal/pull/4&quot;&gt;&lt;strong&gt;Terasology/Journal&lt;/strong&gt; Added Recipe and Image paragraph&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/WoodCrafting/pull/3&quot;&gt;&lt;strong&gt;Terasology/WoodCrafting&lt;/strong&gt; Moved generators to NeoTTA&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/NeoTTA/pull/1&quot;&gt;&lt;strong&gt;Terasology/NeoTTA&lt;/strong&gt; Moved generators from WoodCrafting&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/MovingBlocks/Terasology/pull/2962&quot;&gt;&lt;strong&gt;MovingBlocks/Terasology&lt;/strong&gt; Fixed eye height movement debug command&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/PhysicalStats/pull/3&quot;&gt;&lt;strong&gt;Terasology/PhysicalStats&lt;/strong&gt; Fixes missing save component bugs&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/MovingBlocks/Terasology/pull/2958&quot;&gt;&lt;strong&gt;MovingBlocks/Terasology&lt;/strong&gt; Do not destroy player entity completely on death&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/Journal/pull/3&quot;&gt;&lt;strong&gt;Terasology/Journal&lt;/strong&gt; Adds different colored entries for Unread Journal entries&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/Pathfinding/pull/30&quot;&gt;&lt;strong&gt;Terasology/Pathfinding&lt;/strong&gt; Fixed intelligent flee&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdvancedBehaviors/pull/6&quot;&gt;&lt;strong&gt;Terasology/AdvancedBehaviors&lt;/strong&gt; Added intelligent flee&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/Pathfinding/pull/29&quot;&gt;&lt;strong&gt;Terasology/Pathfinding&lt;/strong&gt; Added intelligent flee&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdvancedBehaviors/pull/5&quot;&gt;&lt;strong&gt;Terasology/AdvancedBehaviors&lt;/strong&gt; Refactor&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdvancedBehaviors/pull/3&quot;&gt;&lt;strong&gt;Terasology/AdvancedBehaviors&lt;/strong&gt; Added the fleeInProximity package&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/WildAnimals/pull/15&quot;&gt;&lt;strong&gt;Terasology/WildAnimals&lt;/strong&gt; Added a scaredDeer&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdvancedBehaviors/pull/2&quot;&gt;&lt;strong&gt;Terasology/AdvancedBehaviors&lt;/strong&gt; Added followInProximity package&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/WildAnimals/pull/14&quot;&gt;&lt;strong&gt;Terasology/WildAnimals&lt;/strong&gt; Added a friendlyDeer&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/WildAnimals/pull/13&quot;&gt;&lt;strong&gt;Terasology/WildAnimals&lt;/strong&gt; Moved packages to AdvancedBehaviors** module&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/AdvancedBehaviors/pull/1&quot;&gt;&lt;strong&gt;Terasology/AdvancedBehaviors&lt;/strong&gt; Moved packages from WildAnimals** module&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/WildAnimals/pull/12&quot;&gt;&lt;strong&gt;Terasology/WildAnimals&lt;/strong&gt; AttackInProximity- adds hostile-stray behavior switching&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/FunnyBlocks/pull/11&quot;&gt;&lt;strong&gt;Terasology/FunnyBlocks&lt;/strong&gt; Portals work in multiplayer&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/WildAnimals/pull/10&quot;&gt;&lt;strong&gt;Terasology/WildAnimals&lt;/strong&gt; Added aggressiveDeer&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/WorldlyTooltip/pull/7&quot;&gt;&lt;strong&gt;Terasology/WorldlyTooltip&lt;/strong&gt; Configured with WorldlyTooltipAPI module&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/MovingBlocks/Terasology/pull/2932&quot;&gt;&lt;strong&gt;MovingBlocks/Terasology&lt;/strong&gt; Fixes the blocker #2913&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/WorldlyTooltip/pull/6&quot;&gt;&lt;strong&gt;Terasology/WorldlyTooltip&lt;/strong&gt; Added character entity support&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/MovingBlocks/Terasology/pull/2930&quot;&gt;&lt;strong&gt;MovingBlocks/Terasology&lt;/strong&gt; BehaviorSystem- use cachedInterpreters&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/MovingBlocks/Terasology/pull/2929&quot;&gt;&lt;strong&gt;MovingBlocks/Terasology&lt;/strong&gt; Worldly tooltip addition for character entities&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/Terasology/WildAnimals/pull/9&quot;&gt;&lt;strong&gt;Terasology/WildAnimals&lt;/strong&gt; Worldly tooltip Integration&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;what-more-to-look-at&quot;&gt;What more to look at?&lt;/h3&gt;
+
+&lt;p&gt;There have been a whole lot of videos I’ve made over the summer. You can have a look at them at &lt;a href=&quot;https://www.youtube.com/channel/UCVDrDJDt7sI8A9Ww1FekUMQ&quot;&gt;my channel&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I have also written a set of blog posts marking the progress I made through the summers. A list of all these can be found under the #GSoC tag &lt;a href=&quot;http://nihal111.github.io/tags/#GSoC&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;whats-next&quot;&gt;What’s next?&lt;/h3&gt;
+
+&lt;p&gt;Although I have checked off most of my primary targets from the proposal. There are quite a few things that need work on-&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Some of the traps like the Swinging Blade work well only in Single Player. This is because the Movement Prediction works quite differently on the server side. The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CharacterImpulseEvent&lt;/code&gt; triggers differently even with a little lag.&lt;/li&gt;
+  &lt;li&gt;Traps like the Wipe Out, require the player to move constantly along with the surfboard. There have also been instances when a collision is not detected between the player and the surfboard. Again something to deal with the Movement Prediction and Physics engine.&lt;/li&gt;
+  &lt;li&gt;On the Gameplay side, I’ve attempted to make interesting short riddles for the three treasure locations, however they get boring very fast. The player might feel it is too much effort to solve a text based riddle. It can be difficult to strike the right chord while making riddles and clues that are both short, engaging and require the player to think.&lt;/li&gt;
+  &lt;li&gt;The Portal upon construction does nothing yet. Well, it is supposed to take you back to your home planet. But I guess we could display a “Game Over” dialog or somehow bring up the Credits screen.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Some of these might be fixed by a long overdue movement refactoring. With Tyler Thompson’s Scenario module developed alongside in &lt;a href=&quot;https://thompsontyler.github.io/gsoc/2017/08/25/scenario-gsoc.html&quot;&gt;another GSoC project&lt;/a&gt;, the Lost module serves as an example of how a gameplay scenario can be made.&lt;br /&gt;
+With the completion of this GSoC project making adventure assets like locked doors, traps, resurrection statues etc are now a lot more easier. Creation of more such things can probably serve as one of the tougher GCI tasks later.&lt;/p&gt;
+
+&lt;h3 id=&quot;wrapping-it-up&quot;&gt;Wrapping it up&lt;/h3&gt;
+
+&lt;p&gt;Once again, I would like to thank all my mentors. My primary mentor, &lt;a href=&quot;http://forum.terasology.org/members/skysom.1621/&quot;&gt;Skylar ‘skysom’ Sommers&lt;/a&gt;, for replying always within a splitsecond (save for the times when he forgets to hit the Send button :P). &lt;a href=&quot;http://forum.terasology.org/members/florian.1335/&quot;&gt;Florian ‘flo’ Köberle&lt;/a&gt;, who was my secondary but went out of his way and functioned effectively as my primary. I got to learn a lot from flo regarding various aspects about the game. It would have been impossible to complete my project without his aid. &lt;a href=&quot;http://forum.terasology.org/members/xtariq.1697/&quot;&gt;Xavier ‘xtariq’ Tariq&lt;/a&gt;, who was also my secondary mentor, helped me whenever I needed him. I’d like to specially thank &lt;a href=&quot;http://forum.terasology.org/members/cervator.2/&quot;&gt;Rasmus ‘cervator’ Praestholm&lt;/a&gt; here. Had he not been there that night in October, welcoming me on IRC and helping me set up my codebase, maybe I would have given up, moved on and never have done GSoC in the first place.&lt;/p&gt;
+
+&lt;p&gt;All in all, it has been a thrilling summer. By this time I am familiar with a good part of the game’s codebase. I would love to continue contributing, albeit in different capacities. Let’s hope real life doesn’t get in the way too much. Also, GCI is almost here and another storm’s coming!&lt;/p&gt;
+
+&lt;p&gt;Here’s a snap from one of the many exciting multiplayer play test sessions-&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/multiplayerPlayTest.jpg&quot; alt=&quot;multiplayerPlayTest&quot; title=&quot;multiplayerPlayTest&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+</description>
+					  <pubDate>2017-08-15T00:00:00+04:00</pubDate>
+					  <link>http://localhost:4000/2017/08/15/GSoC-wrap-up.html</link>
+					  <guid isPermaLink="true">http://localhost:4000/2017/08/15/GSoC-wrap-up.html</guid>
+				  </item>
+				
+
+    
+    		
+				
+	
+				
+	
+				
+	
+				
+				  <item>
+					  <title>GSoC Week 10, 11 and 12: Lost</title>
+					  <description>&lt;style type=&quot;text/css&quot;&gt;
+.collapsiblecontainer {
+width:100%;
+border:1px solid #d3d3d3;
+}
+.collapsiblecontainer div {
+width:100%;
+}
+.collapsiblecontainer .collapsibleheader {
+background-color:#d3d3d3;
+padding: 2px;
+cursor: pointer;
+font-weight: bold;
+}
+.collapsiblecontainer .collapsiblecontent {
+display: none;
+padding : 5px;
+}
+&lt;/style&gt;
+
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/github-buttons.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+$(document).ready(function(){
+$(&quot;.collapsibleheader&quot;).click(function () {
+$collapsibleheader = $(this);
+//getting the next element
+$collapsiblecontent = $collapsibleheader.next();
+//open up the collapsiblecontent needed - toggle the slide- if visible, slide up, if not slidedown.
+$collapsiblecontent.slideToggle(500, function () {
+//execute this after slideToggle is done
+//change text of collapsibleheader based on visibility of collapsiblecontent div
+$collapsibleheader.find(&quot;span:first-child&quot;).text(function () {
+//change text based on condition
+return $collapsiblecontent.is(&quot;:visible&quot;) ? &quot;- &quot; : &quot;+ &quot;;
+});
+});
+
+});
+});
+
+&lt;/script&gt;
+
+&lt;p&gt;This post breaks a long silence. Most of the work in the last three weeks has been discreet and low-key. Since all the elements were made ready, it was time to put it all together and package everything under one roof. A lot of work went into putting together the lore and making a good amount of riddles for a kind of treasure hunt in-game. Most of the reason for the confidentiality was to keep the spoilers at bay. I wanted folks from the community to try out the game without having any idea of what lies ahead.&lt;/p&gt;
+
+&lt;p&gt;Before you proceed any further, I’d like to make it bold and clear that there lie &lt;strong&gt;SPOILERS AHEAD&lt;/strong&gt;. I would highly recommend you give a shot to the game, as instructed below, before you move any further.&lt;/p&gt;
+
+&lt;h2 id=&quot;instructions-to-run-lost&quot;&gt;Instructions to run Lost:&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Download &lt;a href=&quot;https://slack-files.com/T03G8SB1X-F6N474GS0-867f5f5289&quot;&gt;this&lt;/a&gt; Omega.&lt;/li&gt;
+  &lt;li&gt;Extract the Omega.&lt;/li&gt;
+  &lt;li&gt;Move the save folder called “Lost” inside &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;omega796/saves&lt;/code&gt; to the save directory-
+    &lt;ul&gt;
+      &lt;li&gt;in Windows, C:/Users/name/Saved Games/Terasology/&lt;/li&gt;
+      &lt;li&gt;in Linux, /home/name/.local/share/terasology/saves/&lt;br /&gt;
+&lt;strong&gt;&lt;em&gt;Alternatively&lt;/em&gt;&lt;/strong&gt;, you can run the game with the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-homedir&lt;/code&gt; flag.&lt;/li&gt;
+      &lt;li&gt;in Windows, run the game from cmd using a command like: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Terasology.x64.exe -homedir&lt;/code&gt;
+or add the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-homedir&lt;/code&gt; flag to the target field of the shortcut to the exe file.&lt;/li&gt;
+      &lt;li&gt;in Linux, modify the run_linux.sh script so that it has a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-homedir&lt;/code&gt; flag at the end, like so:
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;java -Xms128m -Xmx1536m -jar libs/Terasology.jar -homedir&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Launch the game using the script or the .exe file.&lt;/li&gt;
+  &lt;li&gt;Select Singleplayer -&amp;gt; Lost and load the saved game.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;what-have-i-been-upto&quot;&gt;What have I been upto?&lt;/h1&gt;
+
+&lt;p&gt;There’s a good amount of stuff that happened in the three weeks, from making tricky riddles interspersed with lore to making new blocks and items along with crafting a new world. I’ll try to narrate things in the order of occurence, although my hazy memory might make a few things non-linear.&lt;/p&gt;
+
+&lt;h2 id=&quot;packaging-the-save-game&quot;&gt;Packaging the save game&lt;/h2&gt;
+
+&lt;p&gt;After a bit of discussion, it was clear that it would not be possible to deal with the accurate spawning of the puzzles and other structures I want in game at world generation time, at least within the time and scope of my GSoC project. An alternative idea that was proposed was to let the world gen take care of the terrain, flora and fauna, while the other tricky elements be added (or rather placed) in-game manually. After everything gets placed, the player is moved back to the spawn location with all things like Health, Hunger and Thirst reset. This results in a base save game, that acts as a gameplay template and can be loaded instead of creating a new game. This would also serve as a final product of my GSoC project, something that is easily playable and showcases almost everything I’ve worked on.&lt;/p&gt;
+
+&lt;h2 id=&quot;lore-and-plot&quot;&gt;Lore and Plot&lt;/h2&gt;
+
+&lt;p&gt;After spending a good amount of time on thinking about the story and the character progress, I was able to come up with something. Here’s what the overall plot looks like-&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;The player ends up on a desolate planet devoid of other intelligent beings. He opens up his journal to find that this was meant to be just another exploration survey of one of the potential life-supporting planets in the neighbouring galaxy. However, the wormhole that he created to get here has malfunctioned and closed, leaving him stranded with no communication whatsoever. The situation seems grim and his forlorn attempts to fire up the wormhole again fail terribly. Left with no option, he wanders around to have a look at the planet that might be the last he ever set foot on. Born a survivor, he's able to hunt for food, and build basic tools to keep himself alive. Soon after he starts exploring, the player finds structures that clearly represent signs of existence of intelligent life forms. He becomes careful. Fearing his own death by the hands of the natives, he builds a few tools to defend himself. Underneath one of the structures, he discovers a secret passage. Gathering courage he goes through it. He finds a puzzle that needs to be solved to reach a treasure which seems to be concealed from the unworthy. He finds a book in the treasure chests which reveals a few secrets but creates even more mysteries..
+&quot;.. before the machines tear us apart, it's crucial to save the technology we've created for the survivors to grow and fight back, to take back what's theirs. Most of our defences have been destroyed, our houses burned and whatever we've created is lost, but knowledge is something that doesn't die easily. If you've survived and found this book, what follows are the blueprints of the revolutionary technologies that we’ve created. To build some of these, you might require some artifacts scattered around the entire world...&quot;
+Soon he solves a few more and realises that he can actually find a way back home by using the early civilization's technology to create what is known as a catapult portal that throws you across in space time. He sets on a journey to find and solve all puzzles to find the necessary artifacts and manuscripts to build the portal so that he can travel back home.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;You can find the full Lore document &lt;a href=&quot;https://docs.google.com/document/d/1GVmJEV2KKjqgxjtVR-_Lh7QsvRzQbfxg9qeHjimIbPg/edit?usp=sharing&quot;&gt;here&lt;/a&gt;. The document also contains the whole list of riddles that need to be solved to access locked areas in game. Needless to say, &lt;strong&gt;SPOILER ALERT&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;making-items-and-blocks&quot;&gt;Making items and blocks&lt;/h2&gt;
+
+&lt;p&gt;With all the lore ready in a Google Doc, it was time to bring everything in-game.&lt;/p&gt;
+
+&lt;h3 id=&quot;making-the-books-&quot;&gt;Making the Books-&lt;/h3&gt;
+&lt;p&gt;Most of the game revolves around the usage of books and the journal to convey and progress the story. There are a total of 6 books that were made. Three of these books can be found in treasure chests serving as instructions on usage of specific ingredients (kept alongside in the treasure chest) to make the catapult portal. The most crucial book is the book that carries all the secrets, mainly directions to puzzles and treasures. There is one book inside the hut that hints the player to look in the well for the Book of Secrets. There is another book that lies in a chest located inside the crash site where the player spawns. This book simply has stories on space exploration, serves as light reading. The list of books is as follows-&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Space Exploration Stories (Editable)&lt;/li&gt;
+  &lt;li&gt;The Hut Book (Read-Only)&lt;/li&gt;
+  &lt;li&gt;Book of Secrets (Read-Only)&lt;/li&gt;
+  &lt;li&gt;Treasure Chest 1- Shattered Plasma Book (Read-Only)&lt;/li&gt;
+  &lt;li&gt;Treasure Chest 2- Arkenstone and obsidian Torch Book (Read-Only)&lt;/li&gt;
+  &lt;li&gt;Treasure Chest 3- Facade of Truth Book (Read-Only)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;antrum-sabre-&quot;&gt;Antrum Sabre-&lt;/h3&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/antrumSabre.jpg&quot; alt=&quot;antrumSabre&quot; title=&quot;antrumSabre&quot; style=&quot;max-height: 100px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The word “antrum” is latin for cave or hole. The antrum sabre is an item that the player uses to make a wormhole (a connection in space-time), to travel huge distances in a few seconds. This tool however becomes dysfunctional when the player arrives at the new planet.&lt;/p&gt;
+
+&lt;h3 id=&quot;arkenstone-&quot;&gt;Arkenstone-&lt;/h3&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/arkenstone.jpg&quot; alt=&quot;arkenstone&quot; title=&quot;Arkenstone&quot; style=&quot;max-height: 100px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The arkenstone is the central part of the catapult portal. Preserved since the dawn of the ancient ages, this stone serves as the key to the Portal. The kestone must be activated by tapping on it with the obsidian torch to fire up and ignite the portal.&lt;/p&gt;
+
+&lt;h3 id=&quot;obsidian-torch-&quot;&gt;Obsidian Torch-&lt;/h3&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/obsidianTorch.jpg&quot; alt=&quot;obsidianTorch&quot; title=&quot;obsidianTorch&quot; style=&quot;max-height: 100px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The obsidian torch discovered by the natives in the West, was a remnant found inside the largest volcano. With an ever-glowing flame, it also has other mystical usages. Knocking on the arkenstone with the obsidian torch would light up the portal and activate it.&lt;/p&gt;
+
+&lt;h3 id=&quot;shattered-plasma-&quot;&gt;Shattered Plasma-&lt;/h3&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/shatteredPlasma.jpg&quot; alt=&quot;shatteredPlasma&quot; title=&quot;Shattered Plasma&quot; style=&quot;max-height: 100px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The shattered plasma is a green looking block made up from forging together sand, glass and grass of Spero in the Kiln of Tudal. This forms the base or the foundation for the catapult portal.&lt;/p&gt;
+
+&lt;h3 id=&quot;facade-of-truth-&quot;&gt;Facade of Truth-&lt;/h3&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/facadeOfTruth.jpg&quot; alt=&quot;facadeOfTruth&quot; title=&quot;Facade Of Truth&quot; style=&quot;max-height: 100px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The Facade of Truth is made up of blocks of a special type of Basalt. These blocks need to be piled up to create a 3x3 frame with a 1x2 hole for the tunnel in between.
+With the Shattered Plasma foundation laid, the Facade of Truth built on top, the arkenstone needs to be placed at the front of the foundation and tapped with the Obsidian Torch to activate and light up the portal.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-final-portal&quot;&gt;The Final Portal&lt;/h3&gt;
+
+&lt;p&gt;The final catapult portal when put together from all the above blocks, looks like this-&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/portal.jpg&quot; alt=&quot;portal&quot; title=&quot;Portal&quot; style=&quot;max-height: 400px;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;making-structures&quot;&gt;Making Structures&lt;/h2&gt;
+&lt;p&gt;The puzzle rooms were already made, complete with deadly and lethal traps. It was time to wrap these rooms around with some special structures to hide them from plain sight. There were three puzzle rooms that I hade made. To wrap around and hide these puzzle rooms, I made three additional structures- the pyramid, the stonehenge and an underground temple. In addition to these, there were two more structures that I made, the hut and the well, that exist near the spawn location which serve as a starting point for the player.&lt;/p&gt;
+
+&lt;h3 id=&quot;making-the-pyramid-&quot;&gt;Making the Pyramid-&lt;/h3&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/pyramidActual.jpg&quot; alt=&quot;pyramidActual&quot; title=&quot;Pyramid of Giza&quot; style=&quot;max-height: 400px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A good looking square pyramid made from blocks must have square layers stacked one on top of the other. For a neat looking pyramid that has a pointed top (of one block size), it is required to have each square layer have an odd length, i.e. the top layer would be 1x1, followed by layers having dimensions 3x3, 5x5, 7x7 and so on. For a pyramid having a length &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;l&lt;/code&gt;, the bottom-most layer has dimensions- &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(2l - 1)x(2l - 1)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;I decided to start by making a structural template for the pyramid, the pyramid would then have the puzzle room inside, at its heart, just like the tomb inside the Egyptian pyramids. To do this I required a very large pyramid which would have been extremely tedious to build manually. So, I went ahead and made a small pyramid with a height of 3 and studied the generated structure template. The structure template for a pyramid of height 3 and base of 5x5 looks like this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;blockType&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;core:Sand&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;region&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;min&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;-2&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;size&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]}}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;blockType&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;core:Sand&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;region&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;min&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;-1&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;size&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]}}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;blockType&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;core:Sand&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;region&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;min&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;size&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]}}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;air&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;blocks&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Apart from the air blocks, the sand block followed a nice pattern. So, I went ahead and made a python script to make the generation of square pyramids easy. Here’s the script I wrote-&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;raw_input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Enter length of base of square pyramid (odd number)&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'{ &quot;blockType&quot;: &quot;core:Sand&quot;, &quot;region&quot;: { &quot;min&quot;: ['&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;' ,'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;', '&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'], &quot;size&quot;: ['&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;' , 1, '&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;']}},&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;l&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Note that the generated output would not account for the surrounding air blocks. It is advisable to place the structure (generated from the script) in the world using a spawner and then create another structure template by making a box size region that encompasses the whole pyramid. This ensures that no other block (like parts of a nearby tree) remains floating above the pyramid.&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/pyramid.jpg&quot; alt=&quot;pyramid&quot; title=&quot;Pyramid&quot; style=&quot;max-height: 400px;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;making-the-stonehenge-&quot;&gt;Making the Stonehenge-&lt;/h3&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/stonehengeActual.jpg&quot; alt=&quot;stonehengeActual&quot; title=&quot;Stonehenge Actual&quot; style=&quot;max-height: 400px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Another one such structure to conceal the puzzle room is the stone henge. The stone henge much like the real world stone henge comprises of gaping tall pillars.&lt;/p&gt;
+
+&lt;p&gt;Creating the stonehenge was relatively easy. I made long pillars of cobblestone by entering the ghost mode. Some pillars were broader than the others and some were connected to a neighboring pillar at the top.&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/stonehengePillar.jpg&quot; alt=&quot;stonehengePillar&quot; title=&quot;stonehengePillar&quot; style=&quot;max-width: 400px; max-height: 400px;&quot; /&gt;
+&lt;img src=&quot;/img/stonehengeTwoPillar.jpg&quot; alt=&quot;stonehengeTwoPillar&quot; title=&quot;stonehengeTwoPillar&quot; style=&quot;max-width: 400px; max-height: 400px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The pillars together were arranged in a circular fashion. Inside the circle lay the puzzle room.&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/stonehenge.jpg&quot; alt=&quot;stonehenge&quot; title=&quot;Stonehenge&quot; style=&quot;max-height: 400px;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;making-the-temple-&quot;&gt;Making the Temple-&lt;/h3&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/templeActual.jpg&quot; alt=&quot;templeActual&quot; title=&quot;Temple Actual&quot; style=&quot;max-height: 400px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The third and last structure is an underground temple. The puzzle room is hidden underground in a cave like hollow. The entrance to the cave is marked as a large “T” on the ground made by dirt blocks. Breaking the dirt blocks brings out the hidden staircase that leads to the underground cave. The cave is lit up with torches and directly makes way for the puzzle room.&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/temple.jpg&quot; alt=&quot;temple&quot; title=&quot;Temple&quot; style=&quot;max-height: 400px;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;making-the-hut-and-the-well-&quot;&gt;Making the Hut and the Well-&lt;/h3&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/well.jpg&quot; alt=&quot;well&quot; title=&quot;Well&quot; style=&quot;max-height: 400px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The hut and the well are the nearest structures to the spawn location. They are pivotal to the plot. The well has a hidden treasure chest underground that contains the Book of Secrets. The Book of Secrets hides inside it the directions for the three structures that conceal the different pieces of the catapult portal.&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/hut.jpg&quot; alt=&quot;hut&quot; title=&quot;Hut&quot; style=&quot;max-height: 400px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The hut also has a treasure chest consisting of a Pickaxe and some other blocks. It also contains that book which points towards the well.&lt;/p&gt;
+
+&lt;h2 id=&quot;protecting-regions&quot;&gt;Protecting Regions&lt;/h2&gt;
+
+&lt;div class=&quot;github-button&quot; url=&quot;https://github.com/Terasology/Scenario/pull/33&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;github-button&quot; url=&quot;https://github.com/Terasology/AdventureAssets/pull/19&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;Most of the traps had a settings screen that was produced upon interaction. This behavior was to be prevented for the traps inside the puzzle rooms atleast. In addition the password doors could be broken down easily by attacking. These needed to be protected too.&lt;/p&gt;
+
+&lt;p&gt;To protect the regions, I decided to take help of the Scenarios module (being developed in another GSoC project). I’ve added features like Region Resizing and marking regions Protected in the Regions section of Scenarios. Regions can be created, and their properties altered using the Scenario:HubTool.&lt;/p&gt;
+
+&lt;p&gt;A protected region now has the following functionalities-&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;No block addition&lt;/li&gt;
+  &lt;li&gt;No block attack/removal/mining&lt;/li&gt;
+  &lt;li&gt;No interaction with entities having the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NoInteractionWhenProtected&lt;/code&gt; component&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;journal-integration&quot;&gt;Journal Integration&lt;/h2&gt;
+
+&lt;p&gt;Finally, the Journal that’s been out there dust-laden has finally been put to some good use. Lost makes immense use of the Journal. In addition to adding Journal posts related to WoodAndStoneCrafting (see &lt;a href=&quot;https://github.com/Terasology/WoodAndStoneCraftingJournal&quot;&gt;WoodAndStoneCraftingJournal&lt;/a&gt;), Lost adds its own section in the journal. There are multiple Journal articles that get added upon events like- killing a deer, finding a new treasure chest, finding the book of secrets etc.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-angel-of-resurrection&quot;&gt;The Angel of Resurrection&lt;/h2&gt;
+
+&lt;p&gt;Near every trap or puzzle room, in close proximity an Angel of Resurrection is placed that could be activated to enable respawning near it, essentially acting as a checkpoint. The checkpoint is vital since death caused by the lethal traps would send the player to respawn back at the original spawn point (0, 0, 0). This causes the player to travel a huge distance to get back to the puzzle room. This has some serious chunk loading issues as well.&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/pyramidAngel.jpg&quot; alt=&quot;pyramidAngel&quot; title=&quot;pyramidAngel&quot; style=&quot;max-width: 250px; max-height: 400px;&quot; /&gt;
+&lt;img src=&quot;/img/stonehengeAngel.jpg&quot; alt=&quot;stonehengeAngel&quot; title=&quot;stonehengeAngel&quot; style=&quot;max-width: 250px; max-height: 400px;&quot; /&gt;
+&lt;img src=&quot;/img/templeAngel.jpg&quot; alt=&quot;templeAngel&quot; title=&quot;templeAngel&quot; style=&quot;max-width: 250px; max-height: 400px;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;mcq-button-door&quot;&gt;MCQ Button Door&lt;/h2&gt;
+&lt;p&gt;The Password door allows the player to unlock the door only if the player enters the exact passphrase. The MCQ Button door is less cruel, it provides a set of options to choose from. However, it is dangerous and it kills the player instantly if they press the wrong button.&lt;/p&gt;
+
+&lt;div class=&quot;videowrapper&quot;&gt;
+&lt;iframe width=&quot;1024&quot; height=&quot;768&quot; src=&quot;https://www.youtube.com/embed/hT9Dk_b7s6k&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;set-custom-spawn-location&quot;&gt;Set Custom Spawn Location&lt;/h2&gt;
+
+&lt;p&gt;The world generator is used to set the spawn position at every RespawnRequest. For world generators like PolyWorld this can be troublesome, since there is no static spawn location and the generator finds a suitable spot in an area covered by a specified search radius.&lt;/p&gt;
+
+&lt;p&gt;To allow more control over spawning, I added a new command- &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;setSpawnLocation&lt;/code&gt; that sets the spawn location to the character’s current location.&lt;/p&gt;
+
+&lt;div class=&quot;github-button&quot; url=&quot;https://github.com/MovingBlocks/Terasology/pull/3065/&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;putting-it-all-together&quot;&gt;Putting it all together&lt;/h2&gt;
+
+&lt;p&gt;The individual components were all ready as structures and items. What was left was placing everything together in a world to create the base save file. Piece by piece, I placed everything together. I had to take care of a few things like the directions for the structures as indicated in the Book of Secrets and subtleties like the fact that a mammoth sized pyramid of sand cannot lie on top of grassy meadows.&lt;/p&gt;
+
+&lt;p&gt;The whole world is packed in the &lt;strong&gt;Island World generator&lt;/strong&gt; from &lt;a href=&quot;https://github.com/Terasology/PolyWorld&quot;&gt;PolyWorld&lt;/a&gt; that has nice little islands to help contain all the features and prevent the player from wandering too far.&lt;/p&gt;
+
+&lt;p&gt;Here is the background image for the Lost module-&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/lostBackground.jpg&quot; alt=&quot;lostBackground&quot; title=&quot;Lost&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I’ll be making a wrap up post soon to cover all my contributions over the summer with a few stats. Plus, I might make a teaser video for the Lost module.&lt;/p&gt;
+</description>
+					  <pubDate>2017-07-31T00:00:00+04:00</pubDate>
+					  <link>http://localhost:4000/2017/07/31/GSoC-week10-11-12.html</link>
+					  <guid isPermaLink="true">http://localhost:4000/2017/07/31/GSoC-week10-11-12.html</guid>
+				  </item>
+				
+
+    
+    		
+				
+	
+				
+	
+				
+
+    
+    		
+				
+	
+				
+	
+				
+	
+				
+				  <item>
+					  <title>GSoC Week 9: A fair share of Multiplayer</title>
+					  <description>&lt;style type=&quot;text/css&quot;&gt;
+.collapsiblecontainer {
+width:100%;
+border:1px solid #d3d3d3;
+}
+.collapsiblecontainer div {
+width:100%;
+}
+.collapsiblecontainer .collapsibleheader {
+background-color:#d3d3d3;
+padding: 2px;
+cursor: pointer;
+font-weight: bold;
+}
+.collapsiblecontainer .collapsiblecontent {
+display: none;
+padding : 5px;
+}
+&lt;/style&gt;
+
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/github-buttons.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+$(document).ready(function(){
+$(&quot;.collapsibleheader&quot;).click(function () {
+$collapsibleheader = $(this);
+//getting the next element
+$collapsiblecontent = $collapsibleheader.next();
+//open up the collapsiblecontent needed - toggle the slide- if visible, slide up, if not slidedown.
+$collapsiblecontent.slideToggle(500, function () {
+//execute this after slideToggle is done
+//change text of collapsibleheader based on visibility of collapsiblecontent div
+$collapsibleheader.find(&quot;span:first-child&quot;).text(function () {
+//change text based on condition
+return $collapsiblecontent.is(&quot;:visible&quot;) ? &quot;- &quot; : &quot;+ &quot;;
+});
+});
+
+});
+});
+
+&lt;/script&gt;
+
+&lt;h1 id=&quot;what-have-i-been-upto&quot;&gt;What have I been upto?&lt;/h1&gt;
+&lt;p&gt;The Revival Stone created last week has been polished and is now renamed as the Altar Of Resurrection. All the existing traps and adventure items- Swinging Blade, Wipe Out, Fireball Launcher, Altar of Resurrection and Password Door have been made multiplayer ready.&lt;/p&gt;
+
+&lt;h2 id=&quot;altar-of-resurrection&quot;&gt;Altar of Resurrection&lt;/h2&gt;
+
+&lt;div class=&quot;github-button&quot; url=&quot;https://github.com/Terasology/AdventureAssets/pull/11&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;With most of the work been done last week, this week simply saw a finishing touch and some other minor additions.&lt;/p&gt;
+
+&lt;h3 id=&quot;floating-text&quot;&gt;Floating Text&lt;/h3&gt;
+&lt;p&gt;Instead of sending a chat message to describe the state of the Altar of Resurrection, a better idea was to have a floating text that appears when the angel statue is targeted. The floating text now looks like-&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/angelFloatingText.jpg&quot; alt=&quot;angelFloatingText&quot; title=&quot;Floating Text&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;new-particle-effects&quot;&gt;New Particle Effects&lt;/h3&gt;
+
+&lt;p&gt;The blue opaque Particle Effects have been switched to transparent orange ones, that match with the theme of the angel. The orange color goes along with the color of the orb.&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/angelNewPE.jpg&quot; alt=&quot;angelNewPE&quot; title=&quot;New Particle Effects&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;collapsiblecontainer&quot;&gt;
+&lt;div class=&quot;collapsibleheader&quot;&gt;&lt;span&gt;+ &lt;/span&gt;&lt;span&gt;How to create transparent particle effects?&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;collapsiblecontent&quot;&gt;
+Transparent particled effects only require the texture file for the effect to have the required transparecy. To make such a texture file I used the software &lt;a href=&quot;https://www.getpaint.net/&quot; target=&quot;_blank&quot;&gt;Paint.NET&lt;/a&gt;. A simple way to do this is-
+&lt;ul&gt;
+&lt;li&gt;Open a new file in Paint.NET. &lt;/li&gt;
+&lt;li&gt;Resize the canvas to the desired size (e.g. 32x32). &lt;/li&gt;
+&lt;li&gt;Select all (Ctrl + A) and delete. This would leave you with a empty transparent canvas.&lt;/li&gt;
+&lt;li&gt;Select the Shapes tool and select Ellipse.&lt;/li&gt;
+&lt;li&gt;In the shape styles menu select &quot;Draw Filled Shape&quot;.&lt;/li&gt;
+&lt;li&gt;Select the desired color for fill.&lt;/li&gt;
+&lt;li&gt;From the color toolbar, select &quot;More &amp;gt;&amp;gt;&quot; and adjust the &quot;Opacity- Alpha&quot; value to make the color transparent. For e.g. if you need 50% transparency, set Opacity to 128.&lt;/li&gt;
+&lt;li&gt;Drag the cursor to draw the ellipse on the canvas. The image can be then resized and adjusted. The color can also be adjusted later to see a live preview.&lt;/li&gt;
+&lt;/ul&gt;
+The above should give you an image like &lt;a href=&quot;https://github.com/Terasology/AdventureAssets/blob/master/assets/textures/altarOfResurrection/orangeParticle.png&quot; target=&quot;_blank&quot;&gt;this&lt;/a&gt;.
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;After all this, the final Alar of Resurrection looks like this-&lt;/p&gt;
+
+&lt;div class=&quot;videowrapper&quot;&gt;
+&lt;iframe width=&quot;1024&quot; height=&quot;768&quot; src=&quot;https://www.youtube.com/embed/mOG_v2AkBwo&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;multiplayer-fixes&quot;&gt;Multiplayer Fixes&lt;/h2&gt;
+
+&lt;div class=&quot;github-button&quot; url=&quot;https://github.com/Terasology/AdventureAssets/pull/13&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;github-button&quot; url=&quot;https://github.com/Terasology/AdventureAssets/pull/14&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;github-button&quot; url=&quot;https://github.com/Terasology/AdventureAssets/pull/15&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;github-button&quot; url=&quot;https://github.com/Terasology/AdventureAssets/pull/16&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;github-button&quot; url=&quot;https://github.com/Terasology/AdventureAssets/pull/17&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;A large amount of last week went into making the already created traps functional in multiplayer. Here is a brief collection of the issues I faced and how I solved them. Please read through the wiki page for &lt;a href=&quot;https://github.com/MovingBlocks/Terasology/wiki/Entities%2C-Components-and-Events-on-the-Network&quot;&gt;Entities, Components and Events on the Network&lt;/a&gt; if you already haven’t.&lt;/p&gt;
+
+&lt;h3 id=&quot;entities-on-the-network&quot;&gt;Entities on the network&lt;/h3&gt;
+&lt;p&gt;An entity on the network (one that has a Network Component) exists both on the server and the client. This poses a problem if you are depending on a component addition/activation event to perform an activity. For eg- For the wipe out trap, the mesh for the model was to be created only on the client side. This was supposed to happen on the OnActivatedComponent event for the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;components = {WipeOutComponent, BlockComponent}&lt;/code&gt; which would trigger when the WipeOutRoot block is placed in the world. However, this event gets triggered twice, on the Client System once for the server entity and once for the client side entity. This creates two meshes- one that stays stationary and the other that rotates as expected. Note that the Authority/Server system only has the event handled once since it gets triggered only for the server entity.&lt;/p&gt;
+
+&lt;p&gt;As a workaround to fix this, I received the event on the Authority system with a higher priority. The Authority system event handler would then make changes to the server entity’s WipeOutComponent (add the rod and surfboard collider entities to the childrenEntities list). I would then receive the event on the Client system and recognize the server entity by these changes that have been made. The client entity would not have the changes made by the Authority system (the childrenEntities list would be empty). The Client System event handler for the OnComponentActivated event would now run only for the server entity and the extra static mesh would no longer be created.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://github.com/Terasology/AdventureAssets/blob/master/src/main/java/org/terasology/adventureassets/traps/wipeout/WipeOutServerSystem.java#L114-L134&quot;&gt;Server System event handler&lt;/a&gt; looks like-&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@ReceiveEvent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;priority&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;EventPriority&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;PRIORITY_HIGH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;components&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;WipeOutComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;BlockComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;onWipeOutActivated&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;OnActivatedComponent&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;EntityRef&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;entity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;WipeOutComponent&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wipeOutComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Create server entities for rod and surfboard&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;wipeOutComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;childrenEntities&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;wipeOutComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;childrenEntities&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;surfboard&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://github.com/Terasology/AdventureAssets/blob/master/src/main/java/org/terasology/adventureassets/traps/wipeout/WipeOutClientSystem.java#L66-L80&quot;&gt;Client System event handler&lt;/a&gt; looks like-&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@ReceiveEvent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;components&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;WipeOutComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;BlockComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;onWipeOutActivated&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;OnActivatedComponent&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;EntityRef&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;entity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;WipeOutComponent&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wipeOutComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// So that only the relevant server entity is operated on.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wipeOutComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;childrenEntities&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isEmpty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Create mesh entity on client side&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;saving-component-of-an-entity&quot;&gt;Saving Component of an Entity&lt;/h3&gt;
+&lt;p&gt;Before going into the specifics of the issue I faced, let’s discuss how the &lt;span style=&quot;color: #CCCC00&quot;&gt;&lt;strong&gt;@Replicate&lt;/strong&gt;&lt;/span&gt; annotation works.&lt;/p&gt;
+
+&lt;p&gt;Straight from the wiki-&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Replicate&lt;/code&gt; is an annotation used to mark types or fields to indicate that these types or fields should be replicated between the server and the client. In other words, when changes are made to these types or fields on the server, these changes will be reflected in the clients as well.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;By default, the FieldReplicate type is set to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SERVER_TO_CLIENT&lt;/code&gt;. This basically means that whatever the state of the entity on the server, such will be replicated to the entity on the client side. Changing a component on the client entity would not be reflected on the server entity.&lt;/p&gt;
+
+&lt;p&gt;Since all of the traps I made were on the network (possessed a NetworkComponent and had entities on both the client side and the server side), altering their settings required a change in one of the components. For instance, let’s consider the Fireball Launcher. On interaction with the Fireball Launcher block, the player sees a Settings screen where he can alter the properties for that Fireball Launcher. On hitting “Ok” on the Settings window, the component change happens from the FireballSettingsScreen class which is launched on the client side and instantiated with the client side Fireball Launcher Root entity. The component change thus happens only on the client entity and isn’t taken into account by the server entity.&lt;/p&gt;
+
+&lt;p&gt;To solve this, I created a new event- &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SetFireballLauncherEvent&lt;/code&gt;. This event basically carries all the new values that need to be applied to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FireballLauncherComponent&lt;/code&gt;. The event is then received on the Authority/Server system which then makes the change on the server side Fireball Launcher entity. This change is then reflected on the client side Fireball Launcher entities as they replicate the changes made to the server entity. The event can however not be sent to the FireballLauncherRoot entity from the FireballSettingsScreen class. This is because the FireballLauncherRoot entity that the player interacts with, is the client side entity. Making the change on the client side entity would not make the change register on the associated server entity. Instead, the event can be sent to the local player’s character or client entity with the FireballLauncherRoot entity as a parameter.&lt;/p&gt;
+
+&lt;h3 id=&quot;how-does-the-chest-work&quot;&gt;How does the chest work?&lt;/h3&gt;
+&lt;p&gt;All these issues I faced, made me wonder how the chest entity works. The chest opens an Inventory screen on interaction. It has an InventoryComponent and any change made by one client is reflected on any other client.&lt;/p&gt;
+
+&lt;p&gt;The chest entity has the network component and has &lt;span style=&quot;color: #CCCC00&quot;&gt;&lt;strong&gt;@Replicate&lt;/strong&gt;&lt;/span&gt; on all relevant component fields to ensure that the state is replicated from &lt;strong&gt;SERVER_TO_CLIENT&lt;/strong&gt;. Again, whatever the state of the server entity, so will be replicated on the client.
+Since the entity has a Network Component, it exists on both the client side and the server side.
+Consider a client opening the chest (by interaction) and adding a sand block to it (the inventory of the chest). This action is performed on the local entity (the one on that client’s side). So simply saving the new InventoryComponent (with an added sand block) on the client side in the client system won’t work since all client chest entities replicate the state of the server entity, which remains unaltered.
+To deal with this, the component change must happen on the server entity which can be accessed only at the Authority system. This can be made possible by sending an event that is received and handled by the Authority/Server system.
+Note that the event cannot be sent to the client side chest entity (since the player interacts with the client side chest entity, not the one that exists on the server). However, this event can be sent to the player’s character entity with the chest entity as a parameter of the event. The event can then be received and the server side chest entity can be saved with the new InventoryComponent.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;  Making a change to the client side entity can be done to register the change on the associated server entity. But this requires the entity to be owned by the player and the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FieldReplicateType&lt;/code&gt; to be set to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;OWNER_TO_SERVER_TO_CLIENT&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Citing from code-&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;InventoryClientSystem&lt;/code&gt; sends an event on the local player’s client entity &lt;a href=&quot;https://github.com/MovingBlocks/Terasology/blob/43f05baf94be707d5e3743300759fb530cf67e0f/modules/Core/src/main/java/org/terasology/logic/inventory/InventoryClientSystem.java#L258-L258&quot;&gt;here&lt;/a&gt;.&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;InventoryAuthoritySystem&lt;/code&gt; receives the event and does its thing &lt;a href=&quot;https://github.com/MovingBlocks/Terasology/blob/80702ce7751699d93467cc843dd4ac682edcf21b/modules/Core/src/main/java/org/terasology/logic/inventory/InventoryAuthoritySystem.java#L250-L250&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Note that some of my approaches might be incorrect. I’m not a hundred percent sure about whether the above is the right way to deal with the issues. However, having had a glance at how the Inventory stuff is handled for the chest entity, I’m more or less convinced that it is the right way.&lt;/p&gt;
+
+&lt;h1 id=&quot;whats-next&quot;&gt;What’s next?&lt;/h1&gt;
+&lt;p&gt;Maybe a few more traps like a pressure plate and some more triggers like buttons and levers. The major part that’s really left is to integrate all of what’s made into a world and package it into the Lost module with the supporting Lore.&lt;/p&gt;
+</description>
+					  <pubDate>2017-07-04T00:00:00+04:00</pubDate>
+					  <link>http://localhost:4000/2017/07/04/GSoC-week9.html</link>
+					  <guid isPermaLink="true">http://localhost:4000/2017/07/04/GSoC-week9.html</guid>
+				  </item>
+				
+
+    
+    		
+				
+	
+				
+	
+				
+	
+				
+				  <item>
+					  <title>GSoC Week 8: The Revival stone and the Password Door</title>
+					  <description>&lt;style type=&quot;text/css&quot;&gt;
+.collapsiblecontainer {
+width:100%;
+border:1px solid #d3d3d3;
+}
+.collapsiblecontainer div {
+width:100%;
+}
+.collapsiblecontainer .collapsibleheader {
+background-color:#d3d3d3;
+padding: 2px;
+cursor: pointer;
+font-weight: bold;
+}
+.collapsiblecontainer .collapsiblecontent {
+display: none;
+padding : 5px;
+}
+&lt;/style&gt;
+
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/github-buttons.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+$(document).ready(function(){
+$(&quot;.collapsibleheader&quot;).click(function () {
+$collapsibleheader = $(this);
+//getting the next element
+$collapsiblecontent = $collapsibleheader.next();
+//open up the collapsiblecontent needed - toggle the slide- if visible, slide up, if not slidedown.
+$collapsiblecontent.slideToggle(500, function () {
+//execute this after slideToggle is done
+//change text of collapsibleheader based on visibility of collapsiblecontent div
+$collapsibleheader.find(&quot;span:first-child&quot;).text(function () {
+//change text based on condition
+return $collapsiblecontent.is(&quot;:visible&quot;) ? &quot;- &quot; : &quot;+ &quot;;
+});
+});
+
+});
+});
+
+&lt;/script&gt;
+
+&lt;p&gt;Week 8 has come to an end and quite a few of the proposal targets have been met. The last two months have been phenomenal, to say the least. Since I had started work around 1 month in advance, I would be completing two months by the time the first evaluation completes in a few days.&lt;/p&gt;
+
+&lt;h1 id=&quot;what-have-i-been-upto&quot;&gt;What have I been upto?&lt;/h1&gt;
+&lt;p&gt;This week saw more work on traps, two items in particular- the &lt;strong&gt;Revival Stone&lt;/strong&gt; (to be named the &lt;strong&gt;Altar of Resurrection&lt;/strong&gt;) and a &lt;strong&gt;Password locked door&lt;/strong&gt; .&lt;/p&gt;
+
+&lt;h2 id=&quot;revival-stone&quot;&gt;Revival Stone&lt;/h2&gt;
+
+&lt;div class=&quot;github-button&quot; url=&quot;https://github.com/Terasology/AdventureAssets/pull/11&quot;&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;concept&quot;&gt;Concept&lt;/h3&gt;
+&lt;p&gt;With all the previous traps created (swinging blade, wipe out over lava, fireball launcher) being dangerous in nature, there was a definite need for a checkpoint that allows the player to respawn just before the trap. The revival stone does exactly this. A statue of an angel serves as a checkpoint that can be activated by the player. Upon activation, the angel statue lights up and the orb held by the angel starts glowing. At a time, a player can have only one checkpoint activated. Upon death, the player respawns at the last and only activated checkpoint.&lt;/p&gt;
+
+&lt;h3 id=&quot;model&quot;&gt;Model&lt;/h3&gt;
+&lt;p&gt;The idea for the design of the model was very intricate. Unable to catch &lt;a href=&quot;https://github.com/quaternius&quot;&gt;quaternius&lt;/a&gt; online, I went forward with a placeholder model for the time being, which looked like this-&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/angelOld.jpg&quot; alt=&quot;angelOld&quot; title=&quot;Old Angel Model&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Soon after, &lt;a href=&quot;https://github.com/quaternius&quot;&gt;quaternius&lt;/a&gt; was back and ready to do some Blender magic. This was also probably the most elegant and beautiful work of his that has been added to the game.&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/angelNew.jpg&quot; alt=&quot;angelNew&quot; title=&quot;New Angel Model&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The initial model he made was a flat one (left), but it was soon changed to a smooth version (right) which looked better.&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/angelFlatAndSmooth.jpg&quot; alt=&quot;angelFlatAndSmooth&quot; title=&quot;Angel Flat And Smooth&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The model is completely static and has no built-in animations. The same model is intelligently used for both the active and inactive states of the angel statue using just a texture change.&lt;/p&gt;
+
+&lt;div class=&quot;collapsiblecontainer&quot;&gt;
+&lt;div class=&quot;collapsibleheader&quot;&gt;&lt;span&gt;+ &lt;/span&gt;&lt;span&gt;How does the texture change happen?&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;collapsiblecontent&quot;&gt;
+Every model is added to the game by first exporting the model to a .obj file and then creating an associated prefab for it. The associated prefab needs to have a MeshComponent that describes the mesh and the material. The mesh points to the .obj file exported using Blender. The material, on the other hand, is the texture (png image) that is UV mapped to the model.
+&lt;br /&gt;
+The two states of the revival stone model only differ in texture. This is implemented using a simple material (texture) switch when the player interacts with the statue to activate it. As far as I know, this is the first usage of such a material switch in the game and it can definitely be used for more models to depict a change in state.
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The two different textures being used only differ slightly- the texture for the active state has a brighter color for the angel’s statue and an orange color for the orb to make it appear lit.&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/angelActiveAndInactive.jpg&quot; alt=&quot;angelActiveAndInactive&quot; title=&quot;angelActiveAndInactive&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;respawn-mechanism&quot;&gt;Respawn mechanism&lt;/h3&gt;
+&lt;p&gt;After a player dies a Death Screen is displayed. Upon clicking the “Respawn” button a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;RespawnRequestEvent&lt;/code&gt; is sent and the spawn location is found using the World Generator information and the player respawn happens. This whole process was broken down using &lt;a href=&quot;https://github.com/MovingBlocks/Terasology/pull/2983&quot;&gt;this Engine PR&lt;/a&gt; allowing other systems to alter a player’s respawn location.&lt;/p&gt;
+
+&lt;div class=&quot;collapsiblecontainer&quot;&gt;
+&lt;div class=&quot;collapsibleheader&quot;&gt;&lt;span&gt;+ &lt;/span&gt;&lt;span&gt;How is the respawn mechanism implemented?&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;collapsiblecontent&quot;&gt;
+The RespawnRequestEvent that is sent when the &quot;Respawn&quot; button is clicked on the Death Screen was being used to modify the LocationComponent of the player entity and line it up for respawn.
+&lt;br /&gt;
+This process has now been broken into multiple parts. A method receives the RespawnRequestEvent with a &quot;CRITICAL&quot; priority and sets the respawn location as per the World Generator information. Another method in the PlayerSystem receives the RespawnRequestEvent with a &quot;TRIVIAL&quot; priority and initiates the whole respawn process for the player entity.
+&lt;br /&gt;
+Any other system present in any module can receive the RespawnRequestEvent with a priority between TRIVIAL and CRITICAL (both exclusive) and make a change to the LocationComponent of the player entity to allow for a custom respawn location.
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;particle-effects&quot;&gt;Particle Effects&lt;/h3&gt;
+&lt;p&gt;This was the first time I fiddled around with any particle effects of my own. The particle effects consisted of a bunch of blue mystical particles that rise from the base of the statue towards the top, upon activation. I also reused the smoke explosion particle effect from the core module along with it, to give an added effect. The whole thing in action looks like this-&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/angelParticleEffects.gif&quot; alt=&quot;angelParticleEffects&quot; title=&quot;angelParticleEffects&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;collapsiblecontainer&quot;&gt;
+&lt;div class=&quot;collapsibleheader&quot;&gt;&lt;span&gt;+ &lt;/span&gt;&lt;span&gt;How to create such particle effects?&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;collapsiblecontent&quot;&gt;
+To create the above kind of particle effects I had to create &lt;a href=&quot;https://gist.github.com/nihal111/c419716b6227b7cb469e6885cce76c47&quot; target=&quot;_blank&quot;&gt;a prefab for the particle effects&lt;/a&gt; and then build and spawn this as an entity. The linked gist has a lot of parameters as components that allow me precise and specific control over the particles.
+&lt;br /&gt;
+For instance- the positionRangeGenerator allows me to ensure that all particles spawn at the bottom of the statue and the velocityRangeGenerator allows me to make all the particles ascend upwards.
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Upon deactivation, only the smoke effect is played.&lt;/p&gt;
+
+&lt;h3 id=&quot;lighting&quot;&gt;Lighting&lt;/h3&gt;
+&lt;p&gt;In addition to the texture change, there was a need to add lighting for the orb to appear as glowing. This is done by creating a simple orb entity which spawns near the location of the orb and has a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;LightComponent&lt;/code&gt; attached. Using the light component the two states of the revival stone appear as such at night-&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/angelLightAndDark.jpg&quot; alt=&quot;angelLightAndDark&quot; title=&quot;angelLightAndDark&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The PR for the revival stone is not complete yet, as some fixes are still required to make it multiplayer compatible. &lt;a href=&quot;https://github.com/Terasology/AdventureAssets/pull/11&quot;&gt;This PR&lt;/a&gt; contains all the progress so far. A working video with the placeholder model completely functioning in Single Player follows-&lt;/p&gt;
+
+&lt;div class=&quot;videowrapper&quot;&gt;
+&lt;iframe width=&quot;1024&quot; height=&quot;768&quot; src=&quot;https://www.youtube.com/embed/67TY2BpaZxQ&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;password-locked-door&quot;&gt;Password Locked Door&lt;/h2&gt;
+
+&lt;div class=&quot;github-button&quot; url=&quot;https://github.com/Terasology/AdventureAssets/pull/12&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;There already existed a door in the Core module that allows for simple opening and closing with player interactions. It has a nice system that takes care of placing the two blocks long door in the world, with a nice texture and cool sound effects. I decided to reuse all of this to create a door that would require a password to unlock.&lt;/p&gt;
+
+&lt;p&gt;The password door essentially extends the door from the core module. It uses the existing systems in Core for the basic features and simply overrides over the functionality that needs to change by receiving the respective events with a higher priority. For instance, the ActivateEvent handler in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PasswordDoorSystem&lt;/code&gt; receives (and consumes) the ActivateEvent with a higher priority than Core’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DoorSystem&lt;/code&gt;. This allows the display of a UI Screen that lets the player enter the password to unlock the door.&lt;/p&gt;
+
+&lt;h3 id=&quot;features&quot;&gt;Features:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;The passwordDoor on placement opens a UI Screen for the player to enter the details for it. It takes input for a &lt;strong&gt;Title&lt;/strong&gt;, &lt;strong&gt;Message&lt;/strong&gt; and the &lt;strong&gt;Password&lt;/strong&gt;. Upon entering all the fields and hitting “Ok”, the door is placed in the world.&lt;/li&gt;
+  &lt;li&gt;Upon interacting with an open door, the door close.&lt;/li&gt;
+  &lt;li&gt;Upon interacting with a closed door, a UI Screen is displayed, showing the Title and Message, which can serve as a clue for the password. An empty text box exists for the user to input the password. If the entered password is wrong, a “&lt;span style=&quot;color: red;&quot;&gt;Invalid Password!&lt;/span&gt;” text appears in red just above the text box. Entering the correct password closes the UI Screen and opens the door.&lt;/li&gt;
+  &lt;li&gt;The password door can be mined to get the password door as an item. This can be placed again in the world, cycling to the top step.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Note: A password door can be made indestructible in an area, for the purpose of being used in traps and puzzles.&lt;/p&gt;
+
+&lt;p&gt;Here’s a full video showing the Password Door in action:&lt;/p&gt;
+&lt;div class=&quot;videowrapper&quot;&gt;
+&lt;iframe width=&quot;1024&quot; height=&quot;768&quot; src=&quot;https://www.youtube.com/embed/D_apW1PYTEI&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;whats-next&quot;&gt;What’s next?&lt;/h1&gt;
+&lt;p&gt;For next week, I would spend most of my time working on trying to make most of the created traps compatible in Multiplayer mode so that they can be tested out in the Multiplayer play-test scheduled to happen this Saturday- the first of July.&lt;/p&gt;
+</description>
+					  <pubDate>2017-06-27T00:00:00+04:00</pubDate>
+					  <link>http://localhost:4000/2017/06/27/GSoC-week8.html</link>
+					  <guid isPermaLink="true">http://localhost:4000/2017/06/27/GSoC-week8.html</guid>
+				  </item>
+				
+
+    
+    		
+				
+	
+				
+	
+				
+	
+				
+				  <item>
+					  <title>GSoC Week 7: The Wipe Out and the Fireball Launcher</title>
+					  <description>&lt;style type=&quot;text/css&quot;&gt;
+    .collapsiblecontainer {
+    width:100%;
+    border:1px solid #d3d3d3;
+}
+.collapsiblecontainer div {
+    width:100%;
+}
+.collapsiblecontainer .collapsibleheader {
+    background-color:#d3d3d3;
+    padding: 2px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.collapsiblecontainer .collapsiblecontent {
+    display: none;
+    padding : 5px;
+}
+&lt;/style&gt;
+
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/github-buttons.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+$(document).ready(function(){
+    $(&quot;.collapsibleheader&quot;).click(function () {
+        $collapsibleheader = $(this);
+        //getting the next element
+        $collapsiblecontent = $collapsibleheader.next();
+        //open up the collapsiblecontent needed - toggle the slide- if visible, slide up, if not slidedown.
+        $collapsiblecontent.slideToggle(500, function () {
+            //execute this after slideToggle is done
+            //change text of collapsibleheader based on visibility of collapsiblecontent div
+            $collapsibleheader.find(&quot;span:first-child&quot;).text(function () {
+                //change text based on condition
+                return $collapsiblecontent.is(&quot;:visible&quot;) ? &quot;- &quot; : &quot;+ &quot;;
+            });
+        });
+
+    });
+}); 
+
+&lt;/script&gt;
+
+&lt;p&gt;After having set up the base to create traps last week, this week involved creation of two new traps.&lt;/p&gt;
+
+&lt;h1 id=&quot;what-have-i-been-upto&quot;&gt;What have I been upto?&lt;/h1&gt;
+
+&lt;h2 id=&quot;the-wipe-out&quot;&gt;The Wipe Out&lt;/h2&gt;
+
+&lt;div class=&quot;github-button&quot; url=&quot;https://github.com/Terasology/AdventureAssets/pull/5&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;This trap is inspired from the shows Takeshi’s Castle and Wipe Out. The setup consists of a platform attached to a rod pivoted at a root block and rotated around in horizontal circles. The trap can be configured by adjusting these parameters:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Time Period&lt;/strong&gt;: The time taken to complete a whole circle.&lt;br /&gt;
+&lt;strong&gt;Offset&lt;/strong&gt;: Two add a phase difference between two otherwise identical wipe out traps.&lt;br /&gt;
+&lt;strong&gt;Sense&lt;/strong&gt;: Sense of rotation. (clockwise or anti-clockwise)&lt;br /&gt;
+&lt;strong&gt;Rotation&lt;/strong&gt;: The wipe out is conventionally meant to be rotated horizontally, but the pitch can be changed to give it a different look.&lt;/p&gt;
+
+&lt;p&gt;Here’s a video showing how the Wipe Out looks and how it’s properties can be altered:&lt;/p&gt;
+&lt;div class=&quot;videowrapper&quot;&gt;
+    &lt;iframe width=&quot;1024&quot; height=&quot;768&quot; src=&quot;https://www.youtube.com/embed/qce497AebYQ&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The wipe out has a very similar architecture as the swinging blade:&lt;br /&gt;
+There are 4 entities- A &lt;strong&gt;root&lt;/strong&gt; entity, the &lt;strong&gt;rod&lt;/strong&gt;, the &lt;strong&gt;surfboard&lt;/strong&gt; and the &lt;strong&gt;mesh&lt;/strong&gt; entity. The root entity &lt;strong&gt;owns&lt;/strong&gt; all the other entities and has the &lt;strong&gt;network component&lt;/strong&gt; which replicates it across all clients. Creation of the root entity triggers the creation of the other three entites. The rod and surfboard entity only exist on the server side and are loaded by the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WipeOutServerSystem&lt;/code&gt; that is registered as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AUTHORITY&lt;/code&gt;. The mesh entity exists only on the client side and is loaded by the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WipeOutClientSystem&lt;/code&gt; that is registered as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CLIENT&lt;/code&gt;. The rod and surfboard entities are simply rigid bodies. The mesh entity has the mesh and material which basically is the model exported from blender. The root entity is the one on which the rotation animations are made. The other entities have their location attached to the root entity, which makes them go through the rotations too.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-wipe-out-lava-room&quot;&gt;The Wipe Out Lava Room&lt;/h2&gt;
+&lt;p&gt;After I completed the trap, I went ahead and created a room consisting of two wipe outs with a pit of lava underneath and a treasure chest on the far end of the room. I arranged the wipe outs in such a manner that there would be one moment when they would align, allowing the player to jump from one to the next. The player has to time his jump perfectly such that he gets onto each surfboard, or else the player would fall into the pit of lava.&lt;/p&gt;
+
+&lt;div class=&quot;videowrapper&quot;&gt;
+    &lt;iframe width=&quot;1024&quot; height=&quot;768&quot; src=&quot;https://www.youtube.com/embed/djTG0Ovf_UI&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The motion of the wipe out is pretty straight forward and follows the equation-&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;theta = ((t + offset) % timePeriod)*(2 * Math.PI / timePeriod)* direction&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Where,&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;theta:&lt;/code&gt; is the angle, the rod makes with the vertical&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;timePeriod:&lt;/code&gt; is the time taken for one rotation&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;direction:&lt;/code&gt; +1 (anti-clockwise) or -1 (clockwise)&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/wipeOutMath.PNG&quot; alt=&quot;WipeOutMath&quot; title=&quot;Wipe Out Math&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;the-fireball-launcher&quot;&gt;The Fireball Launcher&lt;/h2&gt;
+
+&lt;div class=&quot;github-button&quot; url=&quot;https://github.com/Terasology/AdventureAssets/pull/6&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;The Fireball Launcher was the next trap I worked on. With some help from &lt;a href=&quot;https://github.com/niksoc/&quot;&gt;niksoc&lt;/a&gt;, I was able to restructure the Projectile module. This made shooting fireballs as easy as sending a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FireProjectileEvent&lt;/code&gt; on the created fireball entity.&lt;/p&gt;
+
+&lt;p&gt;The fireball launcher trap also has a few properties that allow for custom configurations:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Time Period&lt;/strong&gt;: Time interval between two consecutive fireball shots.&lt;br /&gt;
+&lt;strong&gt;Offset&lt;/strong&gt;: Time offset between two fireball launchers that have the same time period.&lt;br /&gt;
+&lt;strong&gt;Max Distance&lt;/strong&gt;: Maximum distance after which the fireball dies.&lt;br /&gt;
+&lt;strong&gt;Damage Amount&lt;/strong&gt;: Total collective damage the fireball can inflict. Acts as &lt;em&gt;health&lt;/em&gt; for the fireball. The fireball is destroyed after it has inflicted a total damage equal to its health, or unitl it comes across an indestructible entity.&lt;br /&gt;
+&lt;strong&gt;Direction&lt;/strong&gt;: Direction in vector form (x, y and z) towards which the fireball is launched.&lt;/p&gt;
+
+&lt;div class=&quot;github-button&quot; url=&quot;https://github.com/Terasology/AdventureAssets/pull/8&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;Here is a video showing how the fireball launcher works:&lt;/p&gt;
+&lt;div class=&quot;videowrapper&quot;&gt;
+    &lt;iframe width=&quot;1024&quot; height=&quot;768&quot; src=&quot;https://www.youtube.com/embed/0N-cD8o6ZLU&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The next item I’m working on is the revival stone which is an artifact that when activated, allows the player to respawn at its location. Also I’m going to get started with using some particle effects. That would come in handy for the revival stone and the fireball.&lt;/p&gt;
+</description>
+					  <pubDate>2017-06-20T00:00:00+04:00</pubDate>
+					  <link>http://localhost:4000/2017/06/20/GSoC-week7.html</link>
+					  <guid isPermaLink="true">http://localhost:4000/2017/06/20/GSoC-week7.html</guid>
+				  </item>
+				
+
+    
+    		
+				
+	
+				
+	
+				
+	
+				
+				  <item>
+					  <title>GSoC Week 6: Setting the trap</title>
+					  <description>&lt;style type=&quot;text/css&quot;&gt;
+    .collapsiblecontainer {
+    width:100%;
+    border:1px solid #d3d3d3;
+}
+.collapsiblecontainer div {
+    width:100%;
+}
+.collapsiblecontainer .collapsibleheader {
+    background-color:#d3d3d3;
+    padding: 2px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.collapsiblecontainer .collapsiblecontent {
+    display: none;
+    padding : 5px;
+}
+&lt;/style&gt;
+
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/github-buttons.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+$(document).ready(function(){
+    $(&quot;.collapsibleheader&quot;).click(function () {
+        $collapsibleheader = $(this);
+        //getting the next element
+        $collapsiblecontent = $collapsibleheader.next();
+        //open up the collapsiblecontent needed - toggle the slide- if visible, slide up, if not slidedown.
+        $collapsiblecontent.slideToggle(500, function () {
+            //execute this after slideToggle is done
+            //change text of collapsibleheader based on visibility of collapsiblecontent div
+            $collapsibleheader.find(&quot;span:first-child&quot;).text(function () {
+                //change text based on condition
+                return $collapsiblecontent.is(&quot;:visible&quot;) ? &quot;- &quot; : &quot;+ &quot;;
+            });
+        });
+
+    });
+}); 
+
+&lt;/script&gt;
+
+&lt;p&gt;With the swinging blade almost ready last week, this week involved a lot of focused efforts on making traps easy and intuitive to set up.&lt;/p&gt;
+
+&lt;h1 id=&quot;what-have-i-been-upto&quot;&gt;What have I been upto?&lt;/h1&gt;
+
+&lt;h2 id=&quot;the-swinging-blade&quot;&gt;The Swinging Blade&lt;/h2&gt;
+&lt;p&gt;Here’s some more detail about the swinging blade I made last week.&lt;/p&gt;
+
+&lt;p&gt;The Swinging Blade arrangement looks like this:&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/swingingbladeentities.png&quot; alt=&quot;SBentities&quot; title=&quot;Swinging Blade Entities&quot; style=&quot;max-height: 700px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;There are 4 entities- A &lt;strong&gt;root&lt;/strong&gt; entity, the &lt;strong&gt;rod&lt;/strong&gt;, the &lt;strong&gt;blade&lt;/strong&gt; and the &lt;strong&gt;mesh&lt;/strong&gt; entity. The root entity &lt;strong&gt;owns&lt;/strong&gt; all the other entities and has the &lt;strong&gt;network component&lt;/strong&gt; which replicates it across all clients. Creation of the root entity triggers the creation of the other three entites. The rod and blade entity only exist on the server side and are loaded by the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SwingingBladeServerSystem&lt;/code&gt; that is registered as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AUTHORITY&lt;/code&gt;. The mesh entity exists only on the client side and is loaded by the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SwingingBladeClientSystem&lt;/code&gt; that is registered as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CLIENT&lt;/code&gt;. The rod and blade entities are simply rigid bodies. The blade, in addition has a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DamageComponent&lt;/code&gt; that sends an impulse and deals damage to character entities. The mesh entity has the mesh and material which basically is the model exported from blender. The root entity is the one on which the rotation animations are made. The other entities have their location attached to the root entity, which makes them go through the rotations too.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-blade-runner&quot;&gt;The Blade Runner&lt;/h2&gt;
+&lt;p&gt;After I had made the swinging blade last week, I couldn’t stop myself from creating a room full of swinging blades in series. I arranged the swinging blades in such a manner that there would be only one (or two) safe way past. The player has to time his sprint perfectly such that he gets past each blade safely. Interestingly, with the setup I had made manually, there was no safe way back.&lt;/p&gt;
+
+&lt;div class=&quot;videowrapper&quot;&gt;
+    &lt;iframe width=&quot;1024&quot; height=&quot;768&quot; src=&quot;https://www.youtube.com/embed/MYmNFplY8Sc&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This brought me to the question, how can I generate such puzzles in which the swinging blades are so set that there are only few safe ways past. I had control over three parameters- the &lt;strong&gt;amplitude&lt;/strong&gt; (maximum angle), the &lt;strong&gt;time period&lt;/strong&gt; (time for one two and fro motion) and the &lt;strong&gt;phase difference&lt;/strong&gt; (an angle to generate an offset).&lt;/p&gt;
+
+&lt;p&gt;The motion of the swinging blade was much akin to that of a simple pendulum, following the equation-&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;theta = A * cos (w*t + phi)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Where,&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;theta:&lt;/code&gt; is the angle, the rod makes with the vertical &lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;w:&lt;/code&gt; is the angular velocity (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;w = 2 * pi / timePeriod&lt;/code&gt;)&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;t:&lt;/code&gt; is the game time at the given instant&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;phi:&lt;/code&gt; is the phase difference or offset&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/SBmath.png&quot; alt=&quot;SBmath&quot; title=&quot;Swinging Blade Math&quot; style=&quot;max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;setting-the-trap--creative-mode&quot;&gt;Setting the trap- Creative Mode&lt;/h2&gt;
+
+&lt;p&gt;After the first trap- the Swinging Blade had been made, a major concern was how to make it easy and intuitive to set up traps in game. At the same time creating puzzles had to be made easy using Structure Templates. Also the editing of the trap settings, or removal of the trap had to be limited so that every player could not disble a trap and move past it.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-trap-placeholder-and-trap-configuration-tool&quot;&gt;The Trap Placeholder and Trap Configuration Tool&lt;/h3&gt;
+&lt;p&gt;The first approach I had taken was to use a trap placeholder. This would be similar to the Structure Template Placeholder that is used to allow spawning of a new structure template when it is placed inside a structure template. This approach basically consisted of a trap placeholder that would allow for spawning any trap by selecting a trap in the dropdown menu of a UI Screen. After a trap is selected, it is automatically spawned. Mining the placeholder block would remove the trap from the world.&lt;/p&gt;
+
+&lt;p&gt;The trap configuration tool is essentially an item that lets you edit the properties of a trap by aiming at the trap and interacting with the item (right-clicking). The trap configuration tool loads up a UI Screen populated with the properties of the targetted trap. The properties can then be edited and saved changes are immediately reflected in the world.&lt;/p&gt;
+
+&lt;p&gt;Integrating this with Structural Templates meant that the trap placeholder blocks won’t show up when the traps are spawned using a structure spawner. This would essentially be a way to prevent editing or even removal of traps by any player in game who doesn’t have the trap configuration tool.&lt;/p&gt;
+
+&lt;p&gt;Here are a few videos of how that looked like:&lt;/p&gt;
+
+&lt;div class=&quot;videowrapper&quot;&gt;
+    &lt;iframe width=&quot;1024&quot; height=&quot;768&quot; src=&quot;https://www.youtube.com/embed/ywD2XsqtGh8&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;div class=&quot;videowrapper&quot;&gt;
+    &lt;iframe width=&quot;1024&quot; height=&quot;768&quot; src=&quot;https://www.youtube.com/embed/I0nH9RWeQHU&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;There were several problems with this approach:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Aiming might not work well in multiplayer. Since the targetted entity was usually the mesh, that existed only on the client side.&lt;/li&gt;
+  &lt;li&gt;Multiple steps are necessary to place a trap. You first have to place the placeholder and then activate it and then select the trap then close that dialog select the tool for configuring it and use it to select the details. This makes setting up traps difficult for a layman.&lt;/li&gt;
+  &lt;li&gt;Traps can’t be replaced as there is no item that remembers the trap settings when the trap is mined. Destroying a trap placeholder doesn’t save the previously configured settings.&lt;/li&gt;
+  &lt;li&gt;Requires Trap Configuration Tool for editing trap properties and removal. Difficult removal of traps if structure is mistakenly spawned a little off.&lt;/li&gt;
+  &lt;li&gt;Inconsistent design. Some traps (spawned by structure spawners) don’t have an associated trap placeholder block, while others do.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;the-root-block--a-better-approach&quot;&gt;The Root Block- a better approach&lt;/h3&gt;
+
+&lt;div class=&quot;github-button&quot; url=&quot;https://github.com/Terasology/AdventureAssets/pull/4&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;The root block approach basically meant that each and every trap would have a unique origin block. For traps that are block based, for e.g. for a block with retracting blades that pop out of it, the origin block would be the trap itself. This block would be the owner to the root entity that has the Trap component. Here are a few features about the root block approach-&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Root block can have a unique look for each trap- different shape and block tiles.&lt;/li&gt;
+  &lt;li&gt;Root block is the owner of the entity that controls the trap.&lt;/li&gt;
+  &lt;li&gt;Root block upon interaction creates a UI screen that allows for modification of trap properties.&lt;/li&gt;
+  &lt;li&gt;Mining a root block would destroy the trap and create a root block item. Placing the root block item again in the world would spawn the trap with the same properties before destruction.&lt;/li&gt;
+  &lt;li&gt;With Structure Templates, the root blocks would still exist and would be dealt in a similar way as chests. This would make the traps appear consistent.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The problem with this approach is that the root block might be unreachable or at distances that cannot be reached without cheats (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ghost&lt;/code&gt;) like inside walls or up in the air. To allow for easier property changes, the entire mesh of the trap can be made a collider that the player can interact with.
+One more problem is that the editing and removal of the trap (basically, interacting with the root block) has to be limited in some way so that player’s in normal gameplay cannot make changes. These will be implemented soon.&lt;/p&gt;
+
+&lt;p&gt;This is a huge step forward and it will make setting up traps easy and intuitive, even for a layman. The whole thing in game, looks like this:&lt;/p&gt;
+
+&lt;div class=&quot;videowrapper&quot;&gt;
+    &lt;iframe width=&quot;1024&quot; height=&quot;768&quot; src=&quot;https://www.youtube.com/embed/t3h1n7WBtLU&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;wipe-out&quot;&gt;Wipe-out&lt;/h2&gt;
+&lt;p&gt;The next trap I’m trying to build is a bit complicated. The idea is to create a horizontal platform attached at the end of a rod that moves in circles. There would exist a pit of lava underneath. The objective of the player would be to time his jump to hop onto the platform and jump past to dodge obstacles that come in the way, to reach the other side. Fall, and the player would be incinerated in the lava pool.&lt;/p&gt;
+
+&lt;p&gt;It would look something like this:&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/wipeout.jpg&quot; alt=&quot;wipeout&quot; title=&quot;Wipe Out&quot; style=&quot;max-width: 700px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Achieving this would be a challenge and I’ll need to get started with the physics engine.&lt;/p&gt;
+
+&lt;p&gt;Next week should involve a lot more tinkering with the Physics Engine and trying to make new puzzles since the base architecture is now decided.&lt;/p&gt;
+</description>
+					  <pubDate>2017-06-12T00:00:00+04:00</pubDate>
+					  <link>http://localhost:4000/2017/06/12/GSoC-week6.html</link>
+					  <guid isPermaLink="true">http://localhost:4000/2017/06/12/GSoC-week6.html</guid>
+				  </item>
+				
+
+    
+    		
+				
+	
+				
+	
+				
+	
+				
+				  <item>
+					  <title>GSoC Week 5: The Swing King</title>
+					  <description>&lt;style type=&quot;text/css&quot;&gt;
+    .collapsiblecontainer {
+    width:100%;
+    border:1px solid #d3d3d3;
+}
+.collapsiblecontainer div {
+    width:100%;
+}
+.collapsiblecontainer .collapsibleheader {
+    background-color:#d3d3d3;
+    padding: 2px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.collapsiblecontainer .collapsiblecontent {
+    display: none;
+    padding : 5px;
+}
+&lt;/style&gt;
+
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/github-buttons.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+$(document).ready(function(){
+    $(&quot;.collapsibleheader&quot;).click(function () {
+        $collapsibleheader = $(this);
+        //getting the next element
+        $collapsiblecontent = $collapsibleheader.next();
+        //open up the collapsiblecontent needed - toggle the slide- if visible, slide up, if not slidedown.
+        $collapsiblecontent.slideToggle(500, function () {
+            //execute this after slideToggle is done
+            //change text of collapsibleheader based on visibility of collapsiblecontent div
+            $collapsibleheader.find(&quot;span:first-child&quot;).text(function () {
+                //change text based on condition
+                return $collapsiblecontent.is(&quot;:visible&quot;) ? &quot;- &quot; : &quot;+ &quot;;
+            });
+        });
+
+    });
+}); 
+
+&lt;/script&gt;
+
+&lt;p&gt;Last week involved a lot of discussions. The plan for the next two months is now a lot clearer. Here’s a quick fun video that should explain the title of this blog post.&lt;/p&gt;
+
+&lt;div class=&quot;videowrapper&quot;&gt;
+    &lt;iframe width=&quot;1024&quot; height=&quot;768&quot; src=&quot;https://www.youtube.com/embed/efCmy_e7JRU&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;what-have-i-been-upto&quot;&gt;What have I been upto?&lt;/h1&gt;
+
+&lt;h2 id=&quot;woodandstonecraftingjournal&quot;&gt;WoodAndStoneCraftingJournal&lt;/h2&gt;
+&lt;p&gt;With last week’s journal improvements, it was time to put the journal to some good use. A good technique to do this is to use the main Gamplay module for all story/lore related journal entries. However for most of the content related entries like crafting tutorials or cooking recipes, the best way to go is to create Journal extension modules. These extension modules would connect each content module to the Journal module. Essentially, the Journal extension module would house the Journal entries related to that content module which can easily be reused by multiple gameplay modules.&lt;/p&gt;
+
+&lt;p&gt;I went ahead and created the first Journal Extension module as a proof of concept with only about 8 entries to demonstrate how it would work. The &lt;a href=&quot;https://github.com/Terasology/WoodAndStoneCraftingJournal/&quot;&gt;WoodAndStoneCraftingJournal&lt;/a&gt; has a dependency on &lt;a href=&quot;https://github.com/Terasology/WoodCrafting&quot;&gt;WoodCrafting&lt;/a&gt;, &lt;a href=&quot;https://github.com/Terasology/StoneCrafting&quot;&gt;StoneCrafting&lt;/a&gt; and &lt;a href=&quot;https://github.com/Terasology/Journal&quot;&gt;Journal&lt;/a&gt;. It contains the journal entries pertaining to both WoodCrafting and StoneCrafting (since both are a little related).&lt;/p&gt;
+
+&lt;h2 id=&quot;where-are-the-puzzles&quot;&gt;Where are the puzzles?&lt;/h2&gt;
+&lt;p&gt;A major chunk of my last two month work consists of making Puzzles and adding them to my exploration centered gameplay module.
+After some discussion with flo about cata’s project on scenarios, I realised that it would be redundant to spend time working on mechanisms for action/event triggered changes. Since the Scenarios project would be focused on dealing with this, it would be a better idea that I aim towards making puzzle elements like traps, portals and other dangerous pieces.&lt;/p&gt;
+
+&lt;h3 id=&quot;adventure-assets&quot;&gt;Adventure Assets&lt;/h3&gt;
+&lt;p&gt;With this new direction to work on, I’ve created a &lt;a href=&quot;https://docs.google.com/document/d/1Go425IJSUEI2baXX0PkSamLIHZf7qYOA7emu6qH7PvE/edit?usp=sharing&quot;&gt;list of potential items&lt;/a&gt; that I could work on. Also a new module called &lt;a href=&quot;https://github.com/Terasology/AdventureAssets/&quot;&gt;AdventureAssets&lt;/a&gt; has been created to house such elements.&lt;/p&gt;
+
+&lt;p&gt;The idea now, is that I would create various puzzle elements and combine them together in a few different settings. I would create structure templates for these puzzles akin to the dungeons in GooeysQuests. This would allow me to place these puzzles in my exploration world manually by using a structure spawner. I plan to place these puzzles in the world manually and share the saved file which could be played with.&lt;/p&gt;
+
+&lt;div class=&quot;collapsiblecontainer&quot;&gt;
+&lt;div class=&quot;collapsibleheader&quot;&gt;&lt;span&gt;+ &lt;/span&gt;&lt;span&gt;Why do I want to use Structure Templates?&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;collapsiblecontent&quot;&gt;   
+    &lt;a target=&quot;_blank&quot; href=&quot;https://github.com/Terasology/StructureTemplates&quot;&gt;Structure Templates&lt;/a&gt; allows me to create a puzzle setting or essentially a puzzle map, as a prefab. I can arrange the elements in the manner I want and also edit the map later. In theory, I could create the puzzles by hand in the saved world that I plan to share, without using Structure Templates at all. However using Structure Templates allows me to concentrate on making the puzzles one by one without worrying about how I would place them in the world. Once I have the Structure Templates for the puzzles ready I can place them however I want in the world. Also, this allows the same created puzzle to be reused multiple times. An existing puzzle can be extended or modified slightly to create a new one. Further, if a puzzle consists of multiple rooms of the same type, a single room created using ST can be easily reused to create more.
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;the-swinging-blade&quot;&gt;The Swinging Blade&lt;/h2&gt;
+
+&lt;div class=&quot;github-button&quot; url=&quot;https://github.com/Terasology/AdventureAssets/pull/2&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;The first item I decided to work on was the Swinging Blade. The setup consists of a huge blade that swings to and fro from one edge of the room to the other. This would serve as on obstacle and coming in contact with the blade would deal damage to the player.&lt;/p&gt;
+
+&lt;p&gt;I started working with a crude swinging blade model made by flo.&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/crudeSB.png&quot; alt=&quot;crudeSB&quot; title=&quot;crude SB&quot; style=&quot;max-height: 400px;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;animating-the-blade&quot;&gt;Animating the blade&lt;/h3&gt;
+&lt;p&gt;I tried to make the blade move by linearly varying the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pitch&lt;/code&gt; (as in rotation’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yaw, pitch and roll&lt;/code&gt;) of the entity. The GIF below shows this linear movement. This motion was later changed to an angular harmonic function, which factors in a time period (in seconds), an amplitude (in radians) and an offset/phase difference (in radians) which altogether looks like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;theta = Acos((2*pi/T)*t + phi)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/crudeSwingingBlade.gif&quot; alt=&quot;crudeSB&quot; title=&quot;crude SB&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;alignment-and-orientation&quot;&gt;Alignment and orientation&lt;/h3&gt;
+&lt;p&gt;The swinging blade was misaligned and I wanted it to rotate in a direction purpendicular to it’s current rotation. Soon I realised that I had no control on the orientaion of the Swinging Blade entity that was being spawned by the Structure Template. I could choose the position but I couldn’t change the orientation and rotation. This is because the Structure Template module allows you to spawn the structure anywhere in the world, regardless of the orientation in which they were created. Meaning, a structure that faced North could be spawned in a manner that it now faces East. All contents of the structure should undergo a similar change in their orientation too. But the entities didn’t. Till now, it wasn’t a problem as the only things being spawned were the GooeysQuests’ skeletons. Their orientation didn’t matter as they were live entities that would come running after you for your life.&lt;/p&gt;
+
+&lt;div class=&quot;github-button&quot; url=&quot;https://github.com/Terasology/StructureTemplates/pull/15&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/Terasology/StructureTemplates/pull/15&quot;&gt;This PR&lt;/a&gt; adds the rotational control to spawning entities while using the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SpawnPrefabsComponent&lt;/code&gt; in the Structure Templates module.&lt;/p&gt;
+
+&lt;div class=&quot;collapsiblecontainer&quot;&gt;
+&lt;div class=&quot;collapsibleheader&quot;&gt;&lt;span&gt;+ &lt;/span&gt;&lt;span&gt;Dealing with Quaternions (Quat4f)&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;collapsiblecontent&quot;&gt;   
+    I hadn't dealt with quaternions before and the above fix in the PR wasn't as straightforward to me as it looks like. I didn't really want to spend too much time learning how Quaternions work to make a simple change. I knew how the yaw, pitch and roll system worked and all I needed was to change the yaw value by a mutiple of 90 degree depending on the orientation in which the room was spawned. After a few attempts of Googling and ending up on wikipedia pages that deal with rigorous math to show how Quaternions work I was almost ready to give up. It was then that I bumped into this &lt;a target=&quot;_blank&quot; href=&quot;http://developerblog.myo.com/quaternions/&quot;&gt;blog post&lt;/a&gt; that made me understand and appreciate Quaternions. Soon after I found a &lt;a target=&quot;_blank&quot; href=&quot;https://gamedev.stackexchange.com/questions/23510/rotate-an-existing-quaternion-around-an-axis&quot;&gt;forum answer&lt;/a&gt; that gave me a good idea on how to solve my problem.
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;new-model-and-texture&quot;&gt;New model and texture&lt;/h3&gt;
+
+&lt;p&gt;Soon after I asked Quaternius to make a better model for the swinging blade and one thing led to another. Not before long, we had a full nice looking model ready with texture.&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;strong&gt;Inspiration&lt;/strong&gt;&lt;br /&gt;
+&lt;img src=&quot;/img/SB1.jpeg&quot; alt=&quot;SB1&quot; title=&quot;SB1&quot; style=&quot;width: 70%;&quot; /&gt;&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;strong&gt;Model imported&lt;/strong&gt;&lt;br /&gt;
+&lt;img src=&quot;/img/SB2.jpg&quot; alt=&quot;SB2&quot; title=&quot;SB2&quot; style=&quot;width: 70%;&quot; /&gt;&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;strong&gt;Texture mapped&lt;/strong&gt;&lt;br /&gt;
+&lt;img src=&quot;/img/SB3.png&quot; alt=&quot;SB3&quot; title=&quot;SB3&quot; style=&quot;width: 70%; max-height: 500px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;strong&gt;Final model imported&lt;/strong&gt;&lt;br /&gt;
+&lt;img src=&quot;/img/SB4.jpg&quot; alt=&quot;SB4&quot; title=&quot;SB4&quot; style=&quot;width: 70%;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;making-it-hurt&quot;&gt;Making it hurt&lt;/h3&gt;
+
+&lt;p&gt;I had a fine looking swinging blade, but it didn’t hurt yet. I could pass through it like silk.&lt;/p&gt;
+&lt;h4 id=&quot;adding-colliders&quot;&gt;Adding Colliders&lt;/h4&gt;
+&lt;p&gt;First step was to make the entity a rigid body and add box shape colliders. Since the shape of the entity was not so simple, I had to create two different entities- one for the blade and one for the rod.&lt;/p&gt;
+&lt;h4 id=&quot;adding-the-dodamageevent&quot;&gt;Adding the DoDamageEvent&lt;/h4&gt;
+&lt;p&gt;Since the blade was the part which would hurt, a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DamagePlayerComponent&lt;/code&gt; was added to the blade to detect collisions with the player and trigger a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DoDamageEvent&lt;/code&gt;. However, simply sending a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DoDamageEvent&lt;/code&gt; would kill the player in no time as however small the damage being sent, being in contact with the blade even for a second would trigger the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;OnCollide&lt;/code&gt; method several times to result in death.&lt;/p&gt;
+&lt;h4 id=&quot;sending-a-characterimpulse&quot;&gt;Sending a CharacterImpulse&lt;/h4&gt;
+&lt;p&gt;The solution to this was sending a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CharacterImpulseEvent&lt;/code&gt; to the player as well, in a direction outward from the blade. This sends the player to a relatively safer zone while also dealing some damage.&lt;/p&gt;
+
+&lt;h3 id=&quot;multiplayer-ready&quot;&gt;Multiplayer ready?&lt;/h3&gt;
+
+&lt;p&gt;The swinging blade is not yet multiplayer ready. There are quite a few issues on dealing with the Swinging Blade in multiplayer. The movement prediction on the server side deals with the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CharacterImpulseEvent&lt;/code&gt; which makes the damaging systems function very differently even if there is a little lag. Often the player experiences too many impulses in a short time frame that end up killing him alone, even without the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DoDamageEvent&lt;/code&gt; being sent.&lt;/p&gt;
+
+&lt;p&gt;The PR which deals with the entire work on the swinging blade is &lt;a href=&quot;https://github.com/Terasology/AdventureAssets/pull/2/&quot;&gt;here&lt;/a&gt;. It is still in progress with only the task of making it work in multiplayer remaining outstanding.&lt;/p&gt;
+
+&lt;p&gt;Up for next week should be more work on puzzles, a few more interesting traps and hopefully multiplayer fixes.&lt;/p&gt;
+</description>
+					  <pubDate>2017-06-06T00:00:00+04:00</pubDate>
+					  <link>http://localhost:4000/2017/06/06/GSoC-week5.html</link>
+					  <guid isPermaLink="true">http://localhost:4000/2017/06/06/GSoC-week5.html</guid>
+				  </item>
+				
+
+    
+    		
+				
+	
+				
+	
+				
+	
+				
+				  <item>
+					  <title>GSoC Week 4: Integrating Journal</title>
+					  <description>&lt;style type=&quot;text/css&quot;&gt;
+    .collapsiblecontainer {
+    width:100%;
+    border:1px solid #d3d3d3;
+}
+.collapsiblecontainer div {
+    width:100%;
+}
+.collapsiblecontainer .collapsibleheader {
+    background-color:#d3d3d3;
+    padding: 2px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.collapsiblecontainer .collapsiblecontent {
+    display: none;
+    padding : 5px;
+}
+&lt;/style&gt;
+
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/github-buttons.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+$(document).ready(function(){
+    $(&quot;.collapsibleheader&quot;).click(function () {
+        $collapsibleheader = $(this);
+        //getting the next element
+        $collapsiblecontent = $collapsibleheader.next();
+        //open up the collapsiblecontent needed - toggle the slide- if visible, slide up, if not slidedown.
+        $collapsiblecontent.slideToggle(500, function () {
+            //execute this after slideToggle is done
+            //change text of collapsibleheader based on visibility of collapsiblecontent div
+            $collapsibleheader.find(&quot;span:first-child&quot;).text(function () {
+                //change text based on condition
+                return $collapsiblecontent.is(&quot;:visible&quot;) ? &quot;- &quot; : &quot;+ &quot;;
+            });
+        });
+
+    });
+}); 
+
+&lt;/script&gt;
+
+&lt;p&gt;The past week involved creating the new module for my exploration world and getting sarted with it.&lt;/p&gt;
+
+&lt;h1 id=&quot;what-have-i-been-up-to&quot;&gt;What have I been up to?&lt;/h1&gt;
+
+&lt;h2 id=&quot;creating-the-lost-module&quot;&gt;Creating the Lost module&lt;/h2&gt;
+
+&lt;p&gt;The Lost module is the new gameplay module that I have created and would be working on for the next two months. I’m still working on writing some logs but the general idea for the &lt;a href=&quot;https://docs.google.com/document/d/1GVmJEV2KKjqgxjtVR-_Lh7QsvRzQbfxg9qeHjimIbPg/edit?usp=sharing&quot;&gt;lore&lt;/a&gt; is complete. In short the story is centered around an intergalactic explorer who while exploring the vast world of Terasology, gets stranded. The wormhole creator that allows him to travel through space becomes dysfunctional. Fornlorn with no way to return to his home planet, he starts exploring the planet, trying to survive on what may become the last planet he would ever set his foot on.&lt;/p&gt;
+
+&lt;h2 id=&quot;integrating-journal&quot;&gt;Integrating Journal&lt;/h2&gt;
+&lt;p&gt;A key part of the new explorationn world would be a journal that links several things. The main purpose of the Journal would be to serve as a secondary memory for the player. I plan to use the Journal in several ways-&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Exploration logs that would be generated as time passes or when an event occurs. Like when the player first spots a deer or finds a treasure.&lt;/li&gt;
+  &lt;li&gt;New recipes would show up when the player pick a new item. Like picking up a stone would create an entry with the recipe for hammer.&lt;/li&gt;
+  &lt;li&gt;The journal would be integrated with books. Whenever you open an important book, the key parts of the book would be stored in the journal.&lt;/li&gt;
+  &lt;li&gt;Integrations with content modules like WoodCrafting, StoneCrafting (earlier WoodAndStone), CopperAndBronze, Alchemy, EquipmentSmithing, Equipment, Cooking and SimpleFarming. These would essentially be tutorials to help the player. Essentially recipes that show up, guides about more involved process like different quality of ingredients resulting in different final products.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;As of now the Journal has only been integrated with item pick up events and an initial on-spawn event that sends the first journal entry.&lt;/p&gt;
+
+&lt;h2 id=&quot;improvements-in-journal&quot;&gt;Improvements in Journal&lt;/h2&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://github.com/Terasology/Journal&quot;&gt;Journal module&lt;/a&gt; was left pretty much untouched since &lt;a href=&quot;https://github.com/MarcinSc&quot;&gt;MarcinSc&lt;/a&gt; had created. The Journal module looks like so-&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/WaSJournal.jpg&quot; alt=&quot;WoodAndStone Journal&quot; title=&quot;WoodAndStone Journal&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It has a left panel for different chapters and each chapter has its own entries. This handles categorisation pretty well, making it easier for the user to access specific entries and saving a long scroll.&lt;/p&gt;
+
+&lt;p&gt;I’ve added another enhancement which now makes the Journal more interactive. Earlier there was just a notification that would pop up when a new Journal Entry was added. However, it wouldn’t be highlighted in any way in the Journal. With the &lt;a href=&quot;https://github.com/Terasology/Journal/pull/3/&quot;&gt;latest PR&lt;/a&gt; merged, now the unread Journal entries appear highlightedin yellow, until the chapter they belong to gets opened once.&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/UnreadJournal.jpg&quot; alt=&quot;Unread Journal&quot; title=&quot;Unread Journal&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In the image above, Exploration Log #111 is a “read” entry while Exploration Log #112 is a new/”unread” entry.&lt;/p&gt;
+
+&lt;div class=&quot;github-button&quot; url=&quot;https://github.com/Terasology/Journal/pull/3&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;github-button&quot; url=&quot;https://github.com/Terasology/Journal/pull/4&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Roadblock:&lt;/em&gt;&lt;/strong&gt; There was a problem with the Journal module though, the first journal entry that was required to be sent only once when the player was spawned was resent every time the player respawned. This happened because the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;onPlayerSpawnedEvent&lt;/code&gt; was sent to the Player entity even on respawn.&lt;br /&gt;
+A bigger problem was that whatever entries that the player had in his journal would all disappear when the player respawned. This happened because the player entity in the game was completely destroyed when the player died. In the process all components attached to the player were stripped and destroyed too.&lt;/p&gt;
+
+&lt;p&gt;This was what I dealt with for the larger part of last week.&lt;/p&gt;
+
+&lt;h2 id=&quot;saving-the-player-entity-from-destruction&quot;&gt;Saving the player entity from destruction&lt;/h2&gt;
+&lt;p&gt;All existing systems relied on the player entity to be totally destroyed (and stripped of all components) when the player dies in game. This however wasn’t a nice approach, as the player entity carried a lot of data that potentially could be preserved or dealt with a better way even on death.&lt;/p&gt;
+
+&lt;p&gt;I felt this problem for the first time when I realised that my player would lose all it’s journal entries on death. However there are many other cases which require the player entity and it’s components to not be totally destroyed.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-need&quot;&gt;The need&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;A player’s inventory is always lost on death. It just disappears. With the player entity now being preserved, the player simply gets to keep its inventory after respawn. However, if needed a system can easily be added to allow items from inventory to drop when a player dies (even probabilistically).&lt;/li&gt;
+  &lt;li&gt;Many other components would be better off having persisted than being destroyed at death. For eg. the EventualSkills module makes learning and gaining skills possible. All the skills a player has just would disappear if the player entity is completely destroyed, which might be undesirable.&lt;/li&gt;
+  &lt;li&gt;There was no separate event that would be sent upon respawning. Now there is an additional &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;onPlayerRespawnedEvent&lt;/code&gt; that can be used for this purpose. The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;onPlayerSpawnedEvent&lt;/code&gt; is simply an event that only gets fired once when the player enters a world for the first time.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/MovingBlocks/Terasology/pull/2958&quot;&gt;This PR&lt;/a&gt; makes the said change. It adds the &lt;strong&gt;OnPlayerRespawnedEvent, PlayerDeathEvent, AliveCharacterComponent, PlayerCharacterComponent.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;github-button&quot; url=&quot;https://github.com/MovingBlocks/Terasology/pull/2958&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;what-happens-now&quot;&gt;What happens now&lt;/h4&gt;
+
+&lt;p&gt;A character lives. It has the AliveComponent.
+It dies.
+A &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BeforeDestroyEvent&lt;/code&gt; handler receives all entities having &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AliveCharacterComponent&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;If the entity also has a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PlayerCharacterComponent&lt;/code&gt;, the event is consumed to prevent destruction. The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AliveCharacterComponent&lt;/code&gt; is stripped off adn a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PlayerDeathEvent&lt;/code&gt; sent along with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DeathEvent&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Else just a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DeathEvent&lt;/code&gt; sent  and the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AliveCharacterComponent&lt;/code&gt; stripped off.
+DeathScreen launches on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PlayerDeathEvent&lt;/code&gt; and sends the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;RespawnRequestEvent&lt;/code&gt;.
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;RespawnRequestEvent&lt;/code&gt; is received by the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PlayerSystem&lt;/code&gt;.
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PlayerSystem&lt;/code&gt; then respawns player, sets the location for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;clientEntity&lt;/code&gt; to spawn location. Sends &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;OnPlayerRespawnedEvent&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Components that need to be removed on death are removed by receiving the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PlayerDeathEvent&lt;/code&gt;.
+Components that need to be reset are done by receiving the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;OnPlayerRespawnedEvent&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Next week would see more work on the exploration module. I need to experiment with Structural Templates and see what’s the best way to spawn structures in different places.&lt;/p&gt;
+</description>
+					  <pubDate>2017-05-30T00:00:00+04:00</pubDate>
+					  <link>http://localhost:4000/2017/05/30/GSoC-week4.html</link>
+					  <guid isPermaLink="true">http://localhost:4000/2017/05/30/GSoC-week4.html</guid>
+				  </item>
+				
+
+    
+    		
+				
+	
+				
+	
+				
+	
+				
+				  <item>
+					  <title>GSoC Week 3: Advanced Behaviors and Taming</title>
+					  <description>&lt;style type=&quot;text/css&quot;&gt;
+    .collapsiblecontainer {
+    width:100%;
+    border:1px solid #d3d3d3;
+}
+.collapsiblecontainer div {
+    width:100%;
+}
+.collapsiblecontainer .collapsibleheader {
+    background-color:#d3d3d3;
+    padding: 2px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.collapsiblecontainer .collapsiblecontent {
+    display: none;
+    padding : 5px;
+}
+&lt;/style&gt;
+
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/github-buttons.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+$(document).ready(function(){
+    $(&quot;.collapsibleheader&quot;).click(function () {
+        $collapsibleheader = $(this);
+        //getting the next element
+        $collapsiblecontent = $collapsibleheader.next();
+        //open up the collapsiblecontent needed - toggle the slide- if visible, slide up, if not slidedown.
+        $collapsiblecontent.slideToggle(500, function () {
+            //execute this after slideToggle is done
+            //change text of collapsibleheader based on visibility of collapsiblecontent div
+            $collapsibleheader.find(&quot;span:first-child&quot;).text(function () {
+                //change text based on condition
+                return $collapsiblecontent.is(&quot;:visible&quot;) ? &quot;- &quot; : &quot;+ &quot;;
+            });
+        });
+
+    });
+}); 
+
+&lt;/script&gt;
+
+&lt;p&gt;The past week has been lighter compared to the previous two, involving a lot more of packing and moving, research and documentation.&lt;/p&gt;
+
+&lt;h1 id=&quot;what-have-i-been-up-to&quot;&gt;What have I been up to?&lt;/h1&gt;
+
+&lt;h2 id=&quot;more-behaviors&quot;&gt;More behaviors&lt;/h2&gt;
+
+&lt;p&gt;Adding to the 4 deer (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;deer&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;insensitiveDeer&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aggressiveDeer&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hostileDeer&lt;/code&gt;) from last time two new behaviors have been added namely- &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;scared&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;friendly&lt;/code&gt;. Again these are just placeholders for actual animals that would display such behavior like a chicken (timid) and a dog (friendly). Here are two new videos that would give a quick preview.&lt;/p&gt;
+
+&lt;div class=&quot;github-button&quot; url=&quot;https://github.com/Terasology/WildAnimals/pull/14&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;github-button&quot; url=&quot;https://github.com/Terasology/WildAnimals/pull/15&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;videowrapper&quot;&gt;
+    &lt;iframe width=&quot;1024&quot; height=&quot;768&quot; src=&quot;https://www.youtube.com/embed/5VREvBUPmA0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;div class=&quot;videowrapper&quot;&gt;
+    &lt;iframe width=&quot;1024&quot; height=&quot;768&quot; src=&quot;https://www.youtube.com/embed/GbeXKIi9Mvs&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;github-button&quot; url=&quot;https://github.com/Terasology/WildAnimals/pull/12&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;github-button&quot; url=&quot;https://github.com/Terasology/AdvancedBehaviors/pull/2&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;github-button&quot; url=&quot;https://github.com/Terasology/AdvancedBehaviors/pull/3&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;Also, the flee behavior is now improved such that the animal would always run in a direction away from the player as compared to randomly moving about like last time.&lt;/p&gt;
+
+&lt;div class=&quot;github-button&quot; url=&quot;https://github.com/Terasology/Pathfinding/pull/29&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;github-button&quot; url=&quot;https://github.com/Terasology/AdvancedBehaviors/pull/6&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;In addition, last year’s GCI saw a lot of students write up formal descriptions about AI for animals and their behavior. This can be found &lt;a href=&quot;http://forum.terasology.org/search/2685474/?q=Formal+Description&amp;amp;o=date&quot;&gt;here&lt;/a&gt; and is possibly a good reference for future.&lt;/p&gt;
+
+&lt;h2 id=&quot;packing-and-moving--advancedbehaviors&quot;&gt;Packing and Moving- AdvancedBehaviors&lt;/h2&gt;
+
+&lt;p&gt;It was felt that the behavior work that I had been up to, should not really be restricted to the WildAnimals module. It had great potential outside for other NPCs like monsters, zombies, aliens.. you name it. One particular requirement was that of the GooeysQuests’ skeleton which would try its best to kill you in the dungeons. Currently the skeleton just has a hostile behavior, which means that it does nothing at all until a player comes close to it. After which, it would follow the player in an attempt to kill. When the player dies or escapes the skelton would return to doing nothing (standing still) where ever it had reached. The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hostileInProximity&lt;/code&gt; behavior that I had implemented for the hostileDeer is probably a better alternative, where in the deer switches from hostile to stray behavior. Further the behavior switching systems could be used to add a &lt;strong&gt;guard behavior&lt;/strong&gt; that would allow the skeleton to return to a specific location that it guards (a tressure, a secret door, who knows?).&lt;/p&gt;
+
+&lt;p&gt;All this just meant one thing, that the core behavior systems should not be kept restricted to the &lt;a href=&quot;https://github.com/Terasology/WildAnimals&quot;&gt;WildAnimals&lt;/a&gt; module as they would have great use even in other modules. With this need was born the &lt;a href=&quot;https://github.com/Terasology/AdvancedBehaviors&quot;&gt;AdvancedBehaviors&lt;/a&gt; module which would just be a library module having logic and systems that are required by other modules as dependencies, but no content of its own. All the behavior systems and behavior components were packaged and moved to this new module.&lt;/p&gt;
+
+&lt;div class=&quot;github-button&quot; url=&quot;https://github.com/Terasology/AdvancedBehaviors/pull/1&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;github-button&quot; url=&quot;https://github.com/Terasology/WildAnimals/pull/13&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;optional-dependencies-and-libraryapi-modules&quot;&gt;Optional Dependencies and Library/API modules&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/Terasology/AdvancedBehaviors&quot;&gt;AdvancedBehaviors&lt;/a&gt; would be my second module in the game, the first being the &lt;a href=&quot;https://github.com/Terasology/WorldlyTooltipAPI&quot;&gt;WorldlyTooltipAPI&lt;/a&gt; module which too has no content of its own, but just serves as an API module for &lt;a href=&quot;https://github.com/Terasology/WorldlyTooltip&quot;&gt;WorldlyTooltip&lt;/a&gt;. This was decided to be a better alternative to optional dependencies.&lt;/p&gt;
+
+&lt;div class=&quot;collapsiblecontainer&quot;&gt;
+&lt;div class=&quot;collapsibleheader&quot;&gt;&lt;span&gt;+ &lt;/span&gt;&lt;span&gt;What is a Library module?&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;collapsiblecontent&quot;&gt;   
+    A library module is one that does not have any features or content of its own. It only provides systems that are used by other modules. An example of such a module is the Pathfinding module. Also the newly created, AdvancedBehaviors module would just be a library module.
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Modules like WildAnimals that use events from the WorldlyTooltip module should not have a dependency on it as it doesn’t need to be necessarily activated. A user should be able to enjoy the WildAnimals module without having to activate the WorldlyTooltip module. One possible way to solve this is using optional dependencies.&lt;/p&gt;
+
+&lt;div class=&quot;collapsiblecontainer&quot;&gt;
+&lt;div class=&quot;collapsibleheader&quot;&gt;&lt;span&gt;+ &lt;/span&gt;&lt;span&gt;What is an optional dependency?&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;collapsiblecontent&quot;&gt;   
+	An optional dependency allows the user to activate modules that depend on other modules without activating the other module. The features that rely on the other module would just be enabled when the other module is activated.
+    &lt;br /&gt;
+    Lets take the WildAnimals and WorldlyTooltip module as an example. If the WildAnimals module is made to have an optional dependency on the WorldlyTooltip module, it's core features would be accessible even when the WorldlyTooltip module is inactive. Activating the WorldlyTooltip module just would enable the features that rely on it.
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;collapsiblecontainer&quot;&gt;
+&lt;div class=&quot;collapsibleheader&quot;&gt;&lt;span&gt;+ &lt;/span&gt;&lt;span&gt;What are the problems with optional dependencies?&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;collapsiblecontent&quot;&gt;   
+    Optional dependencies make sure that the user doesn't have to forcefully download a module that serves as an optional dependency. But for a developer, the module would not compile unless the developer manually downloads all the optional dependencies. Also there is a chance that with some changes happening in Java, this feature might not be available later.
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The other way to do this is using what are called API modules.&lt;/p&gt;
+
+&lt;div class=&quot;collapsiblecontainer&quot;&gt;
+&lt;div class=&quot;collapsibleheader&quot;&gt;&lt;span&gt;+ &lt;/span&gt;&lt;span&gt;What is an API module?&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;collapsiblecontent&quot;&gt; 
+    An API module is one that allows for modules to use on a feature that is present in an external module without having a direct dependency on it. In short it is an alternative to optional dependencies. It can be thought of as an interface to a class. If a module X relies on some classes in Y for a feature, the classes can be moved to Z. Both X and Y can now have dependency on Z and everything would work naturally. This means that Y does not necessarily need to be activated for the user to enjoy the core features of X.
+    &lt;br /&gt;&lt;br /&gt;
+    For example, the WildAnimals module uses the events from the WorldlyTooltip module for the tooltip feature. To enable this, the events were moved to the API module called WorldlyTooltipAPI. Both WildAnimals and WorldlyTooltip had a dependency on the WorldlyTooltipAPI module. WildAnimals module could now be activated without activating the WorldlyTooltip functionality (even though the dependency WorldlyTooltipAPI got activated).
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;github-button&quot; url=&quot;https://github.com/Terasology/WorldlyTooltip/pull/6&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;github-button&quot; url=&quot;https://github.com/Terasology/WildAnimals/pull/9&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;github-button&quot; url=&quot;https://github.com/Terasology/WorldlyTooltip/pull/7&quot;&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;taming-animals&quot;&gt;Taming animals&lt;/h2&gt;
+&lt;p&gt;With behaviors being defined for animals, it would be fun to turn a hostile or aggressive animal into a friendly one. Having a horse that you can ride, a donkey that carries around some load, a dog that guards an entrance, a cow that gives milk, all sound like a fun idea to have in game. Here are some thoughts on how taming can work in game.&lt;/p&gt;
+
+&lt;p&gt;Animals can be broadly and vaguely grouped into friendly and unfriendly, with different animals falling at different levels in this classification. Generally, the friendlier the animal, the easier it would be to tame it.&lt;/p&gt;
+
+&lt;h3 id=&quot;how-would-taming-work&quot;&gt;How would taming work?&lt;/h3&gt;
+&lt;p&gt;Possibly there could be a taming progress bar that gives the player an idea of how long should he continue the efforts on taming. There might be more than one ways to tame an animal, some more effective than the others. The more effective ones would increase the progress bar quicker allowing for speedy taming.&lt;/p&gt;
+
+&lt;h3 id=&quot;taming-methods&quot;&gt;Taming Methods&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Petting&lt;/strong&gt;- Some very friendly animals like dogs might just be tamed after a while of petting.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Feeding&lt;/strong&gt;- Every animal would have a preferred food item (or rather a list of food items it eats with an order of preference). Feeding an animal with its favorite food item would increase the taming progress quicker than with other foods.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Sedating or Tranquilising&lt;/strong&gt;- Animals can be fed poisonous berries or some other substances to intoxicate them. These would leave them vulnerable and make them easier to tame. Such an approach would be useful for more unfriendly or aggressive animals.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Tranquiliser darts&lt;/strong&gt;- For animals that are hostile and would attack when in proximity of the player, tranquiliser darts could be used to intoxicate and subdue the animal, leaving it in a vulnerable state where it can be fed and tamed easily.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Trap&lt;/strong&gt;- Animals that are timid or hostile would either run away from the player or chase the player. A good idea is to trap the animals and then approach them when they are not in a position to run away or attack. An animal trapped in such a manner would have the feed option available now (which wouldn’t have been available earlier).&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Knocking out&lt;/strong&gt;- The animals can be knocked out by fighting off with different equipment. When an animal reaches a low health the player can choose to knock it out. If the player continues to attack it and makes it health reach 0, the animal simply dies as it now does. Knocking out would have a similar effect like tranquilising, it would leave the animal in a vulnerable state where it can be fed and tamed easily.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;These options of &lt;strong&gt;Feed&lt;/strong&gt;, &lt;strong&gt;Pet&lt;/strong&gt;, &lt;strong&gt;Knock Out&lt;/strong&gt;, &lt;strong&gt;Poison&lt;/strong&gt; (selectively enabled) can be displayed in a radial menu that appears on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;E&lt;/code&gt; click on an animal. The radial menu can have a circular progressbar outside that also shows the taming progress.&lt;/p&gt;
+
+&lt;p&gt;Since methods like knocking out or hurting an animal before attempting to tame it seems odd. It can be made possible that the animal remembers only the player which hurt it. This would allow any other player (or even the same player in disguise) to befriend or tame the animal. Such an approach would be necessary only for hostile and aggressive animals and might also bring into picture multiplayer taming.&lt;/p&gt;
+
+&lt;h3 id=&quot;animal-utilities&quot;&gt;Animal Utilities&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Mount for travel&lt;/strong&gt;- Some animals can be chosen as a mount to ride on and for fast travel. Animals would have different speeds, jump heights, stamina etc. Some animals would be suitable for short distance while others for long commutes. Some animals would be stronger than others making them a safer choice of travel. Additionally, some animals may be faster in the day and some faster at night.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Carry load and inventory&lt;/strong&gt;- Most animals would have an inventory of their own that can be used for carrying goods around.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Mining&lt;/strong&gt;- Animals can dig through (with various speeds and capacities) and collect ores and minerals present inside the crust.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Food supply&lt;/strong&gt;- Animals can give eggs or milk that can be used as food.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Wood and stone gatherers&lt;/strong&gt;- Some animals could fell trees and collect wood from their barks. Others could simply go around collecting stone, making construction easier.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Specialised gatherers&lt;/strong&gt;- Some animals could be gatherers for specific items like berries, a specific fruit etc.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Organic Polymer Producer&lt;/strong&gt; - Some animals can be tamed (or killed) to obtain fibre.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Food hunter&lt;/strong&gt;- Tamed carnivores can be trusted to hunt other animals and bring meat. Tamed herbivores can be used to get raw products from trees.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Guard animals&lt;/strong&gt;- Animals can be instructed to guard a location and attack all other players/animals that try to enter.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Combat&lt;/strong&gt;- Different animals can have different special combat abilities that protect the player from attackers.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Sea creatures&lt;/strong&gt;- Sea creatures can be used as a mount to cross oceans or for fishing. Some sea creatures can share their reserve of oxygen increasing the player’s breathing capacity. Some sea creatures could be used to collect resources at the bottom of the sea like oil.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Companion&lt;/strong&gt;- An animal that simply follows you around so that you never feel lonely.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;A nice forum post by &lt;a href=&quot;http://forum.terasology.org/members/vaibhav-bajaj.1985/&quot;&gt;Vaibhav Bajaj&lt;/a&gt;, last year’s GCI student, talks about creating a Pets module and talks about taming at great detail &lt;a href=&quot;http://forum.terasology.org/threads/new-module-pets.1742/&quot;&gt;here&lt;/a&gt;.
+Implementing taming in game is still a bonus item, probably something I’d get back to after I’ve checked off the main items. Next week should involve a start to all the puzzle work and making of the new gameplay module.&lt;/p&gt;
+</description>
+					  <pubDate>2017-05-21T00:00:00+04:00</pubDate>
+					  <link>http://localhost:4000/2017/05/21/GSoC-week3.html</link>
+					  <guid isPermaLink="true">http://localhost:4000/2017/05/21/GSoC-week3.html</guid>
+				  </item>
+				
+
+    
+    		
+				
+	
+				
+	
+				
+	
+				
+				  <item>
+					  <title>GSoC Week 1 and 2: Wild Animals Behavior System</title>
+					  <description>&lt;style type=&quot;text/css&quot;&gt;
+    .collapsiblecontainer {
+    width:100%;
+    border:1px solid #d3d3d3;
+}
+.collapsiblecontainer div {
+    width:100%;
+}
+.collapsiblecontainer .collapsibleheader {
+    background-color:#d3d3d3;
+    padding: 2px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.collapsiblecontainer .collapsiblecontent {
+    display: none;
+    padding : 5px;
+}
+&lt;/style&gt;
+
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/github-buttons.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+$(document).ready(function(){
+    $(&quot;.collapsibleheader&quot;).click(function () {
+        $collapsibleheader = $(this);
+        //getting the next element
+        $collapsiblecontent = $collapsibleheader.next();
+        //open up the collapsiblecontent needed - toggle the slide- if visible, slide up, if not slidedown.
+        $collapsiblecontent.slideToggle(500, function () {
+            //execute this after slideToggle is done
+            //change text of collapsibleheader based on visibility of collapsiblecontent div
+            $collapsibleheader.find(&quot;span:first-child&quot;).text(function () {
+                //change text based on condition
+                return $collapsiblecontent.is(&quot;:visible&quot;) ? &quot;- &quot; : &quot;+ &quot;;
+            });
+        });
+
+    });
+}); 
+
+&lt;/script&gt;
+
+&lt;p&gt;The start to GSoC has been smooth. Currently as I write this wrap up post for week one and two, my work has already crossed the week 3 mark according to my proposal.&lt;/p&gt;
+
+&lt;h1 id=&quot;what-have-i-been-up-to&quot;&gt;What have I been up to?&lt;/h1&gt;
+&lt;p&gt;I’ve been adding new features to the &lt;a href=&quot;https://github.com/Terasology/WildAnimals&quot;&gt;WildAnimals&lt;/a&gt; module. The module only had a deer that idly moved around and did nothing else. When hit it would lose health and ultimately just disappear as a glitch when it’s health reached 0.&lt;/p&gt;
+
+&lt;p&gt;A lot has happened since and at this point there are 4 variants of the deer that exhibit very different behaviors- &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;deer&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;insensitiveDeer&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aggressiveDeer&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hostileDeer&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;github-button&quot; url=&quot;https://github.com/Terasology/WildAnimals/pull/10&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;github-button&quot; url=&quot;https://github.com/Terasology/WildAnimals/pull/12&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;github-button&quot; url=&quot;https://github.com/Terasology/Pathfinding/pull/28&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;Before we get into details of how these were built, let’s have a look at a few preview videos:&lt;/p&gt;
+
+&lt;div class=&quot;videowrapper&quot;&gt;
+    &lt;iframe width=&quot;1024&quot; height=&quot;768&quot; src=&quot;https://www.youtube.com/embed/unAqMHKkSC0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;div class=&quot;videowrapper&quot;&gt;
+    &lt;iframe width=&quot;1024&quot; height=&quot;768&quot; src=&quot;https://www.youtube.com/embed/SjuMzl-5qIc&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;importing-an-animal-in-game&quot;&gt;Importing an animal in game&lt;/h3&gt;
+&lt;p&gt;First an animal model is made in blender. After an artist finishes up a model, gets it rigged, UV Mapped and adds animations, it is pushed to the &lt;a href=&quot;https://github.com/MetaTerasology/WildAnimals/&quot;&gt;Meta repository&lt;/a&gt; that holds all the blender files for creature models. There is a comprehensive guide on how to add creatures in game &lt;a href=&quot;https://github.com/Terasology/TutorialAssetSystem/wiki/Add-a-creature&quot;&gt;here&lt;/a&gt; that I’ve written. Also there is one written by flo, &lt;a href=&quot;https://github.com/MovingBlocks/TeraMisc/blob/master/blender_addons/io_md5_exporter/tutorial/Tutorial.md&quot;&gt;here&lt;/a&gt;. Thanks to &lt;a href=&quot;https://github.com/quaternius&quot;&gt;quaternius&lt;/a&gt;, I’ve been getting some help with animal models.&lt;/p&gt;
+
+&lt;h3 id=&quot;working-with-the-animal-in-game&quot;&gt;Working with the animal in game&lt;/h3&gt;
+&lt;p&gt;Each animal has a prefab file located &lt;a href=&quot;https://github.com/Terasology/WildAnimals/tree/master/assets/prefabs/animals&quot;&gt;here&lt;/a&gt; that details the characterstics of the animal as components. To know more about components and the Entity system architecture, go &lt;a href=&quot;https://github.com/MovingBlocks/Terasology/wiki/Entity-System-Architecture&quot;&gt;here&lt;/a&gt;.
+Once an animal prefab is made, it can be spawned in game by typing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;spawnPrefab prefabName&lt;/code&gt; in the console.&lt;/p&gt;
+
+&lt;h1 id=&quot;event-driven-behavior-system&quot;&gt;Event driven Behavior System&lt;/h1&gt;
+
+&lt;div class=&quot;github-button&quot; url=&quot;https://github.com/Terasology/WildAnimals/pull/8&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;The four different deer I mentioned really have the same animal model, animations and texture. They only vary in behavior. This behavior handling forms the crux of the WildAnimals module. Let’s dive into a little more detail.&lt;/p&gt;
+
+&lt;p&gt;The Behavior System built in the engine allows something known as behavior trees, to define a certain behavior.&lt;/p&gt;
+
+&lt;div class=&quot;collapsiblecontainer&quot;&gt;
+&lt;div class=&quot;collapsibleheader&quot;&gt;&lt;span&gt;+ &lt;/span&gt;&lt;span&gt;What is a behavior tree?&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;collapsiblecontent&quot;&gt;   
+	A behavior tree is used to define conditional or sequential behavior for an entity. A behavior tree essentially has a set of nodes, each node executes some logic and has a condition set for when it would return a status of FAILURE, SUCCESS or simply keep RUNNING. An involved behavior tree can switch among different nodes based on the previous or child node's status.
+	&lt;br /&gt;
+	This &lt;a target=&quot;_blank&quot; href=&quot;http://forum.terasology.org/threads/behavior-trees.882/&quot;&gt;forum post&lt;/a&gt; and &lt;a target=&quot;_blank&quot; href=&quot;https://www.youtube.com/watch?v=gPwBSwq4_mg&quot;&gt;youtube video&lt;/a&gt; would really give you a feel for behavior trees.
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;These behavior trees are central to the event driven behavior system. Each behavior tree defines a particular type of behavior that can be applied to an entity, for eg-&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A “&lt;strong&gt;stray&lt;/strong&gt;” behavior can have a deer idly roam around, walk and stand for a while.&lt;/li&gt;
+  &lt;li&gt;A “&lt;strong&gt;flee&lt;/strong&gt;” behavior can have the deer run away from the player until it’s at a safe (defined minimum) distance.&lt;/li&gt;
+  &lt;li&gt;A “&lt;strong&gt;hostile&lt;/strong&gt;” behavior can have the deer close in on the player and then inflict damage.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The “stray” behavior tree that exists in the &lt;a href=&quot;https://github.com/Terasology/Pathfinding&quot;&gt;Pathfinding module&lt;/a&gt; module looks like this:&lt;/p&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/strayBT.jpg&quot; alt=&quot;stray&quot; title=&quot;stray BT&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Each of these behavior trees can be applied to the entity by simply defining it in the entity’s prefab under the BehaviorComponent. But what’s needed for the animals, is a behavior system that controls what behavior the animal has at any point in time. A system that controls when the behavior needs to switch, what should trigger such a switch and which behavior takes a higher precedence. Enter Event Driven Behavior System.&lt;/p&gt;
+
+&lt;div class=&quot;collapsiblecontainer&quot;&gt;
+&lt;div class=&quot;collapsibleheader&quot;&gt;&lt;span&gt;+ &lt;/span&gt;&lt;span&gt;What is an event?&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;collapsiblecontent&quot;&gt;   
+    An event is an action that propagates through all systems in the game to trigger a change or execute some logic. An event is sent to exactly one entity. An event can be received by event handlers, which can add filters for selecting only entities having a certain set of components. Different event handlers can receive the same event in an order of precedence, by specifying a priority.
+    &lt;br /&gt;
+    This &lt;a target=&quot;_blank&quot; href=&quot;https://github.com/MovingBlocks/Terasology/wiki/Events-and-Systems&quot;&gt;wiki page&lt;/a&gt; describes in detail how events work.
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The WildAnimals module has different packages for different behaviors like “FleeOnHit”, “AttackOnHit”, “AttackInProximity”, “StrayIfIdle”, etc. Each of these packages consists of a system and a component. If such a component is attached to an entity, the respective system takes care of handling the behavior changes associated with that package.&lt;/p&gt;
+
+&lt;div class=&quot;collapsiblecontainer&quot;&gt;
+&lt;div class=&quot;collapsibleheader&quot;&gt;&lt;span&gt;+ &lt;/span&gt;&lt;span&gt;How does it work?&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;collapsiblecontent&quot;&gt;
+    The component from the package whose behavior is to be implemented in an entity, is added to the entity's prefab. Whenever an action/event happens in the game that could trigger a change in the behavior of an entity, an UpdateBehaviorEvent (a consumable event) is sent to the entity. This event is received by event handlers present in any such package's system. These event handlers receive the event based on a priority and trigger the behavior switch by changing the entity's behavior tree inside it's BehaviorComponent.
+    &lt;br /&gt;&lt;br /&gt;
+    Let's take the example of the &quot;FleeOnHit&quot; and &quot;StrayIfIdle&quot; package, the first such packages. &lt;br /&gt;
+    &lt;ul&gt;
+    &lt;li&gt;
+    The FleeOnHit package has a FleeOnHitComponent, which when attached to any wild animal entity would let it exhibit the &quot;flee&quot; behavior when it is hit. &lt;br /&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+    The StrayIfIdle package has a StrayIfIdleComponent, which when attached to any wild animal entity would let it exhibit the stray behavior when it is idle and has no other behavior that could get triggered. &lt;br /&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+    For the deer, by default it has a behavior of &quot;stray&quot; defined in it's prefab.&lt;br /&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+    The FleeOnHitSystem watches for the OnDamageEvent to happen to an entity which has the WildAnimalComponent and FleeOnHitComponent. It saves the event instigator (damage inflictor) to the FleeOnHitComponent and then sends an UpdateBehaviorEvent to the entity to trigger a change if it's needed.
+    &lt;/li&gt;
+    &lt;li&gt;
+    The UpdateBehaviorEvent is received by the FleeOnHitSystem. It checks for the instigator inside &quot;FleeOnHit&quot; to be non-null, triggers the behavior switch to &quot;flee&quot; and consumes the UpdateBehaviorEvent.&lt;br /&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+    The StrayIfIdleSystem also receives the UpdateBehaviorSystem, but with a lower priority.
+    &lt;/li&gt;
+    &lt;li&gt;
+    When the deer reaches a safe (defined minimum) distance from the player, the instigator in the FleeOnHitComponent is set to null and another UpdateBehaviorEvent is fired from the CheckFleeStopNode (a part of the &quot;flee&quot; Behavior Tree).&lt;br /&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+    This event is not consumed by the FleeOnHitSystem event handler as the instigator in FleeOnHitComponent is null. It then is received by the StrayIfIdleSystem event handler, which triggers a behavior switch to &quot;stray&quot; and consumes the event.
+    &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;br /&gt;
+    The behavior switches simply happen based on the different priorities the event handlers in the different packages have.
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;advantages-of-the-event-driven-behavior-system&quot;&gt;Advantages of the Event Driven Behavior System&lt;/h3&gt;
+&lt;p&gt;There are quite a few advantages of using this approach for dealing with complex and multiple behaviors.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Easily Extendable and Reusable&lt;/strong&gt;: A package consisting of a particular conditional behavior can be used for multiple animals/entities. For eg- the “FleeOnHit” package made for the deer can easily be added to other animals like cows, dogs etc. Adding a behavior is as simple as attaching a component.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Efficient&lt;/strong&gt;: There are no constant checks and running loops. The behavior switch is instant.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Simple Behavior Trees&lt;/strong&gt;: The behavior trees remain bare-bones and minimal, as they have to deal with only one behavior and not worry about switching behavior.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Neat Prefabs&lt;/strong&gt;: The prefab for the animal now gives a good picture of what all behaviors it exhibits. A simple deer’s prefab would just have the “FleeOnHit” and “StrayIfIdle” components. A deer’s prefab could look like this:
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&quot;FleesOnHit&quot;: {
+&quot;minDistance&quot;: 15.0
+},
+&quot;EatsFromBlockIfHungry&quot;: {
+ &quot;block&quot;: &quot;grass&quot;,
+ &quot;maxWalkDistance&quot;: 4
+},
+&quot;AttractedByHoldItems&quot;: {
+ &quot;items&quot;: [&quot;apple&quot;, &quot;nut&quot;]
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Clear order of precedence&lt;/strong&gt;: Different behaviors can be given different weights as per priority. A hungry deer when hurt would run for it’s life instead of looking for food. A priority list of behaviors could look like this:
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; ensure safety (flee if recently damaged)
+ ensure not hungry
+ ensure not thirsty
+ ensure not tired
+ ensure not curious (has not watched player / player action / player item recently)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Easy development&lt;/strong&gt;: With this system, someone who’s making the “EatIfHungry” package does not have to worry about what will happen if the animal is hit when it’s hungry. All he has to do is assign the event handler for the “EatIfHungry” package a lesser priority than the “FleeOnHit” package’s event handler.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The post went longer than I had expected it to. The next post would contain details of the deer that have been implemented and maybe new creatures! Most deer at this point are just placeholders for other animals whose models aren’t ready yet. Thanks to &lt;a href=&quot;http://forum.terasology.org/members/florian.1335/&quot;&gt;flo&lt;/a&gt; for all his help lately. The whole event driven behavior system idea was born out of a discussion with him. He’s been really helpful in getting my PRs reviewed and merged too.&lt;/p&gt;
+
+&lt;p&gt;In other news, I was away for 3 days (10th to 12th May) for the &lt;a href=&quot;https://www.acadaccelerator.com/Home/CFDShowCase&quot;&gt;Microsoft code.fun.do SHOWCASE event&lt;/a&gt; that was held in Hyderabad. The trip was fun with sponsored flight trips and hotel stay. Have to catch up with lost time on GSoC though.&lt;/p&gt;
+</description>
+					  <pubDate>2017-05-08T00:00:00+04:00</pubDate>
+					  <link>http://localhost:4000/2017/05/08/GSoC-week1-2.html</link>
+					  <guid isPermaLink="true">http://localhost:4000/2017/05/08/GSoC-week1-2.html</guid>
+				  </item>
+				
+
+    
+    		
+				
+	
+				
+	
+				
+	
+				
+				  <item>
+					  <title>Google Summer of Code Selection</title>
+					  <description>&lt;p&gt;Summer has kicked off with great news. My proposal for the Google Summer of Code with MovingBlocks- Terasology has been selected.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-the-google-summer-of-code&quot;&gt;What is the Google Summer of Code?&lt;/h2&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/GSoC.png&quot; alt=&quot;GSoC&quot; title=&quot;GSoC&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To the uninitiated, Google Summer of Code is a global program targeted at bringing university students into open source. Students work with an open source organization on a 3 month programming project during their summer break. Google first selects around 200 organisations and funds their open source projects. It’s a win-win. The students get an awesome learning experience and a huge stipend. The organisations get a lot of work done from the dedicated students. Well, Google just plays the nice guy being a good Samaritan.&lt;/p&gt;
+
+&lt;p&gt;This would be MovingBlocks’ second GSoC selection as a mentoring organisation, which makes it a veteran org already. With a total of 10 slots this year, way more than last year’s 3, this summer might prove to be the immensely productive for MovingBlocks.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-movingblocks--terasology&quot;&gt;What is MovingBlocks- Terasology?&lt;/h2&gt;
+
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/img/gooey.jpg&quot; alt=&quot;Gooey&quot; title=&quot;Gooey&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/MovingBlocks/Terasology&quot;&gt;Moving Blocks- Terasology&lt;/a&gt; is a minecraft-like open source game built in a voxel world. A &lt;a href=&quot;https://en.wikipedia.org/wiki/Voxel&quot;&gt;voxel&lt;/a&gt; world is essentially a 3-D world made up from blocks. Terasology is still in it’s Alpha stage, but what makes it really special is it’s modularity. With a huge, diverse set of modules already developed/in-development, Terasology offers amazing possibilities. It has a very basic minimal engine, where even core features like health, inventory, combat etc can be added on top or removed as plug-in modules.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-am-i-doing&quot;&gt;What am I doing?&lt;/h2&gt;
+
+&lt;p&gt;My &lt;a href=&quot;https://summerofcode.withgoogle.com/projects/#6685506025816064&quot;&gt;project&lt;/a&gt; is titled as &lt;strong&gt;Exploration World- Improved Gameplay&lt;/strong&gt; (proposal &lt;a href=&quot;https://drive.google.com/file/d/0B3HM64I0M4DmYnVWUUpyQkZ2b1k/view&quot;&gt;here&lt;/a&gt;). In a gist, I plan to add WildAnimals, Puzzles, Exploration and other content to create a new gameplay module. The new gameplay module would pack together the best of whatever is created yet, to create a new gameplay setting that would add meaning and purpose for the end user.&lt;/p&gt;
+
+&lt;p&gt;My primary mentor would be &lt;a href=&quot;http://forum.terasology.org/members/skysom.1621/&quot;&gt;Skylar ‘skysom’ Sommers&lt;/a&gt; and secondary mentors would be- &lt;a href=&quot;http://forum.terasology.org/members/florian.1335/&quot;&gt;Florian ‘flo’ Köberle&lt;/a&gt;, &lt;a href=&quot;http://forum.terasology.org/members/xtariq.1697/&quot;&gt;Xavier ‘xtariq’ Tariq&lt;/a&gt; and &lt;a href=&quot;http://forum.terasology.org/members/isaac.1943/&quot;&gt;Isaac ‘iojw’ Ong&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;when-am-i-doing-this&quot;&gt;When am I doing this?&lt;/h2&gt;
+
+&lt;p&gt;Since my college reopens mid-July, I’ve already started work on the Project. Officially May is meant to be a Community-Bonding period for most and the Coding phase only starts in July. However I plan to finish my GSoC early and I’ve already started off with the coding phase.&lt;/p&gt;
+
+&lt;h2 id=&quot;blog-for-updates&quot;&gt;Blog for updates&lt;/h2&gt;
+
+&lt;p&gt;I plan to use this blog to keep updating my progress. This blog will also be an attempt to document the work that I’ll be doing. This is gonna be an exciting summer!&lt;/p&gt;
+</description>
+					  <pubDate>2017-05-04T00:00:00+04:00</pubDate>
+					  <link>http://localhost:4000/2017/05/04/Google-Summer-of-Code.html</link>
+					  <guid isPermaLink="true">http://localhost:4000/2017/05/04/Google-Summer-of-Code.html</guid>
+				  </item>
+				
+
+    
+    		
+				
+	
+				
+	
+				
+	
+				
+
+    
+    		
+				
+	
+				
+	
+				
+	
+				
+
+    
+    		
+				
+	
+				
+
+    
+    		
+				
+	
+				
+
+    
+    		
+				
+	
+				
+
+    
+    		
+				
+	
+				
+
+    
+    		
+				
+	
+				
+
+    
+    		
+				
+	
+				
+	
+				
+
+    
+  </channel>
+</rss>

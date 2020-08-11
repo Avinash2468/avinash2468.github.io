@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Nihal Singh - Playing with aliases</title>
+
+	<link rel="stylesheet" href="/css/main.css">
+	<link rel="canonical" href="http://localhost:4000/2016/05/08/playing-with-aliases.html">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,600' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+
+	<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114314056-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-114314056-1');
+	</script>
+
+</head> 
+
+
+<body>
+	<aside>
+	<div class="container">
+    <nav>
+      <a class="site-title" href="/">nihal111</a>
+    </nav>
+		<nav class="site-nav">
+     <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+			<ul>
+				
+          
+          
+  				<li><a href="/about/">About</a></li>
+          
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          
+  				<li><a href="/projects/">Projects</a></li>
+          
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          <li><a href="/docs/CV.pdf">CV</a></li>
+      		<li><a href="/blog">Blog</a></li>
+			</ul>
+      </div>
+		</nav>
+	</div>
+</aside>
+	<div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+          <a href="/" class="site-avatar"><img src="https://avatars1.githubusercontent.com/u/13916513?v=2&s=460" /></a>
+
+          <div class="site-info">
+            <h1 class="site-name"><a href="/">Nihal Singh</a></h1>
+            <p class="site-description">I like to know things</p>
+          </div>
+          
+          <nav>
+            <a href="https://github.com/nihal111">
+<span class="icon icon--github">
+<img src="/img/github.png" class="darken" alt="GitHub">
+</span></a>
+
+<a href="https://facebook.com/nihal111">
+<span class="icon icon--facebook">
+<img src="/img/facebook.png" class="darken" alt="Facebook">
+</span>
+</a>
+
+<a href="https://linkedin.com/in/nihal111">
+<span class="icon icon--linkedin">
+<img src="/img/linkedin.png" class="darken" alt="LinkedIn">
+</span>
+</a>
+          </nav>
+          
+        </header>
+      </div>
+</div>
+
+	<main>
+		<article>
+			<center>
+<h2>Playing with aliases</h2>
+<time><i>Written on May 8, 2016</i></time>
+<br><br>
+<div class="post-tags">
+  
+  
+  <a class="tag" href="/tags/#bash">bash</a>
+  
+  <a class="tag" href="/tags/#tutorial">tutorial</a>
+  
+</div>
+</center>
+
+
+<p>Since I can’t do without my games, I can’t do without Windows, and I have to dualboot. This means that most of my data is stored on a disk shared between both the operating systems. The path to the directory where I keep my projects thus becomes rather long. And I like to keep an alias for it.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">alias </span><span class="nv">code</span><span class="o">=</span><span class="s1">'cd /media/Nihal/Code'</span></code></pre></figure>
+
+<p>What this would do is create an alias by the name of ‘code’ which would exist till the time you killed the terminal. Rather I have created a permanent alias for it, which is stored by copying the above line into the <strong><code class="language-plaintext highlighter-rouge">.bash_aliases</code></strong> file in the home directory (if it doesn’t exist, you should really create one). I wanted to create a few more permanent aliases as and when needed and the process to do so felt tedious. Alas! I wrote another alias for it. Let’s talk about the <strong><code class="language-plaintext highlighter-rouge">.bashrc</code></strong> and <strong><code class="language-plaintext highlighter-rouge">.bash_aliases</code></strong> file before getting there.</p>
+
+<h3 id="the-bashrc-file">The <strong><em><code class="language-plaintext highlighter-rouge">.bashrc</code></em></strong> file</h3>
+<p>In the home directory there also exists a <code class="language-plaintext highlighter-rouge">.bashrc</code> file which shall contain a lot of oher things. The <code class="language-plaintext highlighter-rouge">.bashrc</code> file is a script which executes evereytime a terminal is started in the <strong>interactive mode</strong>. It contains a set of configurations for the terminal.  The <code class="language-plaintext highlighter-rouge">.bashrc</code> file provides a space to set up variables, functions, aliases etc that you may want to use. The <code class="language-plaintext highlighter-rouge">.bashrc</code> is then run every time you open up a new terminal. Be careful, that any error or change you make in the <code class="language-plaintext highlighter-rouge">.bashrc</code> file will be reflected in all subsequent terminal windows launced. Also if you have a terminal window running, and you make changes to the <code class="language-plaintext highlighter-rouge">.bashrc</code> file thereafter, you will obviously have no effect on the running terminal and you may want to restart it.</p>
+
+<h3 id="loading-the-bash_aliases-file">Loading the <strong><em><code class="language-plaintext highlighter-rouge">.bash_aliases</code></em></strong> file</h3>
+<p>The <code class="language-plaintext highlighter-rouge">.bashrc</code> file does a fine job of loading the <code class="language-plaintext highlighter-rouge">.bash_aliases</code> file like so:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">if</span> <span class="o">[</span> <span class="nt">-f</span> ~/.bash_aliases <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+    <span class="nb">.</span> ~/.bash_aliases
+<span class="k">fi</span></code></pre></figure>
+
+<p>This essentially allows <code class="language-plaintext highlighter-rouge">.bashrc</code> to load the ‘.bash_aliases’ file within itself, preventing you from meddling with it and managing the list of aliases neatly.</p>
+
+<h3 id="creating-a-permanent-alias">Creating a Permanent Alias</h3>
+<p>Creating a permanent alias is easy. Just open up ~/.bash_aliases and append the following line to it.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">alias </span><span class="nv">foo</span><span class="o">=</span><span class="s1">'bar'</span></code></pre></figure>
+
+<p>Whenever you type in “foo”, “bar” will be passed as an input to the terminal.<br />
+<strong>Note:</strong> You can do this with ~/.bashrc as well but it is neater not to.</p>
+
+<p>A perhaps better way to do this would be to automate the task and save yourself the hassle of opening a the fine and appending to it manually. And what better way to create aliases by using another alias? I wanted to have a way to create a permanent alias by just typing in a ‘p’ before alias like so:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">palias <span class="nv">foo</span><span class="o">=</span><span class="s1">'bar'</span></code></pre></figure>
+
+<p>To do this, I opened up <code class="language-plaintext highlighter-rouge">~/.bash_aliases</code> and created a function called permanent_alias and called it every time I entered “palias” on the terminal:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">permanent_alias<span class="o">(){</span>
+    <span class="nv">KEY</span><span class="o">=</span><span class="si">$(</span><span class="nb">echo</span> <span class="nv">$1</span> | <span class="nb">cut</span> <span class="nt">-d</span><span class="s2">"="</span> <span class="nt">-f</span> 1<span class="si">)</span>
+    <span class="nv">VALUE</span><span class="o">=</span><span class="si">$(</span><span class="nb">echo</span> <span class="nv">$1</span> | <span class="nb">cut</span> <span class="nt">-d</span><span class="s2">"="</span> <span class="nt">-f</span> 2-<span class="si">)</span>
+    <span class="nb">echo</span> <span class="nt">-e</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">alias </span><span class="nv">$KEY</span><span class="s2">='</span><span class="nv">$VALUE</span><span class="s2">'"</span> <span class="o">&gt;&gt;</span> /home/nihal/.bash_aliases
+    <span class="nb">echo</span> <span class="s2">"New permanent bash alias set: alias </span><span class="nv">$KEY</span><span class="s2">='</span><span class="nv">$VALUE</span><span class="s2">'"</span>
+    <span class="k">if</span> <span class="o">[</span> <span class="nt">-f</span> ~/.bash_aliases <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+	    <span class="nb">.</span> ~/.bash_aliases
+	<span class="k">fi</span>
+<span class="o">}</span>
+
+<span class="c">#Create alias for function call</span>
+<span class="nb">alias </span><span class="nv">palias</span><span class="o">=</span><span class="s1">'permanent_alias'</span></code></pre></figure>
+
+<h4 id="explanation">Explanation</h4>
+<ul>
+  <li>$1 is a <strong>positional parameter</strong> that returns the first argument passed. Since “palias” is an alias to a function call, it returns the first word after the word “palias”, without the inverted commas. <code class="language-plaintext highlighter-rouge">palias foo='bar'</code> will return foo=bar as $1.<br />
+Interestingly, $0 returns the address of the script or shell running. In this case /bin/bash</li>
+  <li><strong>$KEY</strong> and <strong>$VALUE</strong> variables are defined by splitting the string in $1 at the first “=”. The string <strong>$1</strong> is passed to cut and with delimiter (<strong>-d</strong>) as “<strong>=</strong>”, fields (<strong>-f</strong>) <strong>1</strong> and <strong>2-</strong> are selected</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">"foo='bar'"</span> | <span class="nb">cut</span> <span class="nt">-d</span><span class="s2">"="</span> <span class="nt">-f</span> 1
+<span class="c">#returns "foo"</span>
+<span class="nb">echo</span> <span class="s2">"foo='bar'"</span> | <span class="nb">cut</span> <span class="nt">-d</span><span class="s2">"="</span> <span class="nt">-f</span> 2
+<span class="c">#returns "bar"</span></code></pre></figure>
+
+<p><strong>Note:</strong> <code class="language-plaintext highlighter-rouge">echo "foo='bar'" | cut -d"=" -f 1</code> has the same effect as <code class="language-plaintext highlighter-rouge">echo "foo='bar'" | cut --delimiter="=" --fields 1 </code><br />
+<strong>Note:</strong> <code class="language-plaintext highlighter-rouge">echo "foo='bar==car'" | cut -d"=" -f 2-</code> fetches ‘bar==car’ while <code class="language-plaintext highlighter-rouge">echo "foo='bar==car'" | cut -d"=" -f 2</code> fetches ‘bar</p>
+
+<ul>
+  <li>Once KEY and VALUE are abstracted, they are appended to the <code class="language-plaintext highlighter-rouge">.bash_aliases</code> file using</li>
+</ul>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="nt">-e</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">alias </span><span class="nv">$KEY</span><span class="s2">='</span><span class="nv">$VALUE</span><span class="s2">'"</span> <span class="o">&gt;&gt;</span> /home/user/.bash_aliases</code></pre></figure>
+
+<p><strong>Note:</strong>  The -e flag is for enabling interpretation of backslash escapes like “\n” (newline). <code class="language-plaintext highlighter-rouge">echo "string" &gt;&gt; file</code> is used to append “string” at the end of file.</p>
+
+<ul>
+  <li>The <code class="language-plaintext highlighter-rouge">if [ -f ~/.bash_aliases ]; then . ~/.bash_aliases fi</code> allows you to use your newly declared permanent alias in the running terminal too, by loading the bash_aliases file again. Not doing this, would result in restarting of terminal for changes to take effect. (Thanks Vinayak for pointing out)</li>
+</ul>
+
+<h4 id="usage">Usage</h4>
+<ul>
+  <li>For single word aliases, scrapping the inverted commas would do.</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">palias <span class="nv">foo</span><span class="o">=</span><span class="s1">'bar'</span>
+and
+palias <span class="nv">foo</span><span class="o">=</span>bar
+would have same effect as we manually add inverted commas later.</code></pre></figure>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	However,
+</code></pre></div></div>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">palias <span class="nv">foo</span><span class="o">=</span><span class="s1">'cd /home'</span>
+<span class="c">#$1 = "foo=cd /home"</span>
+and
+palias <span class="nv">foo</span><span class="o">=</span><span class="nb">cd</span> /home	
+<span class="c">#$1 = "foo=cd"</span>
+would not have the same effect.</code></pre></figure>
+
+<ul>
+  <li>For special characters like “ ( , ) , @” etc, scrapping the inverted commas would not work</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">palias <span class="nv">foo</span><span class="o">=</span><span class="s1">'permanent_alias()'</span>
+and
+palias <span class="nv">foo</span><span class="o">=</span>permanent_alias<span class="o">()</span>
+would not have same effect as <span class="s2">"("</span> would be an unexpected token.</code></pre></figure>
+
+<ul>
+  <li>Garbage after the first space won’t matter.</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">palias <span class="nv">foo</span><span class="o">=</span><span class="s1">'bar'</span>
+and
+palias <span class="nv">foo</span><span class="o">=</span><span class="s1">'bar'</span> this is an amazing blog
+would have same effect.</code></pre></figure>
+
+<ul>
+  <li>Spaces around the “=” in <code class="language-plaintext highlighter-rouge">palias foo = 'bar'</code> wouldn’t work. They wouldn’t work with regular alias either, for that matter.</li>
+</ul>
+
+<p>If you’re still reading, I hope you found it useful. Till next time! :)</p>
+
+
+
+<!-- Code for disqus comments -->
+
+<div id="disqus_thread"></div>
+<script>
+
+var disqus_config = function () {
+this.page.url = "http://localhost:4000/2016/05/08/playing-with-aliases.html"; // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "/2016/05/08/playing-with-aliases"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//nihal111.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+	
+
+
+
+
+
+		</article>
+		
+	</main>
+	<footer class="site-footer">
+
+  <div class="wrapper">
+
+   
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="name">Nihal Singh</li>
+          <li>-nihal111</li>
+          <li><a href="mailto:nihaliter@gmail.com">nihaliter@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <p class="abode">Abode:</p>Indian Institue of Technology, Bombay Mumbai-400076, India
+      </div>
+      <div class="footer-col footer-filler">
+        <p> </p>
+      </div>
+      <div class="footer-col footer-col-3">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/nihal111"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">nihal111</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://facebook.com/nihal111"><span class="icon icon--facebook">
+<svg  x="0px" y="0px" width="16px" height="16px" viewBox="0 0 90 90" style="enable-background:new 0 0 90 90;" xml:space="preserve">
+<g>
+	<path id="Facebook__x28_alt_x29_" d="M90,15.001C90,7.119,82.884,0,75,0H15C7.116,0,0,7.119,0,15.001v59.998   C0,82.881,7.116,90,15.001,90H45V56H34V41h11v-5.844C45,25.077,52.568,16,61.875,16H74v15H61.875C60.548,31,59,32.611,59,35.024V41   h15v15H59v34h16c7.884,0,15-7.119,15-15.001V15.001z" fill="#3A589B"/>
+</g>
+</svg>
+</span><span class="username">Nihal Singh</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://linkedin.com/in/nihal111"><span class="icon icon--linkedin"><svg  x="0px" y="0px" width="16px" height="16px" viewBox="0 50 512 512" style="enable-background:new 0 0 90 90;" xml:space="preserve">
+<g>
+	<path fill="#828282" d="M150.65,100.682c0,27.992-22.508,50.683-50.273,50.683c-27.765,0-50.273-22.691-50.273-50.683
+	C50.104,72.691,72.612,50,100.377,50C128.143,50,150.65,72.691,150.65,100.682z M143.294,187.333H58.277V462h85.017V187.333z
+	M279.195,187.333h-81.541V462h81.541c0,0,0-101.877,0-144.181c0-38.624,17.779-61.615,51.807-61.615
+	c31.268,0,46.289,22.071,46.289,61.615c0,39.545,0,144.181,0,144.181h84.605c0,0,0-100.344,0-173.915
+	s-41.689-109.131-99.934-109.131s-82.768,45.369-82.768,45.369V187.333z"/>
+</g>
+</svg>
+</span><span class="username">Nihal Singh</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      
+    </div>
+
+  </div>
+
+</footer>
+
+</body>
+
+</html>

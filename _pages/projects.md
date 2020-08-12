@@ -5,8 +5,8 @@ header: True
 permalink: /projects/
 ---
 
-Projects are one of the ways to learn something new. There is no such thing as a completed project.
-Here is the list of projects I own:
+Projects are one of the ways to learn something new.
+Here is the list of projects I have worked on or am currently working on:
 
 ## Notable Projects
 
@@ -17,12 +17,21 @@ I mainly worked on the Vision part of the project. For stair detection, we train
 
 * **32 bit MIPS Processor**: In this project, I designed a 32-bit MIPS processor supporting the basic instructions from scratch using **Verilog** and **Vivado**. One of the main features of this project is that the processor is 2 stage pipelines (**IFU** and **Decode and Execute** run in parallel). Another notable feature is that the processor runs at 1.3 GHz. The various modules developed for the processor are the **Instruction Fetch Unit (IFU)** to fetch instructions from the RAM. The next instruction is the **Decode** module used to decode the instruction fetched by the IFU. The last module is the **Execute** module which then executes the instruction in the processor. For more info, check out my github [repo][Github Repo 3].
 
+* **DDR2SDRAM Controller**: In this project, my team and I coded up a DDR2SDRAM controller from scratch using **Verilog** and simulated it in **Vivado**. A DDR2 RAM controller is a digital circuit that manages the flow of data going to and from the computer's main memory. As part of controller we implemented modules such as **Control Interface Unit**, **Command Module**, **Data Path Module**. To get more info, check out my github [repo][Github Repo 5]
+
 ## Side Projects
+
+* **SLAM using a custom robot**: In this project, I built a simple robot from scratch using the URDF file format. To control the robot, I used the differential drive package. I then imported the robot into a custom world containing a synthetic warehouse and did SLAM using a LIDAR sensor and the GMAPPING package. Check out my github [repo][Github Repo 4].
+
+
+
 
 
 [Github Repo 1]: https://github.com/Avinash2468/Stair_Climbing_Robot
 [Github Repo 2]: https://github.com/Avinash2468/IOT_STREETLIGHTS
 [Github Repo 3]: https://github.com/Avinash2468/32-bit-2-stage-pipelined-mips-processor
+[Github Repo 4]: https://github.com/Avinash2468/Warehouse_SLAM_RRC
+[Github Repo 5]: https://github.com/Avinash2468/DDR2_Controller
 [AdvancedBehaviors]: https://github.com/Terasology/AdvancedBehaviors/
 [AdventureAssets]: https://github.com/Terasology/AdventureAssets
 [WildAnimals]: https://github.com/Terasology/WildAnimals

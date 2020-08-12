@@ -5,5 +5,5 @@ permalink: /cv/
 redirect_from:
   - /CV
 redirect_to:
-  - /docs/CV.pdf
+  - /docs/CV2.pdf
 ---

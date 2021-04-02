@@ -1,0 +1,19 @@
+I"]<p>As the course project for CS 419 - Introducing to Machine Learning, Spring 2018, I teamed up with Arpan Banerjee and Srivatsan Sridhar to work on the task of Voice Conversion.</p>
+
+<p>We built a pipelined approach to convert one person’s voice into another person’s voice. We proposed a deep learning approach to convert source waveform to phonemes and further phonemes to target waveform. This approach consisted of two neural networks.
+The first network was used to convert the source speaker’s waveforms to phonemes.</p>
+
+<p class="center"><img src="/img/voice-conversion/net1.png" alt="Net1" title="Net1" style="max-height: 500px;" /></p>
+
+<p>While the second network involved converting the obtained phonemes to the target speaker’s waveforms.</p>
+
+<p class="center"><img src="/img/voice-conversion/net2.png" alt="Net2" title="Net2" style="max-height: 500px;" /></p>
+
+<p>We used the TIMIT (different sources) and CMU ARCTIC (single target) corpus respectively for training our network. As part of our project, we performed extensive experimentation with bi-directional Recurrent Neural Networks using LSTM and GRU cells.</p>
+
+<p>We’ve used the multitask approach to train the network as per both the mel spectral coefficients (as an intermediate representation) and magnitude spectrum which forms the final output while using a pyramidal network architecture.</p>
+
+<p class="center"><img src="/img/voice-conversion/multitask.png" alt="multitask" title="multitask" style="max-height: 500px;" /></p>
+
+<p>Our experiments and approaches are detailed here- <a href="/docs/voice_conversion_report.pdf">Report</a></p>
+:ET

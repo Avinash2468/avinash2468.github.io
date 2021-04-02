@@ -1,0 +1,53 @@
+I"�<p>I’m back in Mumbai as I write this recap blog post describing my summer spent in the heart of Tokyo, during my internship at Mercari. This blog post is going to be specific to my internship. I’ve written about my travelling experiences in a <a href="https://nihal111.github.io/2018/07/09/japan-lookback.html">different post</a>.</p>
+
+<h2 id="about-mercari">About Mercari</h2>
+
+<p>Mercari is a CtoC marketplace startup that was founded in 2013. Their main product is the Mercari CtoC marketplace app. In just 5 years, the company has skyrocketed to become Japan’s largest community-driven marketplace. The company also gained the pre-IPO unicorn status, being a privately held company valued over $1 billion. This was before the company went public this June on the Toyko Stock Exchange’s Mothers Market, during my stay there.</p>
+
+<h2 id="the-office">The Office</h2>
+
+<p class="center"><img src="/img/mercari/officeview.jpg" alt="Office View" title="Office View" style="max-height: 500px;" /></p>
+
+<p>The Mercari office is located on the 18th floor of Mori Tower, the 6th tallest building in Tokyo. The view from the office is fantastic and the breeze on the top, at the observation deck is better. There is a giant spider outside the office, that should remind you of <a href="http://silverscreensnobs.com/spiders-doppelgangers-secrets-enemy-expained/">Enemy</a> if you’re into sci-fi.</p>
+
+<p class="center"><img src="/img/mercari/moritower.jpg" alt="Mori Tower" title="Mori Tower" style="max-height: 500px;" />
+<img src="/img/mercari/spider.jpg" alt="spider" title="Spider" style="max-height: 500px;" /></p>
+
+<h2 id="the-honeymoon-phase">The Honeymoon Phase</h2>
+<p>The first week was nothing short of overwhelming. Even for the honeymoon phase, things seemed too good to be true. The onboarding and orientation were smooth, and we were given our gear. We got company phones, portable wifi and the $2000 MacBook Pro amongst other goodies.</p>
+
+<p class="center"><img src="/img/mercari/gear.jpg" alt="Gear" title="Gear" style="max-height: 500px;" /></p>
+
+<p>We were assigned to our teams but were supposed to go through a week of orientation before beginning any work. The Global Operations Team took special effort to make us feel at home. They organised the multiple onboarding sessions and even took us out for a complete Tokyo tour on a weekday.</p>
+
+<p class="center"><img src="/img/mercari/tokyotour.jpg" alt="Tokyo Tour" title="Tokyo Tour" style="max-height: 500px;" /></p>
+
+<p>By week two, we were on our desks at our respective teams with the welcome balloons we received.</p>
+
+<p class="center"><img src="/img/mercari/balloons.jpg" alt="Balloons" title="Balloons" style="max-height: 500px;" /></p>
+
+<h2 id="the-android-team">The Android Team</h2>
+<p>I had the pleasure to work with the JP Android Team, the team working on the main marketplace app- <a href="https://play.google.com/store/apps/details?id=com.kouzoh.mercari">Mercari</a> for Japan. It was a medium sized team with just over 10 people. The bulk of my task for the summer was to implement client facing feature on the Android app. I also worked on a few isolated issues all over the codebase and took the initiative to improve the code quality in the codebase which was very well received by the team.</p>
+
+<p class="center"><img src="/img/mercari/androidteam.jpg" alt="Android Team" title="Android Team" style="max-height: 500px;" /></p>
+
+<p>My team was largely global, consisting of a large number of Gaijins (Japanese for foreigners). I benefited hugely from this and learned how to work in a multi-cultural team. I learned the flow for how a spec moves to feature that gets shipped and how each detail in the middle matters.</p>
+
+<p>On the technical side, for the first time I <strong>implemented a software architecture</strong>, <strong>wrote Kotlin code</strong>, <strong>wrote Unit tests using Mockito and Robolectric</strong> and <strong>created an automation task using CI</strong>. I’m glad to have been able to achieve this in a small period of just over a month.</p>
+
+<p class="center"><img src="/img/mercari/desk.jpg" alt="Desk" title="Desk" style="max-height: 500px;" /></p>
+
+<p>My team was great in many ways, apart from the mentor lunches that all of us interns were entitled to, the Android team had a weekly team lunch. My team even put together a special farewell dinner for me, after which we ended up going to Karaoke. There was also this beautiful parting gift I received from my team-</p>
+
+<p class="center"><img src="/img/mercari/rum.jpg" alt="rum" title="rum" style="max-height: 500px;" /></p>
+
+<h2 id="experience">Experience</h2>
+
+<p>All in all, the whole experience over the course of my internship was more than I could have asked for. Mercari was great to me, and it was a crazy time to be there. Amidst the whole IPO frenzy and the company celebrating its 5th anniversary, I was lucky to go to all the parties.</p>
+
+<p>I learned how to work efficiently in a team, picked up on a few technical things, got to meet a whole bunch of great people, got exposed to a whole new culture and travelled as much as I could (more about that <a href="https://nihal111.github.io/2018/07/09/japan-lookback.html">here</a>).</p>
+
+<hr />
+
+<p>Summer of ‘18 was one of the best summers I’ve had so far. Being home feels warm but itchy.</p>
+:ET

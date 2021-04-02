@@ -1,0 +1,22 @@
+I"è	<p>I have decided to dive into open source development this summer. Under the WnCC Seasons of Code programme, I have chosen to take part in the Mozilla Quarter of Contribution project mentored by Kalpesh Krishna (<a href="https://github.com/martiansideofthemoon">martiansideofthemoon</a>). The <a href="http://wncc-iitb.org/soc/">WnCC Seasons of Code</a> is an initiative by the Web and Coding Club of IIT Bombay, much akin to the Google Summer Of Code but without any monetary incentive.</p>
+
+<h3 id="mozilla-quarter-of-contribution">Mozilla: Quarter of Contribution</h3>
+<p>The <a href="https://wiki.mozilla.org/Auto-tools/New_Contributor/Quarter_of_Contribution">Mozilla: Quarter of Contribution</a> is an opportunity to work on a large project for a couple of months. Current projects for Summer 2016 are:</p>
+
+<ul>
+  <li>Web Platform Tests - Results Viewer Refactoring (:jgraham, :martianwars)</li>
+  <li>Perfherder (:wlach, :jmaher)</li>
+  <li>Talos (:jmaher, :rwood)</li>
+</ul>
+
+<p>I have made a few bug fixes and have merged PRs on Web Platform Tests as well as Perfherder. I have decided to work on wptview under <a href="https://github.com/jgraham">:jgraham</a> and <a href="https://mozillians.org/en-US/u/martianwars/">:martianwars</a> as a part of Mozilla QoC.</p>
+
+<h3 id="wptview">wptview</h3>
+<p><a href="https://github.com/mozilla/wptview">Wptview</a> is a web platform test viewer. The Web Platform Tests (WPT) are a set of cross browser validation tests designed to validate common functionality on the web between browsers. Wptview is used for viewing the results of web-platform-tests and for easy visual comparison between different tests results. One can add the test data available as mozlog files and all the tests along with their results will be loaded in the form of a table. These results can be studied further by adding filters and sorting by status.</p>
+
+<p>The <a href="https://wiki.mozilla.org/Auto-tools/New_Contributor/Quarter_of_Contribution/WPTViewer_Refactor">agenda for the QoC</a> is a UI revamp, addition of unit testing as well as adding visualizations to be accompanied by test results. I would like to work on all these fratures.</p>
+
+<p>I have fixed a few basic bugs due to which I know a little about the codebase. I am a beginner in AngularJS and plan to learn as I go on contributing to this project.</p>
+
+<p>In conclusion, I plan to learn a lot contributing to this project. This is my first hand at open source as well, so I hope it turns out to be an exciting learning experience.</p>
+:ET

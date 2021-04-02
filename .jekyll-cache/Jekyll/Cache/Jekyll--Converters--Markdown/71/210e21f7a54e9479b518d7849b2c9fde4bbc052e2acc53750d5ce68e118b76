@@ -1,0 +1,37 @@
+I"&<p>It had been a while since I had been using a server to host the <a href="http://www.wncc-iitb.org">website for WnCC</a>. With a lot of development happening around, updating and testing changes on the server, had become a requirement. Having built the site in Jekyll, I required to shift the contents of <code class="language-plaintext highlighter-rouge">_site</code> from my local machine to <code class="language-plaintext highlighter-rouge">/var/www/html</code> on the server, after every build. I had been following the simple, standard method of using scp, for a long time. Copying all the content from <code class="language-plaintext highlighter-rouge">_site</code> to <code class="language-plaintext highlighter-rouge">/var/www/html</code> was now becoming inefficient (as I copied all the files in the folder all over again), took a lot of time as the site started expanding with more multimedia content, and required a long terminal command too. I could have used a probably more efficient way of SSHing into the server, pulling from the git repository and copying the contents of the <code class="language-plaintext highlighter-rouge">_site</code> folder into <code class="language-plaintext highlighter-rouge">/var/www/html</code>. But this would have been tedious too, and probably could have been made easier with a script. Nevertheless, it would have required me to SSH into the server, and atleast a couple of terminal commands.</p>
+
+<h3 id="discovering-github-webhooks">Discovering <a href="https://developer.github.com/webhooks/">Github Webhooks</a></h3>
+<p>Enter webhooks. <a href="https://developer.github.com/webhooks/">Webhooks</a> allow one to set up an integration with their github repository to listen for one or more events. Whenever such an event occurs, Github sends a HTTP POST payload to the webhook’s configured URL. An event can occur with the creation of an issue, a push to the server or be triggered whenever a repository is starred, forked etc. Webhooks can be used to do a lot of things. I have used a webhook, in this example for the quite general purpose of setting up an auto-deplow on my server.</p>
+
+<p>Github provides a quite <a href="https://developer.github.com/webhooks/configuring/">comprehensive guide</a> about how to set up a webhook to the local host which is connected to the web using <a href="https://ngrok.com/download">ngrok</a>. I followed the guide and replicated similar steps on my server to get my webhook configured to send a HTTP POST payload to the server.</p>
+
+<h3 id="using-sinatra">Using <a href="http://www.sinatrarb.com/">Sinatra</a></h3>
+<p>I used Sintara to create a simple web framework which would receive a HTTP POST made to the configured server URL, and run a small shell command. Having written this small piece of code, I could now reflect all changes made in the repository on the website, everytime a push is made to the repository. The following code renames the <code class="language-plaintext highlighter-rouge">html</code> folder inside <code class="language-plaintext highlighter-rouge">/var/www/</code> to <code class="language-plaintext highlighter-rouge">_site</code> and performs a git pull inside <code class="language-plaintext highlighter-rouge">/var/www</code> and later renames it back to <code class="language-plaintext highlighter-rouge">html</code>. This is done as the built site lies inside the <code class="language-plaintext highlighter-rouge">_site</code> folder of the repository. I</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="c1"># hook.rb</span>
+<span class="nb">require</span> <span class="s1">'sinatra'</span>
+<span class="nb">require</span> <span class="s1">'json'</span>
+
+<span class="n">set</span> <span class="ss">:bind</span><span class="p">,</span> <span class="s1">'0.0.0.0'</span>
+
+<span class="n">post</span> <span class="s1">'/payload'</span> <span class="k">do</span>
+  <span class="c1">#push = JSON.parse(request.body.read)</span>
+  <span class="c1">#puts "I got some JSON: #{push.inspect}"</span>
+  <span class="n">output</span> <span class="o">=</span> <span class="sb">`mv html _site ; git pull origin master; mv _site html`</span>
+  <span class="nb">p</span> <span class="n">output</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>Running a <code class="language-plaintext highlighter-rouge">ruby hook.rb -o 0.0.0.0</code> will give a message like <code class="language-plaintext highlighter-rouge">Sinatra/1.4.4 has taken the stage on 4567...</code>. Making a POST request on http://IP:4567/payload, will now trigger the shell command in the above script. (<code class="language-plaintext highlighter-rouge">-o 0.0.0.0</code> and <code class="language-plaintext highlighter-rouge">set :bind, '0.0.0.0'</code> allows access from networks other than localhost)</p>
+
+<p><strong>Note:</strong> You may have to enable the port if you are using a firewall on your server. A simple <code class="language-plaintext highlighter-rouge">sudo ufw allow 4567</code> should do it.</p>
+
+<p>However this session of Sinatra will close as soon as you CTRL+C out of it or logout. To keep such an instance running even after logout you could try</p>
+
+<p><code class="language-plaintext highlighter-rouge">nohup sudo ruby hook.rb -o 0.0.0.0 &amp;</code></p>
+
+<p>This would put the Sinatra process in background and keep it running even after you have logged out.</p>
+
+<p>I did not know about github webhooks earlier and this was an interesting find. The above was a quick setup for automation. If you know a way in which I could improve it, do let me know in the comments.</p>
+
+<p>Till next time!</p>
+:ET

@@ -1,0 +1,137 @@
+I"�0<style type="text/css">
+    .collapsiblecontainer {
+    width:100%;
+    border:1px solid #d3d3d3;
+}
+.collapsiblecontainer div {
+    width:100%;
+}
+.collapsiblecontainer .collapsibleheader {
+    background-color:#d3d3d3;
+    padding: 2px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.collapsiblecontainer .collapsiblecontent {
+    display: none;
+    padding : 5px;
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+<script type="text/javascript" src="/js/github-buttons.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $(".collapsibleheader").click(function () {
+        $collapsibleheader = $(this);
+        //getting the next element
+        $collapsiblecontent = $collapsibleheader.next();
+        //open up the collapsiblecontent needed - toggle the slide- if visible, slide up, if not slidedown.
+        $collapsiblecontent.slideToggle(500, function () {
+            //execute this after slideToggle is done
+            //change text of collapsibleheader based on visibility of collapsiblecontent div
+            $collapsibleheader.find("span:first-child").text(function () {
+                //change text based on condition
+                return $collapsiblecontent.is(":visible") ? "- " : "+ ";
+            });
+        });
+
+    });
+}); 
+
+</script>
+
+<p>Last week involved a lot of discussions. The plan for the next two months is now a lot clearer. Here’s a quick fun video that should explain the title of this blog post.</p>
+
+<div class="videowrapper">
+    <iframe width="1024" height="768" src="https://www.youtube.com/embed/efCmy_e7JRU" frameborder="0" allowfullscreen=""></iframe>
+</div>
+
+<h1 id="what-have-i-been-upto">What have I been upto?</h1>
+
+<h2 id="woodandstonecraftingjournal">WoodAndStoneCraftingJournal</h2>
+<p>With last week’s journal improvements, it was time to put the journal to some good use. A good technique to do this is to use the main Gamplay module for all story/lore related journal entries. However for most of the content related entries like crafting tutorials or cooking recipes, the best way to go is to create Journal extension modules. These extension modules would connect each content module to the Journal module. Essentially, the Journal extension module would house the Journal entries related to that content module which can easily be reused by multiple gameplay modules.</p>
+
+<p>I went ahead and created the first Journal Extension module as a proof of concept with only about 8 entries to demonstrate how it would work. The <a href="https://github.com/Terasology/WoodAndStoneCraftingJournal/">WoodAndStoneCraftingJournal</a> has a dependency on <a href="https://github.com/Terasology/WoodCrafting">WoodCrafting</a>, <a href="https://github.com/Terasology/StoneCrafting">StoneCrafting</a> and <a href="https://github.com/Terasology/Journal">Journal</a>. It contains the journal entries pertaining to both WoodCrafting and StoneCrafting (since both are a little related).</p>
+
+<h2 id="where-are-the-puzzles">Where are the puzzles?</h2>
+<p>A major chunk of my last two month work consists of making Puzzles and adding them to my exploration centered gameplay module.
+After some discussion with flo about cata’s project on scenarios, I realised that it would be redundant to spend time working on mechanisms for action/event triggered changes. Since the Scenarios project would be focused on dealing with this, it would be a better idea that I aim towards making puzzle elements like traps, portals and other dangerous pieces.</p>
+
+<h3 id="adventure-assets">Adventure Assets</h3>
+<p>With this new direction to work on, I’ve created a <a href="https://docs.google.com/document/d/1Go425IJSUEI2baXX0PkSamLIHZf7qYOA7emu6qH7PvE/edit?usp=sharing">list of potential items</a> that I could work on. Also a new module called <a href="https://github.com/Terasology/AdventureAssets/">AdventureAssets</a> has been created to house such elements.</p>
+
+<p>The idea now, is that I would create various puzzle elements and combine them together in a few different settings. I would create structure templates for these puzzles akin to the dungeons in GooeysQuests. This would allow me to place these puzzles in my exploration world manually by using a structure spawner. I plan to place these puzzles in the world manually and share the saved file which could be played with.</p>
+
+<div class="collapsiblecontainer">
+<div class="collapsibleheader"><span>+ </span><span>Why do I want to use Structure Templates?</span></div>
+<div class="collapsiblecontent">   
+    <a target="_blank" href="https://github.com/Terasology/StructureTemplates">Structure Templates</a> allows me to create a puzzle setting or essentially a puzzle map, as a prefab. I can arrange the elements in the manner I want and also edit the map later. In theory, I could create the puzzles by hand in the saved world that I plan to share, without using Structure Templates at all. However using Structure Templates allows me to concentrate on making the puzzles one by one without worrying about how I would place them in the world. Once I have the Structure Templates for the puzzles ready I can place them however I want in the world. Also, this allows the same created puzzle to be reused multiple times. An existing puzzle can be extended or modified slightly to create a new one. Further, if a puzzle consists of multiple rooms of the same type, a single room created using ST can be easily reused to create more.
+</div>
+</div>
+
+<h2 id="the-swinging-blade">The Swinging Blade</h2>
+
+<div class="github-button" url="https://github.com/Terasology/AdventureAssets/pull/2"></div>
+
+<p>The first item I decided to work on was the Swinging Blade. The setup consists of a huge blade that swings to and fro from one edge of the room to the other. This would serve as on obstacle and coming in contact with the blade would deal damage to the player.</p>
+
+<p>I started working with a crude swinging blade model made by flo.</p>
+
+<p class="center"><img src="/img/crudeSB.png" alt="crudeSB" title="crude SB" style="max-height: 400px;" /></p>
+
+<h3 id="animating-the-blade">Animating the blade</h3>
+<p>I tried to make the blade move by linearly varying the <code class="language-plaintext highlighter-rouge">pitch</code> (as in rotation’s <code class="language-plaintext highlighter-rouge">yaw, pitch and roll</code>) of the entity. The GIF below shows this linear movement. This motion was later changed to an angular harmonic function, which factors in a time period (in seconds), an amplitude (in radians) and an offset/phase difference (in radians) which altogether looks like <code class="language-plaintext highlighter-rouge">theta = Acos((2*pi/T)*t + phi)</code>.</p>
+
+<p class="center"><img src="/img/crudeSwingingBlade.gif" alt="crudeSB" title="crude SB" /></p>
+
+<h3 id="alignment-and-orientation">Alignment and orientation</h3>
+<p>The swinging blade was misaligned and I wanted it to rotate in a direction purpendicular to it’s current rotation. Soon I realised that I had no control on the orientaion of the Swinging Blade entity that was being spawned by the Structure Template. I could choose the position but I couldn’t change the orientation and rotation. This is because the Structure Template module allows you to spawn the structure anywhere in the world, regardless of the orientation in which they were created. Meaning, a structure that faced North could be spawned in a manner that it now faces East. All contents of the structure should undergo a similar change in their orientation too. But the entities didn’t. Till now, it wasn’t a problem as the only things being spawned were the GooeysQuests’ skeletons. Their orientation didn’t matter as they were live entities that would come running after you for your life.</p>
+
+<div class="github-button" url="https://github.com/Terasology/StructureTemplates/pull/15"></div>
+
+<p><a href="https://github.com/Terasology/StructureTemplates/pull/15">This PR</a> adds the rotational control to spawning entities while using the <code class="language-plaintext highlighter-rouge">SpawnPrefabsComponent</code> in the Structure Templates module.</p>
+
+<div class="collapsiblecontainer">
+<div class="collapsibleheader"><span>+ </span><span>Dealing with Quaternions (Quat4f)</span></div>
+<div class="collapsiblecontent">   
+    I hadn't dealt with quaternions before and the above fix in the PR wasn't as straightforward to me as it looks like. I didn't really want to spend too much time learning how Quaternions work to make a simple change. I knew how the yaw, pitch and roll system worked and all I needed was to change the yaw value by a mutiple of 90 degree depending on the orientation in which the room was spawned. After a few attempts of Googling and ending up on wikipedia pages that deal with rigorous math to show how Quaternions work I was almost ready to give up. It was then that I bumped into this <a target="_blank" href="http://developerblog.myo.com/quaternions/">blog post</a> that made me understand and appreciate Quaternions. Soon after I found a <a target="_blank" href="https://gamedev.stackexchange.com/questions/23510/rotate-an-existing-quaternion-around-an-axis">forum answer</a> that gave me a good idea on how to solve my problem.
+</div>
+</div>
+
+<h3 id="new-model-and-texture">New model and texture</h3>
+
+<p>Soon after I asked Quaternius to make a better model for the swinging blade and one thing led to another. Not before long, we had a full nice looking model ready with texture.</p>
+
+<p class="center"><strong>Inspiration</strong><br />
+<img src="/img/SB1.jpeg" alt="SB1" title="SB1" style="width: 70%;" /></p>
+
+<p class="center"><strong>Model imported</strong><br />
+<img src="/img/SB2.jpg" alt="SB2" title="SB2" style="width: 70%;" /></p>
+
+<p class="center"><strong>Texture mapped</strong><br />
+<img src="/img/SB3.png" alt="SB3" title="SB3" style="width: 70%; max-height: 500px;" /></p>
+
+<p class="center"><strong>Final model imported</strong><br />
+<img src="/img/SB4.jpg" alt="SB4" title="SB4" style="width: 70%;" /></p>
+
+<h3 id="making-it-hurt">Making it hurt</h3>
+
+<p>I had a fine looking swinging blade, but it didn’t hurt yet. I could pass through it like silk.</p>
+<h4 id="adding-colliders">Adding Colliders</h4>
+<p>First step was to make the entity a rigid body and add box shape colliders. Since the shape of the entity was not so simple, I had to create two different entities- one for the blade and one for the rod.</p>
+<h4 id="adding-the-dodamageevent">Adding the DoDamageEvent</h4>
+<p>Since the blade was the part which would hurt, a <code class="language-plaintext highlighter-rouge">DamagePlayerComponent</code> was added to the blade to detect collisions with the player and trigger a <code class="language-plaintext highlighter-rouge">DoDamageEvent</code>. However, simply sending a <code class="language-plaintext highlighter-rouge">DoDamageEvent</code> would kill the player in no time as however small the damage being sent, being in contact with the blade even for a second would trigger the <code class="language-plaintext highlighter-rouge">OnCollide</code> method several times to result in death.</p>
+<h4 id="sending-a-characterimpulse">Sending a CharacterImpulse</h4>
+<p>The solution to this was sending a <code class="language-plaintext highlighter-rouge">CharacterImpulseEvent</code> to the player as well, in a direction outward from the blade. This sends the player to a relatively safer zone while also dealing some damage.</p>
+
+<h3 id="multiplayer-ready">Multiplayer ready?</h3>
+
+<p>The swinging blade is not yet multiplayer ready. There are quite a few issues on dealing with the Swinging Blade in multiplayer. The movement prediction on the server side deals with the <code class="language-plaintext highlighter-rouge">CharacterImpulseEvent</code> which makes the damaging systems function very differently even if there is a little lag. Often the player experiences too many impulses in a short time frame that end up killing him alone, even without the <code class="language-plaintext highlighter-rouge">DoDamageEvent</code> being sent.</p>
+
+<p>The PR which deals with the entire work on the swinging blade is <a href="https://github.com/Terasology/AdventureAssets/pull/2/">here</a>. It is still in progress with only the task of making it work in multiplayer remaining outstanding.</p>
+
+<p>Up for next week should be more work on puzzles, a few more interesting traps and hopefully multiplayer fixes.</p>
+:ET

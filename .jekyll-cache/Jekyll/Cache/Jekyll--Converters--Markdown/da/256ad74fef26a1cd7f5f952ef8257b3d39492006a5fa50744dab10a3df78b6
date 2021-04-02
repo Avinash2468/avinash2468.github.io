@@ -1,0 +1,115 @@
+I"�-<p>Since I can’t do without my games, I can’t do without Windows, and I have to dualboot. This means that most of my data is stored on a disk shared between both the operating systems. The path to the directory where I keep my projects thus becomes rather long. And I like to keep an alias for it.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">alias </span><span class="nv">code</span><span class="o">=</span><span class="s1">'cd /media/Nihal/Code'</span></code></pre></figure>
+
+<p>What this would do is create an alias by the name of ‘code’ which would exist till the time you killed the terminal. Rather I have created a permanent alias for it, which is stored by copying the above line into the <strong><code class="language-plaintext highlighter-rouge">.bash_aliases</code></strong> file in the home directory (if it doesn’t exist, you should really create one). I wanted to create a few more permanent aliases as and when needed and the process to do so felt tedious. Alas! I wrote another alias for it. Let’s talk about the <strong><code class="language-plaintext highlighter-rouge">.bashrc</code></strong> and <strong><code class="language-plaintext highlighter-rouge">.bash_aliases</code></strong> file before getting there.</p>
+
+<h3 id="the-bashrc-file">The <strong><em><code class="language-plaintext highlighter-rouge">.bashrc</code></em></strong> file</h3>
+<p>In the home directory there also exists a <code class="language-plaintext highlighter-rouge">.bashrc</code> file which shall contain a lot of oher things. The <code class="language-plaintext highlighter-rouge">.bashrc</code> file is a script which executes evereytime a terminal is started in the <strong>interactive mode</strong>. It contains a set of configurations for the terminal.  The <code class="language-plaintext highlighter-rouge">.bashrc</code> file provides a space to set up variables, functions, aliases etc that you may want to use. The <code class="language-plaintext highlighter-rouge">.bashrc</code> is then run every time you open up a new terminal. Be careful, that any error or change you make in the <code class="language-plaintext highlighter-rouge">.bashrc</code> file will be reflected in all subsequent terminal windows launced. Also if you have a terminal window running, and you make changes to the <code class="language-plaintext highlighter-rouge">.bashrc</code> file thereafter, you will obviously have no effect on the running terminal and you may want to restart it.</p>
+
+<h3 id="loading-the-bash_aliases-file">Loading the <strong><em><code class="language-plaintext highlighter-rouge">.bash_aliases</code></em></strong> file</h3>
+<p>The <code class="language-plaintext highlighter-rouge">.bashrc</code> file does a fine job of loading the <code class="language-plaintext highlighter-rouge">.bash_aliases</code> file like so:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">if</span> <span class="o">[</span> <span class="nt">-f</span> ~/.bash_aliases <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+    <span class="nb">.</span> ~/.bash_aliases
+<span class="k">fi</span></code></pre></figure>
+
+<p>This essentially allows <code class="language-plaintext highlighter-rouge">.bashrc</code> to load the ‘.bash_aliases’ file within itself, preventing you from meddling with it and managing the list of aliases neatly.</p>
+
+<h3 id="creating-a-permanent-alias">Creating a Permanent Alias</h3>
+<p>Creating a permanent alias is easy. Just open up ~/.bash_aliases and append the following line to it.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">alias </span><span class="nv">foo</span><span class="o">=</span><span class="s1">'bar'</span></code></pre></figure>
+
+<p>Whenever you type in “foo”, “bar” will be passed as an input to the terminal.<br />
+<strong>Note:</strong> You can do this with ~/.bashrc as well but it is neater not to.</p>
+
+<p>A perhaps better way to do this would be to automate the task and save yourself the hassle of opening a the fine and appending to it manually. And what better way to create aliases by using another alias? I wanted to have a way to create a permanent alias by just typing in a ‘p’ before alias like so:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">palias <span class="nv">foo</span><span class="o">=</span><span class="s1">'bar'</span></code></pre></figure>
+
+<p>To do this, I opened up <code class="language-plaintext highlighter-rouge">~/.bash_aliases</code> and created a function called permanent_alias and called it every time I entered “palias” on the terminal:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">permanent_alias<span class="o">(){</span>
+    <span class="nv">KEY</span><span class="o">=</span><span class="si">$(</span><span class="nb">echo</span> <span class="nv">$1</span> | <span class="nb">cut</span> <span class="nt">-d</span><span class="s2">"="</span> <span class="nt">-f</span> 1<span class="si">)</span>
+    <span class="nv">VALUE</span><span class="o">=</span><span class="si">$(</span><span class="nb">echo</span> <span class="nv">$1</span> | <span class="nb">cut</span> <span class="nt">-d</span><span class="s2">"="</span> <span class="nt">-f</span> 2-<span class="si">)</span>
+    <span class="nb">echo</span> <span class="nt">-e</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">alias </span><span class="nv">$KEY</span><span class="s2">='</span><span class="nv">$VALUE</span><span class="s2">'"</span> <span class="o">&gt;&gt;</span> /home/nihal/.bash_aliases
+    <span class="nb">echo</span> <span class="s2">"New permanent bash alias set: alias </span><span class="nv">$KEY</span><span class="s2">='</span><span class="nv">$VALUE</span><span class="s2">'"</span>
+    <span class="k">if</span> <span class="o">[</span> <span class="nt">-f</span> ~/.bash_aliases <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+	    <span class="nb">.</span> ~/.bash_aliases
+	<span class="k">fi</span>
+<span class="o">}</span>
+
+<span class="c">#Create alias for function call</span>
+<span class="nb">alias </span><span class="nv">palias</span><span class="o">=</span><span class="s1">'permanent_alias'</span></code></pre></figure>
+
+<h4 id="explanation">Explanation</h4>
+<ul>
+  <li>$1 is a <strong>positional parameter</strong> that returns the first argument passed. Since “palias” is an alias to a function call, it returns the first word after the word “palias”, without the inverted commas. <code class="language-plaintext highlighter-rouge">palias foo='bar'</code> will return foo=bar as $1.<br />
+Interestingly, $0 returns the address of the script or shell running. In this case /bin/bash</li>
+  <li><strong>$KEY</strong> and <strong>$VALUE</strong> variables are defined by splitting the string in $1 at the first “=”. The string <strong>$1</strong> is passed to cut and with delimiter (<strong>-d</strong>) as “<strong>=</strong>”, fields (<strong>-f</strong>) <strong>1</strong> and <strong>2-</strong> are selected</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">"foo='bar'"</span> | <span class="nb">cut</span> <span class="nt">-d</span><span class="s2">"="</span> <span class="nt">-f</span> 1
+<span class="c">#returns "foo"</span>
+<span class="nb">echo</span> <span class="s2">"foo='bar'"</span> | <span class="nb">cut</span> <span class="nt">-d</span><span class="s2">"="</span> <span class="nt">-f</span> 2
+<span class="c">#returns "bar"</span></code></pre></figure>
+
+<p><strong>Note:</strong> <code class="language-plaintext highlighter-rouge">echo "foo='bar'" | cut -d"=" -f 1</code> has the same effect as <code class="language-plaintext highlighter-rouge">echo "foo='bar'" | cut --delimiter="=" --fields 1 </code><br />
+<strong>Note:</strong> <code class="language-plaintext highlighter-rouge">echo "foo='bar==car'" | cut -d"=" -f 2-</code> fetches ‘bar==car’ while <code class="language-plaintext highlighter-rouge">echo "foo='bar==car'" | cut -d"=" -f 2</code> fetches ‘bar</p>
+
+<ul>
+  <li>Once KEY and VALUE are abstracted, they are appended to the <code class="language-plaintext highlighter-rouge">.bash_aliases</code> file using</li>
+</ul>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="nt">-e</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">alias </span><span class="nv">$KEY</span><span class="s2">='</span><span class="nv">$VALUE</span><span class="s2">'"</span> <span class="o">&gt;&gt;</span> /home/user/.bash_aliases</code></pre></figure>
+
+<p><strong>Note:</strong>  The -e flag is for enabling interpretation of backslash escapes like “\n” (newline). <code class="language-plaintext highlighter-rouge">echo "string" &gt;&gt; file</code> is used to append “string” at the end of file.</p>
+
+<ul>
+  <li>The <code class="language-plaintext highlighter-rouge">if [ -f ~/.bash_aliases ]; then . ~/.bash_aliases fi</code> allows you to use your newly declared permanent alias in the running terminal too, by loading the bash_aliases file again. Not doing this, would result in restarting of terminal for changes to take effect. (Thanks Vinayak for pointing out)</li>
+</ul>
+
+<h4 id="usage">Usage</h4>
+<ul>
+  <li>For single word aliases, scrapping the inverted commas would do.</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">palias <span class="nv">foo</span><span class="o">=</span><span class="s1">'bar'</span>
+and
+palias <span class="nv">foo</span><span class="o">=</span>bar
+would have same effect as we manually add inverted commas later.</code></pre></figure>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	However,
+</code></pre></div></div>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">palias <span class="nv">foo</span><span class="o">=</span><span class="s1">'cd /home'</span>
+<span class="c">#$1 = "foo=cd /home"</span>
+and
+palias <span class="nv">foo</span><span class="o">=</span><span class="nb">cd</span> /home	
+<span class="c">#$1 = "foo=cd"</span>
+would not have the same effect.</code></pre></figure>
+
+<ul>
+  <li>For special characters like “ ( , ) , @” etc, scrapping the inverted commas would not work</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">palias <span class="nv">foo</span><span class="o">=</span><span class="s1">'permanent_alias()'</span>
+and
+palias <span class="nv">foo</span><span class="o">=</span>permanent_alias<span class="o">()</span>
+would not have same effect as <span class="s2">"("</span> would be an unexpected token.</code></pre></figure>
+
+<ul>
+  <li>Garbage after the first space won’t matter.</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">palias <span class="nv">foo</span><span class="o">=</span><span class="s1">'bar'</span>
+and
+palias <span class="nv">foo</span><span class="o">=</span><span class="s1">'bar'</span> this is an amazing blog
+would have same effect.</code></pre></figure>
+
+<ul>
+  <li>Spaces around the “=” in <code class="language-plaintext highlighter-rouge">palias foo = 'bar'</code> wouldn’t work. They wouldn’t work with regular alias either, for that matter.</li>
+</ul>
+
+<p>If you’re still reading, I hope you found it useful. Till next time! :)</p>
+:ET

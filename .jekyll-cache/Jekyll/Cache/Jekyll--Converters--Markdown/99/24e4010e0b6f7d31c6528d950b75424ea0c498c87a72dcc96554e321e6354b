@@ -1,0 +1,62 @@
+I"W<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+<script type="text/javascript" src="/js/github-buttons.js"></script>
+
+<p>Lately, I’ve created a lot of blog posts in which I’ve felt the need to link a Github Pull Request or an Issue. Creating a vanilla link in markdown is easy but not aesthetically appealing. I wanted a ribbon sort-of thing that would distinguish between issues and PRs. Unable to find something good online, I went ahead and created my own jQuery plugin.</p>
+
+<h2 id="how-does-it-look">How does it look?</h2>
+<p>Without further ado, this is how it looks like:</p>
+
+<p>This is an un-merged open PR.</p>
+
+<div class="github-button" url="https://github.com/Terasology/AdventureAssets/pull/14"></div>
+
+<p>This is a merged PR.</p>
+
+<div class="github-button" url="https://github.com/MovingBlocks/Terasology/pull/2994"></div>
+
+<p>This is an open issue.</p>
+
+<div class="github-button" url="https://github.com/Terasology/WildAnimals/issues/7"></div>
+
+<p>This is a closed issue.</p>
+
+<div class="github-button" url="https://github.com/Terasology/Books/issues/5"></div>
+
+<h2 id="how-does-it-work">How does it work?</h2>
+<p>Generating such a button only requires creating a div with the appropriate URL and it is super simple. Here’s how the HTML for one button looks like-</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"github-button"</span> <span class="na">url=</span><span class="s">"https://github.com/Terasology/Books/issues/5"</span><span class="nt">&gt;&lt;/div&gt;</span></code></pre></figure>
+
+<p>The plugin uses the <a href="https://api.github.com/">Github API</a> to fetch details of the PR or the issue, like the date, status and the repository.<br />
+The color and the icon of the right side icon is changed depending on the state. The hyperlinks to the issue/PR and associated repository are created.<br />
+The icons that have been included belong to the <a href="https://octicons.github.com/">Github Octicon</a> pack. The stylesheet for the icons is loaded directly by the plugin from <a href="https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.css">CDN</a> and does not need to be included separately.</p>
+
+<p>This plugin is very minimal and can be easily customised to make it look different. The jQuery code resides in one file, while the CSS code lies in another file.</p>
+
+<h3 id="responsive">Responsive</h3>
+<p>Since, the plugin is tailor-made to fit my needs, I rely on a single <a href="https://www.w3schools.com/css/css_rwd_mediaqueries.asp">media query</a> to adjust the font and width of the elements to suit a mobile device. This is a screenshot of how it looks on my phone-</p>
+
+<p class="center"><img src="/img/githubButtonResponsive.jpg" alt="githubButtonResponsive" title="Github Button Responsive" style="max-height: 800px;" /></p>
+
+<h2 id="usage">Usage</h2>
+
+<p>Here is the <a href="https://jsfiddle.net/2r10thcb/">FIDDLE</a>.</p>
+<div style="height:400px; overflow: scroll">
+<script style="height:400px" async="" src="//jsfiddle.net/2r10thcb/1/embed/"></script>
+</div>
+
+<p>The fiddle consists of the CSS and the Javascript (jQuery) code. It only has jQuery added as an external library. Simply download the CSS code into <code class="language-plaintext highlighter-rouge">github-buttons.css</code> and jQuery code into <code class="language-plaintext highlighter-rouge">github-buttons.js</code> and include it as shown-</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"/css/github-buttons.css"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"/js/github-buttons.js"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
+
+<h3 id="for-jekyll">For Jekyll:</h3>
+<p>This depends on the kind of setup you have. If you have a setup like <a href="https://github.com/nihal111/nihal111.github.io">mine</a>, you might have to create a <code class="language-plaintext highlighter-rouge">github-buttons.scss</code> file instead of the <code class="language-plaintext highlighter-rouge">github-buttons.css</code> file with the same CSS code. Place the scss file inside the <code class="language-plaintext highlighter-rouge">_sass</code> directory. The <code class="language-plaintext highlighter-rouge">main.css</code> file then needs to be updated with</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="k">@import</span> 
+	<span class="s1">"github-buttons"</span></code></pre></figure>
+
+<p>That’s all for now. Feel free to use and share this plugin. Cheers!</p>
+:ET

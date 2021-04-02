@@ -1,0 +1,227 @@
+I"�X<p><em>The following blog post discusses two solutions to updating time through an external/local NTP server on a Windows machine.</em></p>
+
+<h1 id="problem">Problem</h1>
+<p><strong>Windows would not update time using the standard NTP servers since they are blocked on the network.</strong></p>
+
+<p>The system time often gets messed up when <strong>switching between different operating systems on a multi-boot machine</strong> (solution to this specific problem in <a href="#appendix">appendix</a>). This problem arises when you are on a network (like the IIT Bombay network) that blocks outside NTP servers. IIT Bombay has its own NTP server- ntp.iitb.ac.in. All other standard NTP servers (like time.windows.com, time.nist.gov, pool.ntp.org) are blocked.</p>
+
+<p>This problem can be <a href="https://askubuntu.com/questions/14558/how-do-i-setup-a-local-ntp-server">easily solved</a> on linux machines by simply adding the NTP server to <code class="language-plaintext highlighter-rouge">/etc/ntp.conf</code>. However, in Windows, the control panel settings would not allow you to add an external NTP server (in our case ntp.iitb.ac.in).</p>
+
+<p class="center"><img src="/img/ntp_no_option.png" alt="ntp_no_option" title="No Option" style="max-height: 500px;" /></p>
+
+<p>Trying to force an update through a pre-defined NTP server (like time.nist.gov) results in a time out, as shown-</p>
+
+<p class="center"><img src="/img/ntp_timeout.png" alt="ntp_timeout" title="Timeout" style="max-height: 500px;" /></p>
+
+<h3 id="checking-if-an-ntp-server-is-accessible-">Checking if an NTP server is accessible-</h3>
+<p>On windows you can check if an NTP server is accessible by running the following command in command prompt-</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>w32tm /stripchart /computer:ntp.iitb.ac.in /dataonly /samples:3
+</code></pre></div></div>
+<p>(Replace ntp.iitb.ac.in with your NTP server address)</p>
+
+<p>This command is analogous to running <code class="language-plaintext highlighter-rouge">ntpdate -q ntp.iitb.ac.in</code> on a linux machine.</p>
+
+<p>Testing the above command on IIT-B network, reveals this-</p>
+
+<p class="center"><img src="/img/cmd_check_ntp_server.png" alt="cmd_check_ntp_server" title="cmd check ntp server" style="max-height: 500px;" /></p>
+
+<p>time.nist.gov is inaccessible while ntp.iitb.ac.in is accessible.</p>
+
+<hr />
+
+<h1 id="solution-1-python-script-with-windows-task-scheduler">Solution 1: Python Script with Windows Task Scheduler</h1>
+
+<h3 id="description">Description:</h3>
+<p>Make a list of NTP servers, and send a request to each until a response is received. Use socket to send a request to the NTP server on port 123. (Reference: <a href="http://code.activestate.com/recipes/117211-simple-very-sntp-client/">Simon Foster’s recipe</a>). Use win32api to update system time.</p>
+
+<h3 id="step-1-install-dependencies">Step 1: Install Dependencies</h3>
+<p>All dependencies are standard libraries apart from win32api (a.k.a. pywin32).</p>
+
+<p>Install <code class="language-plaintext highlighter-rouge">pywin32</code> from <a href="https://sourceforge.net/projects/pywin32/">here</a> or simply do a <code class="language-plaintext highlighter-rouge">pip install pywin32</code>.<br />
+To install pip for Windows, refer <a href="https://stackoverflow.com/questions/4750806/how-do-i-install-pip-on-windows">this</a>.</p>
+
+<h3 id="step-2-download-the-script">Step 2: Download the script</h3>
+<p>The script can be found in <a href="https://gist.github.com/nihal111/23faa51c3f88a281b676dcbac77ce015">this gist</a>.<br />
+Find Raw file <a href="https://gist.githubusercontent.com/nihal111/23faa51c3f88a281b676dcbac77ce015/raw/fc1e5009837ab7920cd34acc8113c2451618e6f5/ntp_update_time.py">here</a>.</p>
+
+<p>This script is tested with Python 2 and 3.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">socket</span>
+<span class="kn">import</span> <span class="nn">struct</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">import</span> <span class="nn">win32api</span>
+
+<span class="c1"># List of servers in order of attempt of fetching
+</span><span class="n">server_list</span> <span class="o">=</span> <span class="p">[</span><span class="s">'ntp.iitb.ac.in'</span><span class="p">,</span> <span class="s">'time.nist.gov'</span><span class="p">,</span> <span class="s">'time.windows.com'</span><span class="p">,</span> <span class="s">'pool.ntp.org'</span><span class="p">]</span>
+
+<span class="s">'''
+Returns the epoch time fetched from the NTP server passed as argument.
+Returns none if the request is timed out (5 seconds).
+'''</span>
+<span class="k">def</span> <span class="nf">gettime_ntp</span><span class="p">(</span><span class="n">addr</span><span class="o">=</span><span class="s">'time.nist.gov'</span><span class="p">):</span>
+    <span class="c1"># http://code.activestate.com/recipes/117211-simple-very-sntp-client/
+</span>    <span class="n">TIME1970</span> <span class="o">=</span> <span class="mi">2208988800</span>      <span class="c1"># Thanks to F.Lundh
+</span>    <span class="n">client</span> <span class="o">=</span> <span class="n">socket</span><span class="p">.</span><span class="n">socket</span><span class="p">(</span> <span class="n">socket</span><span class="p">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="p">.</span><span class="n">SOCK_DGRAM</span> <span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="s">'</span><span class="se">\x1b</span><span class="s">'</span> <span class="o">+</span> <span class="mi">47</span> <span class="o">*</span> <span class="s">'</span><span class="se">\0</span><span class="s">'</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># Timing out the connection after 5 seconds, if no response received
+</span>        <span class="n">client</span><span class="p">.</span><span class="n">settimeout</span><span class="p">(</span><span class="mf">5.0</span><span class="p">)</span>
+        <span class="n">client</span><span class="p">.</span><span class="n">sendto</span><span class="p">(</span> <span class="n">data</span><span class="p">,</span> <span class="p">(</span><span class="n">addr</span><span class="p">,</span> <span class="mi">123</span><span class="p">))</span>
+        <span class="n">data</span><span class="p">,</span> <span class="n">address</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="n">recvfrom</span><span class="p">(</span> <span class="mi">1024</span> <span class="p">)</span>
+        <span class="k">if</span> <span class="n">data</span><span class="p">:</span>
+            <span class="n">epoch_time</span> <span class="o">=</span> <span class="n">struct</span><span class="p">.</span><span class="n">unpack</span><span class="p">(</span> <span class="s">'!12I'</span><span class="p">,</span> <span class="n">data</span> <span class="p">)[</span><span class="mi">10</span><span class="p">]</span>
+            <span class="n">epoch_time</span> <span class="o">-=</span> <span class="n">TIME1970</span>
+            <span class="k">return</span> <span class="n">epoch_time</span>
+    <span class="k">except</span> <span class="n">socket</span><span class="p">.</span><span class="n">timeout</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">None</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+    <span class="c1"># Iterates over every server in the list until it finds time from any one.
+</span>    <span class="k">for</span> <span class="n">server</span> <span class="ow">in</span> <span class="n">server_list</span><span class="p">:</span>
+        <span class="n">epoch_time</span> <span class="o">=</span> <span class="n">gettime_ntp</span><span class="p">(</span><span class="n">server</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">epoch_time</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="c1"># SetSystemTime takes time as argument in UTC time. UTC time is obtained using utcfromtimestamp()
+</span>            <span class="n">utcTime</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">.</span><span class="n">datetime</span><span class="p">.</span><span class="n">utcfromtimestamp</span><span class="p">(</span><span class="n">epoch_time</span><span class="p">)</span>
+            <span class="n">win32api</span><span class="p">.</span><span class="n">SetSystemTime</span><span class="p">(</span><span class="n">utcTime</span><span class="p">.</span><span class="n">year</span><span class="p">,</span> <span class="n">utcTime</span><span class="p">.</span><span class="n">month</span><span class="p">,</span> <span class="n">utcTime</span><span class="p">.</span><span class="n">weekday</span><span class="p">(),</span> <span class="n">utcTime</span><span class="p">.</span><span class="n">day</span><span class="p">,</span> <span class="n">utcTime</span><span class="p">.</span><span class="n">hour</span><span class="p">,</span> <span class="n">utcTime</span><span class="p">.</span><span class="n">minute</span><span class="p">,</span> <span class="n">utcTime</span><span class="p">.</span><span class="n">second</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="c1"># Local time is obtained using fromtimestamp()
+</span>            <span class="n">localTime</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">.</span><span class="n">datetime</span><span class="p">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="n">epoch_time</span><span class="p">)</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">"Time updated to: "</span> <span class="o">+</span> <span class="n">localTime</span><span class="p">.</span><span class="n">strftime</span><span class="p">(</span><span class="s">"%Y-%m-%d %H:%M"</span><span class="p">)</span> <span class="o">+</span> <span class="s">" from "</span> <span class="o">+</span> <span class="n">server</span><span class="p">)</span>
+            <span class="k">break</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">"Could not find time from "</span> <span class="o">+</span> <span class="n">server</span><span class="p">)</span></code></pre></figure>
+
+<p>Download the file and save it at a location you’ll remember.
+For the purpose of this demonstration, I’ll be saving it inside- <code class="language-plaintext highlighter-rouge">C:\Python27\ntp_update_time.py</code> with my Python installation directory as <code class="language-plaintext highlighter-rouge">C:\Python27</code>.</p>
+
+<h3 id="step-3-test-the-script">Step 3: Test the script</h3>
+<p>Open Command Prompt with admin privileges- Hit key combo <code class="language-plaintext highlighter-rouge">Windows</code> + <code class="language-plaintext highlighter-rouge">X</code>, and click on <code class="language-plaintext highlighter-rouge">Command Prompt (Admin)</code>.</p>
+
+<p>Type:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd C:\Python27
+python ntp_update_time.py
+</code></pre></div></div>
+
+<p>If you were on IIT-B network and everything worked well, it should say- <code class="language-plaintext highlighter-rouge">Time updated to: 2018-03-30 19:04 from ntp.iitb.ac.in</code></p>
+
+<h3 id="step-4-schedule-a-task">Step 4: Schedule a Task</h3>
+<p>Similar to a cronjob in Unix, you can create a task to run periodically using Windows Task Scheduler.</p>
+
+<ul>
+  <li>
+    <p>Search for “Task Scheduler” from the start menu and open it.</p>
+  </li>
+  <li>
+    <p>Create a basic task from the Actions menu at the right</p>
+  </li>
+</ul>
+
+<p class="center"><img src="/img/ntp_ts_1.png" alt="ntp_ts_1" title="ntp_ts_1" style="max-height: 500px;" /></p>
+
+<ul>
+  <li>Under the General tab, give a name and description to the task. Check the “Run with highest privileges” checkbox.</li>
+</ul>
+
+<p class="center"><img src="/img/ntp_ts_2.png" alt="ntp_ts_2" title="ntp_ts_2" style="max-height: 500px;" /></p>
+
+<ul>
+  <li>Under the Triggers tab, click on New, and set “Begin the task:” to “On workstation unlock”. Leave everything as is, and hit Ok.</li>
+</ul>
+
+<p class="center"><img src="/img/ntp_ts_3.png" alt="ntp_ts_3" title="ntp_ts_3" style="max-height: 500px;" /></p>
+
+<ul>
+  <li>Under the Actions tab, set Program/Script to your python path (<code class="language-plaintext highlighter-rouge">C:\Python27\python.exe</code>) and set “Add arguments (optional)” to the script path (<code class="language-plaintext highlighter-rouge">C:\Python27\ntp_update_time.py</code>).</li>
+</ul>
+
+<p class="center"><img src="/img/ntp_ts_4.png" alt="ntp_ts_4" title="ntp_ts_4" style="max-height: 500px;" /></p>
+
+<ul>
+  <li>Under the Conditions tab, uncheck the checkbox under Power which says “Start the task only if the computer is on AC power”.</li>
+</ul>
+
+<p class="center"><img src="/img/ntp_ts_5.png" alt="ntp_ts_5" title="ntp_ts_5" style="max-height: 500px;" /></p>
+
+<ul>
+  <li>Hit Ok and save the Task. Return to the Task Scheduler window, double click on “Task Scheduler Library” on the left navigation drawer. Select the task you made from the list and click on it. Hit “Run” from the right hand actions menu. (Make sure to screw up your system time before running. If it gets fixed after you run the task, everything is set up to work.)</li>
+</ul>
+
+<p class="center"><img src="/img/ntp_ts_6.png" alt="ntp_ts_6" title="ntp_ts_6" style="max-height: 500px;" /></p>
+
+<p>The task would be scheduled to run every time you unlock your machine. This makes sense since mostly the time gets messed up when switching between two different Operating Systems on a multi-boot machine.</p>
+
+<hr />
+
+<h1 id="solution-2-use-windows-time-service-tools-to-query-local-ntp-server">Solution 2: Use Windows Time Service tools to query local NTP server</h1>
+
+<p>This solution uses the Windows Time Service tool to add an external/local NTP server.</p>
+
+<ol>
+  <li>Open Command Prompt with admin privileges- Hit key combo <code class="language-plaintext highlighter-rouge">Windows</code> + <code class="language-plaintext highlighter-rouge">X</code>, and click on <code class="language-plaintext highlighter-rouge">Command Prompt (Admin)</code>.</li>
+  <li>Stop the time service- <code class="language-plaintext highlighter-rouge">net stop w32time</code></li>
+  <li>Type in <code class="language-plaintext highlighter-rouge">w32tm /config /syncfromflags:manual /manualpeerlist:"ntp.iitb.ac.in,pool.ntp.org"</code> to manually set the list of external/local NTP servers.</li>
+  <li>Force set the connection as reliable- <code class="language-plaintext highlighter-rouge">w32tm /config /reliable:yes</code></li>
+  <li>Start the time service- <code class="language-plaintext highlighter-rouge">net start w32time</code></li>
+  <li>Check if the configuration has been written successfully- <code class="language-plaintext highlighter-rouge">w32tm /query /configuration</code> and <code class="language-plaintext highlighter-rouge">w32tm /query /status</code>. You should see “NtpServer: ntp.iitb.ac.in,pool.ntp.org (Local)”.</li>
+  <li>Do a <code class="language-plaintext highlighter-rouge">w32tm /resync</code> to force an update. (Make sure your system time is messed up to see if it gets corrected).</li>
+</ol>
+
+<hr />
+
+<h1 id="solution-3-no-ntp-server-reachable-update-using-https">Solution 3: No NTP server reachable, update using HTTPS</h1>
+<p>In case you are unable to reach any NTP server, you can use the following script to update the time by scraping duration since epoch time from www.unixtimestamp.com.</p>
+
+<p>The script can be found in <a href="https://gist.github.com/nihal111/7d95fa52fb91bf3298947cd36b700ce8">this gist</a>.<br />
+Find Raw file <a href="https://gist.githubusercontent.com/nihal111/7d95fa52fb91bf3298947cd36b700ce8/raw/b65d8c187329d85ac971efc23291c06eff4d433b/update_time.py">here</a>.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">import</span> <span class="nn">win32api</span>
+
+<span class="n">page</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://www.unixtimestamp.com/'</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s">'Cache-Control'</span><span class="p">:</span> <span class="s">'no-cache'</span><span class="p">})</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">page</span><span class="p">.</span><span class="n">text</span>
+
+
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">text</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">):</span>
+	<span class="n">match_text</span> <span class="o">=</span> <span class="s">"&lt;h3 class=</span><span class="se">\"</span><span class="s">text-danger</span><span class="se">\"</span><span class="s">&gt;"</span>
+	<span class="n">suffix</span> <span class="o">=</span> <span class="s">" &lt;small&gt;seconds since Jan 01 1970. (UTC)&lt;/small&gt;&lt;/h3&gt;"</span>
+	<span class="k">if</span> <span class="n">match_text</span> <span class="ow">in</span> <span class="n">line</span><span class="p">:</span>
+		<span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'&lt;'</span><span class="p">,</span><span class="s">' '</span><span class="p">).</span><span class="n">replace</span><span class="p">(</span><span class="s">'&gt;'</span><span class="p">,</span><span class="s">' '</span><span class="p">)</span>
+		<span class="n">epoch_time</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">line</span><span class="p">.</span><span class="n">split</span><span class="p">()</span> <span class="k">if</span> <span class="n">s</span><span class="p">.</span><span class="n">isdigit</span><span class="p">()][</span><span class="mi">0</span><span class="p">]</span>
+		<span class="k">break</span>
+
+<span class="n">utcTime</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">.</span><span class="n">datetime</span><span class="p">.</span><span class="n">utcfromtimestamp</span><span class="p">(</span><span class="n">epoch_time</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+	<span class="c1"># SetSystemTime takes time as argument in UTC time
+</span>	<span class="n">win32api</span><span class="p">.</span><span class="n">SetSystemTime</span><span class="p">(</span><span class="n">utcTime</span><span class="p">.</span><span class="n">year</span><span class="p">,</span> <span class="n">utcTime</span><span class="p">.</span><span class="n">month</span><span class="p">,</span> <span class="n">utcTime</span><span class="p">.</span><span class="n">weekday</span><span class="p">(),</span> <span class="n">utcTime</span><span class="p">.</span><span class="n">day</span><span class="p">,</span> <span class="n">utcTime</span><span class="p">.</span><span class="n">hour</span><span class="p">,</span> <span class="n">utcTime</span><span class="p">.</span><span class="n">minute</span><span class="p">,</span> <span class="n">utcTime</span><span class="p">.</span><span class="n">second</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+	<span class="n">localTime</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">.</span><span class="n">datetime</span><span class="p">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="n">epoch_time</span><span class="p">)</span>
+	<span class="k">print</span><span class="p">(</span><span class="s">"Time updated to: "</span> <span class="o">+</span> <span class="n">localTime</span><span class="p">.</span><span class="n">strftime</span><span class="p">(</span><span class="s">"%Y-%m-%d %H:%M"</span><span class="p">))</span>
+<span class="k">except</span><span class="p">:</span>
+	<span class="k">print</span><span class="p">(</span><span class="s">"Could not update time"</span><span class="p">)</span></code></pre></figure>
+
+<ol>
+  <li>Install requests- <code class="language-plaintext highlighter-rouge">pip install requests</code>.
+To install pip for Windows, refer <a href="https://stackoverflow.com/questions/4750806/how-do-i-install-pip-on-windows">this</a>.</li>
+  <li>Follow Step 3 and Step 4 from Solution 1, using the script above.</li>
+</ol>
+
+<hr />
+
+<h3 id="appendix">Appendix</h3>
+
+<p>Specifically pertaining to the problem of the system time going haywire when dual booting across Windows and Linux, the <a href="https://help.ubuntu.com/community/UbuntuTime#Multiple_Boot_Systems_Time_Conflicts">Official Ubuntu documentation explains</a> what causes this.</p>
+
+<p>In essence, Linux/Unix systems store UTC as the time on the hardware clock and with good reason, since this saves unnecessary changes to the hardware clock when moving between timezones. On the other hand, Windows stores the local time as the time on the hardware clock. This ends up messing with the system time since both OS deal with the hardware clock differently.</p>
+
+<p>The <a href="https://help.ubuntu.com/community/UbuntuTime#Multiple_Boot_Systems_Time_Conflicts">Official Ubuntu Docs</a> list down a step by step solution to avoid this from happening.</p>
+
+<hr />
+
+<p>That should save you from manually setting time again.</p>
+
+<p>Till next ‘time’..<br />
+Cheers!</p>
+:ET

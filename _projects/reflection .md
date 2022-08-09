@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Reflection Removal.
+title: Reflection Removal
 description: Implementation of the CVPR 2015 paper reflection removal.
 img: assets/img/reflection.jpeg
 redirect: https://github.com/Avinash2468/reflection-removal

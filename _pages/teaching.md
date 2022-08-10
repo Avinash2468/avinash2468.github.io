@@ -21,7 +21,7 @@ nav_order: 5
 
 ### ECEA, NIT Warangal and ECEA, Probe, NIT Trichy
 
-1. Computer Vision Workship - 23rd and 24th October
+1. Computer Vision Workshop - 23rd and 24th October
 
     - Guest lecturer at the Computer Vision Workshop jointly conducted by NIT Trichy and NIT Warangal. Taught a class of 150 students the basics of Computer Vision and Image Processing.
 

@@ -10,6 +10,8 @@ nav_order: 5
 ### Georgia Tech
 
 1. Computational Perception and Robotics (CS 3630) - Fall 2022
+2. Deep Learning (CS 7643) - Spring 2023
+3. Deep Learning (CS 7643) - Spring 2024
 
 ### IIIT-Hyderabad
 

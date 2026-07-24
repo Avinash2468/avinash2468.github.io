@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: MS in CS at Georgia Tech.
+subtitle: ML Engineer @ KLA
 
 profile:
   align: left
@@ -18,13 +18,13 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Hello! I am Avinash Prabhu. I'm a currently 1st year MS in CS student at Georgia Tech, specializing in Machine Learning. I graduated from [IIIT-Hyderabad](https://www.iiit.ac.in/) in July 2022, with a BTech (Honors) in ECE.
+Hello! I am Avinash Prabhu. I'm an ML Engineer at KLA, where I build vision-language models, CNNs, and tabular models for semiconductor defect inspection — from synthetic data generation to fine-tuning VLMs with SFT and GRPO to deploying them efficiently at scale with vLLM.
 
-At IIIT, I was an undergraduate researcher at [Robotics Research Center](https://robotics.iiit.ac.in/), advised by [Dr. Madhava Krishna](https://scholar.google.co.in/citations?user=QDuPGHwAAAAJ&hl=en). Here, I worked on the 3D reconstruction of scenes from a single image using Deep Learning based Computer Vision. I also worked at the [Precog Lab](https://precog.iiit.ac.in/) under [Dr. Ponnurangam Kumaraguru](https://scholar.google.com/citations?user=MfzQyP8AAAAJ&hl=en). Here, I worked on understanding the behaviour of users on Twitter using ML models. 
+Previously, I did my MS in Computer Science at Georgia Tech, specializing in Machine Learning, and was a TA for Perception & Robotics and Deep Learning. I also interned with  Apple's  Computer Vision team, where I built a CNN-LSTM model for HomePod LED animation detection.
 
-Broadly, I am interested and specialise in **Deep/Machine Learning** techniques. I love to design and train models, deal with large and complex datasets, ultimately designing an AI system that I am proud of. My specific subfield of interest in **Computer Vision**. I am deeply passionate about this field and enjoy reading and replicating results of top research papers, as well as designing my own CNN networks. I strongly believe synthetic data is the key to solving several problems in Computer Vision.
+Before that, I completed my BTech (Honors) in ECE at IIIT-Hyderabad, where I was a research assistant at the [Robotics Research Center](https://robotics.iiit.ac.in/), advised by [Dr. Madhava Krishna](https://scholar.google.co.in/citations?user=QDuPGHwAAAAJ&hl=en), working on monocular 3D scene reconstruction. I also spent time at the [Precog Lab](https://precog.iiit.ac.in/), advised by [Dr. Ponnurangam Kumaraguru](https://scholar.google.com/citations?user=MfzQyP8AAAAJ&hl=en), studying user behavior and platform moderation on Twitter using explainable ML.
 
-Apart from my academics and research, I love to swim and play tennis.
+Outside of work, I swim and play tennis. I'm always happy to chat over email or LinkedIn — especially if you're working on fine-tuning VLMs for a specific use case, or squeezing more out of LLM/VLM inference.
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
